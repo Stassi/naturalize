@@ -1,0 +1,16 @@
+language: node_js
+cache: npm
+node_js:
+  - 8
+  - 10
+  - 11
+  - 12
+  - node
+
+before_deploy: npm run prepublishOnly
+deploy:
+  provider: npm
+  email: andreas@stassi.net
+  skip_cleanup: true
+  on:
+    node: 12
