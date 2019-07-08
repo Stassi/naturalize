@@ -1,0 +1,32 @@
+{
+  "name": "naturalize",
+  "version": "0.0.1",
+  "description": "Natural language processing.",
+  "keywords": [
+    "computational linguistics",
+    "natural language processing",
+    "nlp"
+  ],
+  "license": "MIT",
+  "author": "Andreas Stassivik <andreas@stassi.net> (https://github.com/Stassi)",
+  "files": [
+    "/lib"
+  ],
+  "main": "./lib/naturalize.umd.js",
+  "module": "./lib/naturalize.esm.js",
+  "repository": "github:Stassi/naturalize",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.16.0",
+    "npm": ">=6.4.1"
+  },
+  "browserslist": [
+    "defaults",
+    "node 8",
+    "node 10",
+    "node 11",
+    "node 12"
+  ]
+}
