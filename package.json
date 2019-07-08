@@ -16,7 +16,10 @@
   "module": "./lib/naturalize.esm.js",
   "repository": "github:Stassi/naturalize",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build",
+    "test": "cross-env NODE_ENV=test mocha"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
