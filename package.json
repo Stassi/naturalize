@@ -21,6 +21,9 @@
     "prepublishOnly": "npm run build",
     "test": "cross-env NODE_ENV=test mocha"
   },
+  "dependencies": {
+    "natural": "^0.6.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",

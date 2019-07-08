@@ -1,0 +1,31 @@
+{
+  "hammingDistances": {
+    "equalLength": [
+      [
+        "karolin",
+        "kathrin",
+        3
+      ],
+      [
+        "karolin",
+        "kerstin",
+        3
+      ],
+      [
+        "1011101",
+        "1001001",
+        2
+      ],
+      [
+        "2173896",
+        "2233796",
+        3
+      ]
+    ],
+    "unequalLength": [
+      "dixon",
+      "dicksonx",
+      -1
+    ]
+  }
+}
