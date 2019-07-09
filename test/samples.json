@@ -1,4 +1,28 @@
 {
+  "damerauLevenshteinDistances": {
+    "restricted": [
+      [
+        "ABC",
+        "ACB",
+        1
+      ],
+      [
+        "CA",
+        "ABC",
+        3
+      ]
+    ],
+    "standard": [
+      "az",
+      "za",
+      1
+    ],
+    "unrestricted": [
+      "CA",
+      "ABC",
+      2
+    ]
+  },
   "hammingDistances": {
     "equalLength": [
       [
