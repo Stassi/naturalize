@@ -1,0 +1,101 @@
+{
+  "damerauLevenshteinDistances": {
+    "restricted": [
+      [
+        "ABC",
+        "ACB",
+        1
+      ],
+      [
+        "CA",
+        "ABC",
+        3
+      ]
+    ],
+    "standard": [
+      "az",
+      "za",
+      1
+    ],
+    "unrestricted": [
+      "CA",
+      "ABC",
+      2
+    ]
+  },
+  "diceCoefficientDistances": {
+    "completelyDissimilar": [
+      "not",
+      "same",
+      0
+    ],
+    "identical": [
+      "dixon",
+      "dixon",
+      1
+    ],
+    "similar": [
+      "dixon",
+      "dicksonx",
+      0.36363636363636365
+    ]
+  },
+  "hammingDistances": {
+    "equalLength": [
+      [
+        "karolin",
+        "kathrin",
+        3
+      ],
+      [
+        "karolin",
+        "kerstin",
+        3
+      ],
+      [
+        "1011101",
+        "1001001",
+        2
+      ],
+      [
+        "2173896",
+        "2233796",
+        3
+      ]
+    ],
+    "unequalLength": [
+      "dixon",
+      "dicksonx",
+      -1
+    ]
+  },
+  "jaroWinklerDistances": {
+    "completelyDissimilar": [
+      "not",
+      "same",
+      0
+    ],
+    "identical": [
+      "dixon",
+      "dixon",
+      1
+    ],
+    "similar": [
+      "dixon",
+      "dicksonx",
+      0.8133333333333332
+    ]
+  },
+  "levenshteinDistances": {
+    "identical": [
+      "one",
+      "one",
+      0
+    ],
+    "similar": [
+      "ones",
+      "onez",
+      1
+    ]
+  }
+}

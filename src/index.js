@@ -1,4 +1,13 @@
-import truth from './truth';
+import damerauLevenshteinDistance from './stringDistance/damerauLevenshtein';
+import diceCoefficient from './stringDistance/diceCoefficient';
+import hammingDistance from './stringDistance/hamming';
+import jaroWinklerDistance from './stringDistance/jaroWinkler';
+import levenshteinDistance from './stringDistance/levenshtein';
 
-// eslint-disable-next-line import/prefer-default-export
-export { truth };
+export {
+  damerauLevenshteinDistance,
+  diceCoefficient,
+  hammingDistance,
+  jaroWinklerDistance,
+  levenshteinDistance,
+};
