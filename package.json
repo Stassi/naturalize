@@ -1,6 +1,6 @@
 {
   "name": "naturalize",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Natural language processing.",
   "keywords": [
     "computational linguistics",
@@ -45,17 +45,16 @@
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.1.0",
+    "webworker-threads": "^0.7.17",
     "wordnet-db": "^3.1.11"
   },
   "engines": {
-    "node": ">=8.16.0",
+    "node": "8.16 - 10.16",
     "npm": ">=6.4.1"
   },
   "browserslist": [
     "defaults",
     "node 8",
-    "node 10",
-    "node 11",
-    "node 12"
+    "node 10"
   ]
 }
