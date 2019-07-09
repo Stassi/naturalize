@@ -49,14 +49,12 @@
     "wordnet-db": "^3.1.11"
   },
   "engines": {
-    "node": ">=8.16.0",
+    "node": "8.16 - 10.16",
     "npm": ">=6.4.1"
   },
   "browserslist": [
     "defaults",
     "node 8",
-    "node 10",
-    "node 11",
-    "node 12"
+    "node 10"
   ]
 }
