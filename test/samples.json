@@ -44,5 +44,17 @@
       "dicksonx",
       0.8133333333333332
     ]
+  },
+  "levenshteinDistances": {
+    "identical": [
+      "one",
+      "one",
+      0
+    ],
+    "similar": [
+      "ones",
+      "onez",
+      1
+    ]
   }
 }
