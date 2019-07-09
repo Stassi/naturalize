@@ -27,5 +27,22 @@
       "dicksonx",
       -1
     ]
+  },
+  "jaroWinklerDistances": {
+    "completelyDissimilar": [
+      "not",
+      "same",
+      0
+    ],
+    "identical": [
+      "dixon",
+      "dixon",
+      1
+    ],
+    "similar": [
+      "dixon",
+      "dicksonx",
+      0.8133333333333332
+    ]
   }
 }
