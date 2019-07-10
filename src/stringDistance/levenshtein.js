@@ -1,3 +1,3 @@
-import { LevenshteinDistance as levenshtein } from 'natural';
+import levenshtein from 'talisman/metrics/distance/levenshtein';
 
 export default levenshtein;
