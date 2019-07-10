@@ -1,28 +1,9 @@
 {
-  "damerauLevenshteinDistances": {
-    "restricted": [
-      [
-        "ABC",
-        "ACB",
-        1
-      ],
-      [
-        "CA",
-        "ABC",
-        3
-      ]
-    ],
-    "standard": [
-      "az",
-      "za",
-      1
-    ],
-    "unrestricted": [
-      "CA",
-      "ABC",
-      2
-    ]
-  },
+  "damerauLevenshteinDistances": [
+    "az",
+    "za",
+    1
+  ],
   "diceCoefficientDistances": {
     "completelyDissimilar": [
       "not",
@@ -40,35 +21,28 @@
       0.36363636363636365
     ]
   },
-  "hammingDistances": {
-    "equalLength": [
-      [
-        "karolin",
-        "kathrin",
-        3
-      ],
-      [
-        "karolin",
-        "kerstin",
-        3
-      ],
-      [
-        "1011101",
-        "1001001",
-        2
-      ],
-      [
-        "2173896",
-        "2233796",
-        3
-      ]
+  "hammingDistances": [
+    [
+      "karolin",
+      "kathrin",
+      3
     ],
-    "unequalLength": [
-      "dixon",
-      "dicksonx",
-      -1
+    [
+      "karolin",
+      "kerstin",
+      3
+    ],
+    [
+      "1011101",
+      "1001001",
+      2
+    ],
+    [
+      "2173896",
+      "2233796",
+      3
     ]
-  },
+  ],
   "jaroWinklerDistances": {
     "completelyDissimilar": [
       "not",

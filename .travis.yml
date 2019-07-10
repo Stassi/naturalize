@@ -3,6 +3,9 @@ cache: npm
 node_js:
   - 8
   - 10
+  - 11
+  - 12
+  - node
 
 before_deploy: npm run prepublishOnly
 deploy:
@@ -12,4 +15,4 @@ deploy:
     secure: mAL0ornrtqiXI9Bb+QETeO1fAZ/wJufHnzVRXNdkE47eFVIVQPInxwYhP6/VR5ryRe0XQB0KMuSJ7QrXN6G+6RHmoO5rkXJcI28+1o/rbBVyJYdYVBWT47N+IaYyagl/nm3W7crMmbOKGiwXAYV2DfYxIDSqLOpY0iLEL8YGUSh/9Rdjw64BAlp8UeiLGHisA7U2ezzshGfv8OhUB8/im/1KO668CtcX8Bl5QLPcLVwHERwP/Kt8lA1vWjUjsEaBqJXiFRrL/yQk6mxMLebTBQqt6/cYzHA4F6/H3Z18mexlk0aRQI0lNA0QPHdpE4UCRyL1e8x1xEHyqqi8PDy092kE6gxf9ib0hGppGuKbhSCHqNMo7fGXhilZRTOSZ79qQsHQfgWxWoQ2fzo2vG1l/qKusVxyoy2rFx+di9CuhCVrxP3G0bclBwoOCJJvd9N8uE7glMBS/NuTp3M0W12dHRhuuYhawIXCjfvV9Q+MQppTlcerWo22ck59h2ji5eVBHsesuazQVkSUJq9MaE+MVG3LLumFwlLBYAGk0BNSLEvZvhDYyPmuwfPnrbzmiGHU/lwz2BFCqSkN6BWOiout4bAJJARI1fEok+1pXDY2hnMwKs0mlmspqlPHQN2jzpIsRGmVbHvtgIFgWxegyskty6Xjye8Xh8ScF6RhufmmgwU=
   skip_cleanup: true
   on:
-    node: 10
+    node: 12

@@ -1,3 +1,3 @@
-import { DamerauLevenshteinDistance as damerauLevenshtein } from 'natural';
+import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
 
 export default damerauLevenshtein;

@@ -1,3 +1,3 @@
-import { DiceCoefficient as diceCoefficient } from 'natural';
+import diceCoefficient from 'talisman/metrics/distance/dice';
 
 export default diceCoefficient;

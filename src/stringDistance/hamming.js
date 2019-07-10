@@ -1,3 +1,3 @@
-import { HammingDistance as hamming } from 'natural';
+import hamming from 'talisman/metrics/distance/hamming';
 
 export default hamming;
