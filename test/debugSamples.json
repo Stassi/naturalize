@@ -2,6 +2,7 @@
   {
     "distances": {
       "damerauLevenshtein": 1,
+      "dice": 0,
       "levenshtein": 1
     },
     "sample": [
@@ -12,6 +13,7 @@
   {
     "distances": {
       "damerauLevenshtein": 1,
+      "dice": 0,
       "levenshtein": 1
     },
     "sample": [
@@ -22,6 +24,7 @@
   {
     "distances": {
       "damerauLevenshtein": 1,
+      "dice": 0,
       "levenshtein": 1
     },
     "sample": [
@@ -32,6 +35,7 @@
   {
     "distances": {
       "damerauLevenshtein": 1,
+      "dice": 0,
       "levenshtein": 1
     },
     "sample": [
@@ -42,6 +46,7 @@
   {
     "distances": {
       "damerauLevenshtein": 3,
+      "dice": 0.36363636363636365,
       "levenshtein": 3
     },
     "sample": [
@@ -52,6 +57,7 @@
   {
     "distances": {
       "damerauLevenshtein": 6,
+      "dice": 0.25,
       "levenshtein": 6
     },
     "sample": [
@@ -62,6 +68,7 @@
   {
     "distances": {
       "damerauLevenshtein": 2,
+      "dice": 0,
       "levenshtein": 2
     },
     "sample": [
@@ -72,6 +79,7 @@
   {
     "distances": {
       "damerauLevenshtein": 6,
+      "dice": 0.3333333333333333,
       "levenshtein": 6
     },
     "sample": [
@@ -82,6 +90,7 @@
   {
     "distances": {
       "damerauLevenshtein": 7,
+      "dice": 0.19047619047619047,
       "levenshtein": 7
     },
     "sample": [
@@ -92,6 +101,7 @@
   {
     "distances": {
       "damerauLevenshtein": 3,
+      "dice": 0.6666666666666666,
       "levenshtein": 3
     },
     "sample": [
@@ -102,6 +112,7 @@
   {
     "distances": {
       "damerauLevenshtein": 6,
+      "dice": 0.42857142857142855,
       "levenshtein": 6
     },
     "sample": [
@@ -112,6 +123,7 @@
   {
     "distances": {
       "damerauLevenshtein": 6,
+      "dice": 0.47619047619047616,
       "levenshtein": 6
     },
     "sample": [
@@ -122,6 +134,7 @@
   {
     "distances": {
       "damerauLevenshtein": 5,
+      "dice": 0.375,
       "levenshtein": 5
     },
     "sample": [
@@ -132,6 +145,7 @@
   {
     "distances": {
       "damerauLevenshtein": 5,
+      "dice": 0,
       "levenshtein": 5
     },
     "sample": [
@@ -142,6 +156,7 @@
   {
     "distances": {
       "damerauLevenshtein": 2,
+      "dice": 0.6923076923076923,
       "levenshtein": 2
     },
     "sample": [
@@ -152,6 +167,7 @@
   {
     "distances": {
       "damerauLevenshtein": 7,
+      "dice": 1,
       "levenshtein": 7
     },
     "sample": [
