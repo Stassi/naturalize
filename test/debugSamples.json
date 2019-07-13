@@ -1,0 +1,146 @@
+[
+  {
+    "distances": {
+      "levenshtein": 1
+    },
+    "sample": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 1
+    },
+    "sample": [
+      "ab",
+      "ac"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 1
+    },
+    "sample": [
+      "ac",
+      "bc"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 1
+    },
+    "sample": [
+      "abc",
+      "axc"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 3
+    },
+    "sample": [
+      "kitten",
+      "sitting"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 6
+    },
+    "sample": [
+      "1ab2cd34ef5g6",
+      "xabxcdxxefxgx"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 2
+    },
+    "sample": [
+      "cat",
+      "cow"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 6
+    },
+    "sample": [
+      "abcdefg",
+      "xabxcdxxefxgx"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 7
+    },
+    "sample": [
+      "javawasneat",
+      "scalaisgreat"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 3
+    },
+    "sample": [
+      "example",
+      "samples"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 6
+    },
+    "sample": [
+      "sturgeon",
+      "urgently"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 6
+    },
+    "sample": [
+      "levenshtein",
+      "frankenstein"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 5
+    },
+    "sample": [
+      "distance",
+      "difference"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 5
+    },
+    "sample": [
+      "abcde",
+      "tes"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 2
+    },
+    "sample": [
+      "因為我是中國人所以我會說中文",
+      "因為我是英國人所以我會說英文"
+    ]
+  },
+  {
+    "distances": {
+      "levenshtein": 7
+    },
+    "sample": [
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+    ]
+  }
+]
