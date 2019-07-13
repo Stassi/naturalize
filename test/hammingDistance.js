@@ -2,7 +2,7 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
 import { hammingDistance } from '../src';
-import samples from './debugSamples';
+import samples from './samples';
 
 const [
   {

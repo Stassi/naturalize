@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
 import { damerauLevenshteinDistance } from '../src';
-import samples from './debugSamples';
+import samples from './samples';
 
 const [
   {
