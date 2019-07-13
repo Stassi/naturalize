@@ -1,75 +1,210 @@
-{
-  "damerauLevenshteinDistances": [
-    "az",
-    "za",
-    1
-  ],
-  "diceCoefficientDistances": {
-    "completelyDissimilar": [
-      "not",
-      "same",
-      0
-    ],
-    "identical": [
-      "dixon",
-      "dixon",
-      1
-    ],
-    "similar": [
-      "dixon",
-      "dicksonx",
-      0.36363636363636365
+[
+  {
+    "distances": {
+      "damerauLevenshtein": 1,
+      "dice": 0,
+      "hamming": 1,
+      "jaroWinkler": 0,
+      "levenshtein": 1
+    },
+    "sample": [
+      "a",
+      "b"
     ]
   },
-  "hammingDistances": [
-    [
-      "karolin",
-      "kathrin",
-      3
-    ],
-    [
-      "karolin",
-      "kerstin",
-      3
-    ],
-    [
-      "1011101",
-      "1001001",
-      2
-    ],
-    [
-      "2173896",
-      "2233796",
-      3
-    ]
-  ],
-  "jaroWinklerDistances": {
-    "completelyDissimilar": [
-      "not",
-      "same",
-      0
-    ],
-    "identical": [
-      "dixon",
-      "dixon",
-      1
-    ],
-    "similar": [
-      "dixon",
-      "dicksonx",
-      0.8133333333333332
+  {
+    "distances": {
+      "damerauLevenshtein": 1,
+      "dice": 0,
+      "hamming": 1,
+      "jaroWinkler": 0.6666666666666666,
+      "levenshtein": 1
+    },
+    "sample": [
+      "ab",
+      "ac"
     ]
   },
-  "levenshteinDistances": {
-    "identical": [
-      "one",
-      "one",
-      0
-    ],
-    "similar": [
-      "ones",
-      "onez",
-      1
+  {
+    "distances": {
+      "damerauLevenshtein": 1,
+      "dice": 0,
+      "hamming": 1,
+      "jaroWinkler": 0.6666666666666666,
+      "levenshtein": 1
+    },
+    "sample": [
+      "ac",
+      "bc"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 1,
+      "dice": 0,
+      "hamming": 1,
+      "jaroWinkler": 0.7999999999999999,
+      "levenshtein": 1
+    },
+    "sample": [
+      "abc",
+      "axc"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 3,
+      "dice": 0.36363636363636365,
+      "hamming": null,
+      "jaroWinkler": 0.746031746031746,
+      "levenshtein": 3
+    },
+    "sample": [
+      "kitten",
+      "sitting"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 6,
+      "dice": 0.25,
+      "hamming": 6,
+      "jaroWinkler": 0.6923076923076922,
+      "levenshtein": 6
+    },
+    "sample": [
+      "1ab2cd34ef5g6",
+      "xabxcdxxefxgx"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 2,
+      "dice": 0,
+      "hamming": 2,
+      "jaroWinkler": 0.5555555555555555,
+      "levenshtein": 2
+    },
+    "sample": [
+      "cat",
+      "cow"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 6,
+      "dice": 0.3333333333333333,
+      "hamming": null,
+      "jaroWinkler": 0.8461538461538461,
+      "levenshtein": 6
+    },
+    "sample": [
+      "abcdefg",
+      "xabxcdxxefxgx"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 7,
+      "dice": 0.19047619047619047,
+      "hamming": null,
+      "jaroWinkler": 0.6262626262626263,
+      "levenshtein": 7
+    },
+    "sample": [
+      "javawasneat",
+      "scalaisgreat"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 3,
+      "dice": 0.6666666666666666,
+      "hamming": 7,
+      "jaroWinkler": 0.8095238095238096,
+      "levenshtein": 3
+    },
+    "sample": [
+      "example",
+      "samples"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 6,
+      "dice": 0.42857142857142855,
+      "hamming": 8,
+      "jaroWinkler": 0.75,
+      "levenshtein": 6
+    },
+    "sample": [
+      "sturgeon",
+      "urgently"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 6,
+      "dice": 0.47619047619047616,
+      "hamming": null,
+      "jaroWinkler": 0.597041847041847,
+      "levenshtein": 6
+    },
+    "sample": [
+      "levenshtein",
+      "frankenstein"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 5,
+      "dice": 0.375,
+      "hamming": null,
+      "jaroWinkler": 0.6416666666666667,
+      "levenshtein": 5
+    },
+    "sample": [
+      "distance",
+      "difference"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 5,
+      "dice": 0,
+      "hamming": null,
+      "jaroWinkler": 0,
+      "levenshtein": 5
+    },
+    "sample": [
+      "abcde",
+      "tes"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 2,
+      "dice": 0.6923076923076923,
+      "hamming": 2,
+      "jaroWinkler": 0.9428571428571428,
+      "levenshtein": 2
+    },
+    "sample": [
+      "因為我是中國人所以我會說中文",
+      "因為我是英國人所以我會說英文"
+    ]
+  },
+  {
+    "distances": {
+      "damerauLevenshtein": 7,
+      "dice": 1,
+      "hamming": null,
+      "jaroWinkler": 0.9269253363096986,
+      "levenshtein": 7
+    },
+    "sample": [
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
     ]
   }
-}
+]
