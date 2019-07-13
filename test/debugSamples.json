@@ -1,6 +1,7 @@
 [
   {
     "distances": {
+      "damerauLevenshtein": 1,
       "levenshtein": 1
     },
     "sample": [
@@ -10,6 +11,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 1,
       "levenshtein": 1
     },
     "sample": [
@@ -19,6 +21,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 1,
       "levenshtein": 1
     },
     "sample": [
@@ -28,6 +31,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 1,
       "levenshtein": 1
     },
     "sample": [
@@ -37,6 +41,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 3,
       "levenshtein": 3
     },
     "sample": [
@@ -46,6 +51,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 6,
       "levenshtein": 6
     },
     "sample": [
@@ -55,6 +61,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 2,
       "levenshtein": 2
     },
     "sample": [
@@ -64,6 +71,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 6,
       "levenshtein": 6
     },
     "sample": [
@@ -73,6 +81,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 7,
       "levenshtein": 7
     },
     "sample": [
@@ -82,6 +91,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 3,
       "levenshtein": 3
     },
     "sample": [
@@ -91,6 +101,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 6,
       "levenshtein": 6
     },
     "sample": [
@@ -100,6 +111,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 6,
       "levenshtein": 6
     },
     "sample": [
@@ -109,6 +121,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 5,
       "levenshtein": 5
     },
     "sample": [
@@ -118,6 +131,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 5,
       "levenshtein": 5
     },
     "sample": [
@@ -127,6 +141,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 2,
       "levenshtein": 2
     },
     "sample": [
@@ -136,6 +151,7 @@
   },
   {
     "distances": {
+      "damerauLevenshtein": 7,
       "levenshtein": 7
     },
     "sample": [
