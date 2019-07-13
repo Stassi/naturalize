@@ -4,6 +4,7 @@
       "damerauLevenshtein": 1,
       "dice": 0,
       "hamming": 1,
+      "jaroWinkler": 0,
       "levenshtein": 1
     },
     "sample": [
@@ -16,6 +17,7 @@
       "damerauLevenshtein": 1,
       "dice": 0,
       "hamming": 1,
+      "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
     },
     "sample": [
@@ -28,6 +30,7 @@
       "damerauLevenshtein": 1,
       "dice": 0,
       "hamming": 1,
+      "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
     },
     "sample": [
@@ -40,6 +43,7 @@
       "damerauLevenshtein": 1,
       "dice": 0,
       "hamming": 1,
+      "jaroWinkler": 0.7999999999999999,
       "levenshtein": 1
     },
     "sample": [
@@ -52,6 +56,7 @@
       "damerauLevenshtein": 3,
       "dice": 0.36363636363636365,
       "hamming": null,
+      "jaroWinkler": 0.746031746031746,
       "levenshtein": 3
     },
     "sample": [
@@ -64,6 +69,7 @@
       "damerauLevenshtein": 6,
       "dice": 0.25,
       "hamming": 6,
+      "jaroWinkler": 0.6923076923076922,
       "levenshtein": 6
     },
     "sample": [
@@ -76,6 +82,7 @@
       "damerauLevenshtein": 2,
       "dice": 0,
       "hamming": 2,
+      "jaroWinkler": 0.5555555555555555,
       "levenshtein": 2
     },
     "sample": [
@@ -88,6 +95,7 @@
       "damerauLevenshtein": 6,
       "dice": 0.3333333333333333,
       "hamming": null,
+      "jaroWinkler": 0.8461538461538461,
       "levenshtein": 6
     },
     "sample": [
@@ -100,6 +108,7 @@
       "damerauLevenshtein": 7,
       "dice": 0.19047619047619047,
       "hamming": null,
+      "jaroWinkler": 0.6262626262626263,
       "levenshtein": 7
     },
     "sample": [
@@ -112,6 +121,7 @@
       "damerauLevenshtein": 3,
       "dice": 0.6666666666666666,
       "hamming": 7,
+      "jaroWinkler": 0.8095238095238096,
       "levenshtein": 3
     },
     "sample": [
@@ -124,6 +134,7 @@
       "damerauLevenshtein": 6,
       "dice": 0.42857142857142855,
       "hamming": 8,
+      "jaroWinkler": 0.75,
       "levenshtein": 6
     },
     "sample": [
@@ -136,6 +147,7 @@
       "damerauLevenshtein": 6,
       "dice": 0.47619047619047616,
       "hamming": null,
+      "jaroWinkler": 0.597041847041847,
       "levenshtein": 6
     },
     "sample": [
@@ -148,6 +160,7 @@
       "damerauLevenshtein": 5,
       "dice": 0.375,
       "hamming": null,
+      "jaroWinkler": 0.6416666666666667,
       "levenshtein": 5
     },
     "sample": [
@@ -160,6 +173,7 @@
       "damerauLevenshtein": 5,
       "dice": 0,
       "hamming": null,
+      "jaroWinkler": 0,
       "levenshtein": 5
     },
     "sample": [
@@ -172,6 +186,7 @@
       "damerauLevenshtein": 2,
       "dice": 0.6923076923076923,
       "hamming": 2,
+      "jaroWinkler": 0.9428571428571428,
       "levenshtein": 2
     },
     "sample": [
@@ -184,6 +199,7 @@
       "damerauLevenshtein": 7,
       "dice": 1,
       "hamming": null,
+      "jaroWinkler": 0.9269253363096986,
       "levenshtein": 7
     },
     "sample": [
