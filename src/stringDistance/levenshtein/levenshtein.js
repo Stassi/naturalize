@@ -1,14 +1,8 @@
-import {
-  dec,
-  gt,
-  inc,
-} from 'ramda';
+import { dec, inc } from 'ramda';
 import mapDecrement from './mapDecrement';
 import mapLength from './mapLength';
-import mapSubtractBy from './mapSubtractBy';
-import debugLoopAlpha from './debugLoopAlpha';
 import debugPredicateAlpha from './debugPredicateAlpha';
-import debugTransformAlpha from './debugTransformAlpha';
+import debugTransformBeta from './debugTransformBeta';
 
 const CODES = [];
 const VECTOR = [];
@@ -40,13 +34,16 @@ const levenshtein = (alpha, beta) => {
     ]);
   }
 
-  // TODO: Rename variables
-  const greaterThanAlphaLength = gt(alphaLength);
-  const predicatesAlpha = [greaterThanAlphaLength, debugTransformAlpha];
-  const startWithoutPrefix = debugLoopAlpha(predicatesAlpha);
-  const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
-  const lengthsAlpha = [alphaLength, betaLength];
-  const [alphaLengthFinal, betaLengthFinal] = mapSubtractByStart(lengthsAlpha);
+  const [
+    startWithoutPrefix,
+    [
+      alphaLengthFinal,
+      betaLengthFinal,
+    ],
+  ] = debugTransformBeta([
+    alphaLength,
+    betaLength,
+  ]);
 
   if (!alphaLengthFinal) {
     // console.log('No alphaLengthFinal, returning betaLengthFinal');
