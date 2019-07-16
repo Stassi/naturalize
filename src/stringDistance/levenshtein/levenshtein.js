@@ -1,20 +1,14 @@
-import debugTransformBeta from './debugTransformBeta';
-import debugTransformEpsilon from './debugTransformEpsilon';
+import debugTransformEpsilonBeta from './debugTransformEpsilonBeta';
 import debugTransformZeta from './debugTransformZeta';
 
 const levenshtein = (alpha, beta) => {
-  const [alphaLength, betaLength] = debugTransformEpsilon([alpha, beta]);
-
   const [
     startWithoutPrefix,
     [
       alphaLengthFinal,
       betaLengthFinal,
     ],
-  ] = debugTransformBeta([
-    alphaLength,
-    betaLength,
-  ]);
+  ] = debugTransformEpsilonBeta([alpha, beta]);
 
   return debugTransformZeta({
     alpha,
