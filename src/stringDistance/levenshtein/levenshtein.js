@@ -45,18 +45,19 @@ const levenshtein = (alpha, beta) => {
   const predicatesAlpha = [greaterThanAlphaLength, debugTransformAlpha];
   const startWithoutPrefix = debugLoopAlpha(predicatesAlpha);
   const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
-  [alphaLength, betaLength] = mapSubtractByStart([alphaLength, betaLength]);
+  const lengthsAlpha = [alphaLength, betaLength];
+  const [alphaLengthFinal, betaLengthFinal] = mapSubtractByStart(lengthsAlpha);
 
-  if (!alphaLength) {
-    // console.log('No alphaLength, returning betaLength');
-    return betaLength;
+  if (!alphaLengthFinal) {
+    // console.log('No alphaLengthFinal, returning betaLengthFinal');
+    return betaLengthFinal;
   }
 
   const v0 = VECTOR;
 
   let i = 0;
 
-  while (i < betaLength) {
+  while (i < betaLengthFinal) {
     CODES[i] = beta.charCodeAt(startWithoutPrefix + i);
     i = inc(i);
     v0[dec(i)] = i;
@@ -69,7 +70,7 @@ const levenshtein = (alpha, beta) => {
   let j;
 
   // eslint-disable-next-line no-plusplus
-  for (i = 0; i < alphaLength; i++) {
+  for (i = 0; i < alphaLengthFinal; i++) {
     // console.log('Starting the nested loops');
     left = i;
     current = i + 1;
@@ -77,7 +78,7 @@ const levenshtein = (alpha, beta) => {
     charA = alpha.charCodeAt(startWithoutPrefix + i);
 
     // eslint-disable-next-line no-plusplus
-    for (j = 0; j < betaLength; j++) {
+    for (j = 0; j < betaLengthFinal; j++) {
       above = current;
 
       current = left;
