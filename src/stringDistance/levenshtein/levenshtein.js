@@ -55,11 +55,9 @@ const levenshtein = (alpha, beta) => {
     ]);
   }
 
-  const greaterThanAlphaLength = gt(alphaLength);
-
   // TODO: Rename variables
+  const greaterThanAlphaLength = gt(alphaLength);
   const startWithoutPrefix = debug([greaterThanAlphaLength, debugTransformAlpha]);
-
   const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
   [alphaLength, betaLength] = mapSubtractByStart([alphaLength, betaLength]);
 
