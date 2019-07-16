@@ -3,27 +3,12 @@ import {
   gt,
   inc,
 } from 'ramda';
-import mapApplyToAnd from './mapApplyToAnd';
 import mapDecrement from './mapDecrement';
 import mapLength from './mapLength';
 import mapSubtractBy from './mapSubtractBy';
+import debugLoopAlpha from './debugLoopAlpha';
 import debugPredicateAlpha from './debugPredicateAlpha';
 import debugTransformAlpha from './debugTransformAlpha';
-
-// TODO: Rename
-const debug = (debugPredicates) => {
-  let start = 0;
-
-  const mapApplyStartToAnd = mapApplyToAnd(start);
-  const predicate = mapApplyStartToAnd(debugPredicates);
-
-  while (predicate) {
-    // console.log('Ignoring common prefix, incrementing start variable');
-    start = inc(start);
-  }
-
-  return start;
-};
 
 const CODES = [];
 const VECTOR = [];
@@ -57,7 +42,8 @@ const levenshtein = (alpha, beta) => {
 
   // TODO: Rename variables
   const greaterThanAlphaLength = gt(alphaLength);
-  const startWithoutPrefix = debug([greaterThanAlphaLength, debugTransformAlpha]);
+  const predicatesAlpha = [greaterThanAlphaLength, debugTransformAlpha];
+  const startWithoutPrefix = debugLoopAlpha(predicatesAlpha);
   const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
   [alphaLength, betaLength] = mapSubtractByStart([alphaLength, betaLength]);
 
