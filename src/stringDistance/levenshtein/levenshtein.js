@@ -1,35 +1,9 @@
-import mapDecrement from './mapDecrement';
-import mapLength from './mapLength';
-import debugPredicateAlpha from './debugPredicateAlpha';
 import debugTransformBeta from './debugTransformBeta';
 import debugTransformDelta from './debugTransformDelta';
+import debugTransformEpsilon from './debugTransformEpsilon';
 
 const levenshtein = (alpha, beta) => {
-  let [
-    alphaLength,
-    betaLength,
-  ] = mapLength([
-    alpha,
-    beta,
-  ]);
-
-  while (
-    debugPredicateAlpha({
-      alpha,
-      beta,
-      alphaLength,
-      betaLength,
-    })
-  ) {
-    // console.log('Ignoring common suffix: decrementing alpha and beta lengths.');
-    [
-      alphaLength,
-      betaLength,
-    ] = mapDecrement([
-      alphaLength,
-      betaLength,
-    ]);
-  }
+  const [alphaLength, betaLength] = debugTransformEpsilon([alpha, beta]);
 
   const [
     startWithoutPrefix,
