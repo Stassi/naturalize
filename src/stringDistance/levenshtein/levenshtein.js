@@ -1,6 +1,6 @@
 import debugTransformBeta from './debugTransformBeta';
-import debugTransformDelta from './debugTransformDelta';
 import debugTransformEpsilon from './debugTransformEpsilon';
+import debugTransformZeta from './debugTransformZeta';
 
 const levenshtein = (alpha, beta) => {
   const [alphaLength, betaLength] = debugTransformEpsilon([alpha, beta]);
@@ -16,15 +16,13 @@ const levenshtein = (alpha, beta) => {
     betaLength,
   ]);
 
-  return alphaLengthFinal
-    ? debugTransformDelta({
-      alpha,
-      alphaLengthFinal,
-      beta,
-      betaLengthFinal,
-      startWithoutPrefix,
-    })
-    : betaLengthFinal;
+  return debugTransformZeta({
+    alpha,
+    alphaLengthFinal,
+    beta,
+    betaLengthFinal,
+    startWithoutPrefix,
+  });
 };
 
 export default levenshtein;
