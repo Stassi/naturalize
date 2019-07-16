@@ -1,9 +1,30 @@
-import { dec, inc } from 'ramda';
-import debugPredicateAlpha from './debugPredicateAlpha';
-import debugPredicateBeta from './debugPredicateBeta';
+import {
+  dec,
+  gt,
+  inc,
+} from 'ramda';
+import applyEquals from './applyEquals';
+import mapApplyToAnd from './mapApplyToAnd';
 import mapDecrement from './mapDecrement';
 import mapLength from './mapLength';
 import mapSubtractBy from './mapSubtractBy';
+import mapUTF16CodeAt from './mapUTF16CodeAt';
+import debugPredicateAlpha from './debugPredicateAlpha';
+
+// TODO: Rename
+const debug = (debugPredicates) => {
+  let start = 0;
+
+  const mapApplyStartToAnd = mapApplyToAnd(start);
+  const predicate = mapApplyStartToAnd(debugPredicates);
+
+  while (predicate) {
+    // console.log('Ignoring common prefix, incrementing start variable');
+    start = inc(start);
+  }
+
+  return start;
+};
 
 const CODES = [];
 const VECTOR = [];
@@ -35,19 +56,19 @@ const levenshtein = (alpha, beta) => {
     ]);
   }
 
-  let start = 0;
+  const greaterThanAlphaLength = gt(alphaLength);
 
-  while (debugPredicateBeta({
-    alpha,
-    alphaLength,
-    beta,
-    start,
-  })) {
-    // console.log('Ignoring common prefix, incrementing start variable');
-    start = inc(start);
-  }
+  // TODO: Rename variables
+  const startWithoutPrefix = debug([
+    greaterThanAlphaLength,
+    (index) => {
+      const mapUTF16CodeAtStart = mapUTF16CodeAt(index);
+      const alphaBetaUTF16StartCodes = mapUTF16CodeAtStart([alpha, beta]);
+      return applyEquals(alphaBetaUTF16StartCodes);
+    },
+  ]);
 
-  const mapSubtractByStart = mapSubtractBy(start);
+  const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
   [alphaLength, betaLength] = mapSubtractByStart([alphaLength, betaLength]);
 
   if (!alphaLength) {
@@ -60,7 +81,7 @@ const levenshtein = (alpha, beta) => {
   let i = 0;
 
   while (i < betaLength) {
-    CODES[i] = beta.charCodeAt(start + i);
+    CODES[i] = beta.charCodeAt(startWithoutPrefix + i);
     i = inc(i);
     v0[dec(i)] = i;
   }
@@ -77,7 +98,7 @@ const levenshtein = (alpha, beta) => {
     left = i;
     current = i + 1;
 
-    charA = alpha.charCodeAt(start + i);
+    charA = alpha.charCodeAt(startWithoutPrefix + i);
 
     // eslint-disable-next-line no-plusplus
     for (j = 0; j < betaLength; j++) {
