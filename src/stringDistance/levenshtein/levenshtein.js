@@ -1,14 +1,16 @@
 import {
+  applyTo,
   dec,
   gt,
   inc,
+  pipe,
 } from 'ramda';
 import applyEquals from './applyEquals';
 import mapApplyToAnd from './mapApplyToAnd';
 import mapDecrement from './mapDecrement';
 import mapLength from './mapLength';
 import mapSubtractBy from './mapSubtractBy';
-import mapUTF16CodeAt from './mapUTF16CodeAt';
+import mapUTF16Code from './mapUTF16Code';
 import debugPredicateAlpha from './debugPredicateAlpha';
 
 // TODO: Rename
@@ -61,11 +63,11 @@ const levenshtein = (alpha, beta) => {
   // TODO: Rename variables
   const startWithoutPrefix = debug([
     greaterThanAlphaLength,
-    (index) => {
-      const mapUTF16CodeAtStart = mapUTF16CodeAt(index);
-      const alphaBetaUTF16StartCodes = mapUTF16CodeAtStart([alpha, beta]);
-      return applyEquals(alphaBetaUTF16StartCodes);
-    },
+    index => pipe(
+      mapUTF16Code,
+      applyTo(index),
+      applyEquals,
+    ),
   ]);
 
   const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
