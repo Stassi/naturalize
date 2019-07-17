@@ -1,5 +1,5 @@
-import debugTransformEpsilonBeta from './debugTransformEpsilonBeta';
-import debugTransformZeta from './debugTransformZeta';
+import debugTransformAlpha from './debugTransformAlpha';
+import debugTransformEta from './debugTransformEta';
 
 const levenshtein = (alpha, beta) => {
   const [
@@ -8,9 +8,9 @@ const levenshtein = (alpha, beta) => {
       alphaLengthFinal,
       betaLengthFinal,
     ],
-  ] = debugTransformEpsilonBeta([alpha, beta]);
+  ] = debugTransformAlpha([alpha, beta]);
 
-  return debugTransformZeta({
+  return debugTransformEta({
     alpha,
     alphaLengthFinal,
     beta,

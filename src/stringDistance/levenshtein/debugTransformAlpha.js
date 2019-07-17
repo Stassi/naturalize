@@ -1,14 +1,7 @@
-import { applyTo, pipe } from 'ramda';
-import applyEquals from './applyEquals';
-import mapUTF16Code from './mapUTF16Code';
+import { pipe } from 'ramda';
+import debugTransformBeta from './debugTransformBeta';
+import debugTransformGamma from './debugTransformGamma';
 
-const debugTransformAlpha = pipe(
-  applyTo,
-  applyToIndex => pipe(
-    mapUTF16Code,
-    applyToIndex,
-    applyEquals,
-  ),
-);
+const debugTransformAlpha = pipe(debugTransformBeta, debugTransformGamma);
 
 export default debugTransformAlpha;

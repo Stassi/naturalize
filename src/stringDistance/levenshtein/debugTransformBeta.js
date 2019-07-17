@@ -1,16 +1,38 @@
-import { gt } from 'ramda';
-import mapSubtractBy from './mapSubtractBy';
-import debugLoopAlpha from './debugLoopAlpha';
-import debugTransformAlpha from './debugTransformAlpha';
+import mapDecrement from './mapDecrement';
+import mapLength from './mapLength';
+import debugPredicateAlpha from './debugPredicateAlpha';
 
-const debugTransformBeta = (lengths) => {
-  const [alphaLength] = lengths;
-  const greaterThanAlphaLength = gt(alphaLength);
-  const predicates = [greaterThanAlphaLength, debugTransformAlpha];
-  const startWithoutPrefix = debugLoopAlpha(predicates);
-  const mapSubtractByStart = mapSubtractBy(startWithoutPrefix);
-  const finalLengths = mapSubtractByStart(lengths);
-  return [startWithoutPrefix, finalLengths];
+const debugTransformBeta = ([alpha, beta]) => {
+  let [
+    alphaLength,
+    betaLength,
+  ] = mapLength([
+    alpha,
+    beta,
+  ]);
+
+  while (
+    debugPredicateAlpha({
+      alpha,
+      beta,
+      alphaLength,
+      betaLength,
+    })
+  ) {
+    // console.log('Ignoring common suffix: decrementing alpha and beta lengths.');
+    [
+      alphaLength,
+      betaLength,
+    ] = mapDecrement([
+      alphaLength,
+      betaLength,
+    ]);
+  }
+
+  return [
+    alphaLength,
+    betaLength,
+  ];
 };
 
 export default debugTransformBeta;
