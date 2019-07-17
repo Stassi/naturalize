@@ -1,12 +1,12 @@
 import debugTransformZeta from './debugTransformZeta';
 
-const debugTransformEta = ({
-  alpha,
-  alphaLengthFinal,
-  beta,
-  betaLengthFinal,
+const debugTransformEta = ([
   startWithoutPrefix,
-}) => (
+  [
+    alphaLengthFinal,
+    betaLengthFinal,
+  ],
+]) => ([alpha, beta]) => (
   alphaLengthFinal
     ? debugTransformZeta({
       alpha,

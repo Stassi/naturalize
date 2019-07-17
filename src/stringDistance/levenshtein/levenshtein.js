@@ -1,22 +1,9 @@
+import { pipe } from 'ramda';
+import list from './list';
 import debugTransformAlpha from './debugTransformAlpha';
-import debugTransformEta from './debugTransformEta';
 
-const levenshtein = (alpha, beta) => {
-  const [
-    startWithoutPrefix,
-    [
-      alphaLengthFinal,
-      betaLengthFinal,
-    ],
-  ] = debugTransformAlpha([alpha, beta]);
-
-  return debugTransformEta({
-    alpha,
-    alphaLengthFinal,
-    beta,
-    betaLengthFinal,
-    startWithoutPrefix,
-  });
-};
+// TODO: Rename variable, avoid duplicate calls
+const debugTransformPrime = strings => debugTransformAlpha(strings)(strings);
+const levenshtein = pipe(list, debugTransformPrime);
 
 export default levenshtein;
