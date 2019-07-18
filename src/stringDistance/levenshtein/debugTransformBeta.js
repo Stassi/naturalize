@@ -1,38 +1,16 @@
-import mapDecrement from './mapDecrement';
+import { pipe } from 'ramda';
 import mapLength from './mapLength';
+import debugLoopBeta from './debugLoopBeta';
 import debugPredicateAlpha from './debugPredicateAlpha';
 
-const debugTransformBeta = ([alpha, beta]) => {
-  let [
-    alphaLength,
-    betaLength,
-  ] = mapLength([
-    alpha,
-    beta,
-  ]);
-
-  while (
-    debugPredicateAlpha({
-      alpha,
-      beta,
-      alphaLength,
-      betaLength,
-    })
-  ) {
-    // console.log('Ignoring common suffix: decrementing alpha and beta lengths.');
-    [
-      alphaLength,
-      betaLength,
-    ] = mapDecrement([
-      alphaLength,
-      betaLength,
-    ]);
-  }
-
-  return [
-    alphaLength,
-    betaLength,
-  ];
-};
+// TODO: Simplify
+const debugTransformBeta = pipe(
+  debugPredicateAlpha,
+  debugLoopBeta,
+  x => pipe(
+    mapLength,
+    x,
+  ),
+);
 
 export default debugTransformBeta;
