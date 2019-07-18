@@ -1,19 +1,30 @@
+import {
+  apply,
+  flip,
+  map,
+  pipe,
+  zip,
+} from 'ramda';
 import applyAnd from './applyAnd';
 import applyEquals from './applyEquals';
-import greaterThanZero from './greaterThanZero';
-import negateBitwiseNot from './negateBitwiseNot';
+import headGreaterThanZero from './headGreaterThanZero';
+import mapNegateBitwiseNot from './mapNegateBitwiseNot';
+import utf16Code from './utf16Code';
 
-const debugPredicateAlpha = ([alpha, beta]) => ([alphaLength, betaLength]) => {
-  const [alphaUTF16, betaUTF16] = [
-    negateBitwiseNot(alphaLength),
-    negateBitwiseNot(betaLength),
-  ];
-  const predicateDelta = [
-    alpha.charCodeAt(alphaUTF16),
-    beta.charCodeAt(betaUTF16),
-  ];
-  const debugPredicateAlphaBeta = applyEquals(predicateDelta);
-  const alphaLengthGreaterThanZero = greaterThanZero(alphaLength);
+const applyUTF16Code = apply(utf16Code);
+const mapApplyUTF16Code = map(applyUTF16Code);
+const zipMapApplyUTF16Code = pipe(zip, mapApplyUTF16Code);
+const flipZipMapApplyUTF16Code = flip(zipMapApplyUTF16Code);
+const mapNegateBitwiseNotThenFlipZipMapApplyUTF16Code = pipe(
+  mapNegateBitwiseNot,
+  flipZipMapApplyUTF16Code,
+);
+
+const debugPredicateAlpha = strings => (lengths) => {
+  const alphaLengthGreaterThanZero = headGreaterThanZero(lengths);
+  const debugPredicateDeltaZappaKappa = mapNegateBitwiseNotThenFlipZipMapApplyUTF16Code(lengths);
+  const debugPredicateOmegaEpsilonCharlie = pipe(debugPredicateDeltaZappaKappa, applyEquals);
+  const debugPredicateAlphaBeta = debugPredicateOmegaEpsilonCharlie(strings);
   const predicates = [alphaLengthGreaterThanZero, debugPredicateAlphaBeta];
   return applyAnd(predicates);
 };
