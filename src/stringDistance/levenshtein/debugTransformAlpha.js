@@ -1,17 +1,18 @@
 import { pipe } from 'ramda';
-import debugTransformBeta from './debugTransformBeta';
+import mapLength from './mapLength';
+import debugLoopBeta from './debugLoopBeta';
+import debugPredicateAlpha from './debugPredicateAlpha';
 import debugTransformEta from './debugTransformEta';
 import debugTransformGamma from './debugTransformGamma';
 
-// TODO: Simplify
 const debugTransformAlpha = pipe(
-  debugTransformBeta,
+  debugPredicateAlpha,
+  debugLoopBeta,
+  x => pipe(mapLength, x),
   x => pipe(
     x,
-    pipe(
-      debugTransformGamma,
-      debugTransformEta,
-    ),
+    debugTransformGamma,
+    debugTransformEta,
   ),
 );
 
