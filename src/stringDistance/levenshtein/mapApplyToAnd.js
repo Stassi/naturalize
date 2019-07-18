@@ -1,14 +1,7 @@
-import {
-  applyTo,
-  map,
-  pipe,
-} from 'ramda';
+import { pipe } from 'ramda';
 import applyAnd from './applyAnd';
+import mapApplyTo from './mapApplyTo';
 
-const mapApplyToApplyAnd = pipe(
-  applyTo,
-  map,
-  applyAnd,
-);
+const mapApplyToApplyAnd = pipe(mapApplyTo, applyAnd);
 
 export default mapApplyToApplyAnd;
