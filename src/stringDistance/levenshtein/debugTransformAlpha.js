@@ -1,19 +1,18 @@
 import { pipe } from 'ramda';
-import mapLength from './mapLength';
+import applyPipe from './applyPipe';
+import flipPair from './flipPair';
+import pairMapLength from './pairMapLength';
 import debugLoopBeta from './debugLoopBeta';
 import debugPredicateAlpha from './debugPredicateAlpha';
-import debugTransformEta from './debugTransformEta';
-import debugTransformGamma from './debugTransformGamma';
+import debugTransformGammaEta from './debugTransformGammaEta';
 
 const debugTransformAlpha = pipe(
   debugPredicateAlpha,
   debugLoopBeta,
-  x => pipe(mapLength, x),
-  x => pipe(
-    x,
-    debugTransformGamma,
-    debugTransformEta,
-  ),
+  pairMapLength,
+  applyPipe,
+  flipPair(debugTransformGammaEta),
+  applyPipe,
 );
 
 export default debugTransformAlpha;
