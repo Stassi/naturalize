@@ -1,4 +1,4 @@
-import { applyTo, pipe } from 'ramda';
+import {apply, applyTo, pipe} from 'ramda';
 import applyAnd from './applyAnd';
 import headGreaterThanZero from './headGreaterThanZero';
 import mapApplyTo from './mapApplyTo';
@@ -12,12 +12,13 @@ const debugPredicateAlpha = pipe(
     headGreaterThanZero,
     debugAlias,
   ]),
-  x => applyAnd(
-    pipe(
-      debugLastThenApplyEquals(x),
-      pairHead(x),
-    ),
+  x => apply(pipe)(
+    mapApplyTo(x)([
+      debugLastThenApplyEquals,
+      pairHead,
+    ]),
   ),
+  applyAnd,
 );
 
 export default debugPredicateAlpha;
