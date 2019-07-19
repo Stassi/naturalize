@@ -1,19 +1,15 @@
-import { inc, not } from 'ramda';
-import mapApplyToAnd from './mapApplyToAnd';
+import { inc } from 'ramda';
 
-const debugLoopAlpha = (debugPredicates) => {
-  let start = 0;
+const debugLoopAlpha = (x) => {
+  let temp = 0;
 
-  const mapApplyStartToAnd = mapApplyToAnd(start);
-  const predicate = mapApplyStartToAnd(debugPredicates);
-  const notPredicate = not(predicate);
+  const predicate = x(temp);
 
-  while (!notPredicate) {
-    // console.log('Ignoring common prefix, incrementing start variable');
-    start = inc(start);
+  while (!predicate) {
+    temp = inc(temp);
   }
 
-  return start;
+  return temp;
 };
 
 export default debugLoopAlpha;
