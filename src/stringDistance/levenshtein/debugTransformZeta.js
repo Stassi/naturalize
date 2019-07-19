@@ -1,8 +1,5 @@
 import { dec, inc } from 'ramda';
 
-const CODES = [];
-const VECTOR = [];
-
 const debugTransformZeta = ({
   alpha,
   alphaLengthFinal,
@@ -10,14 +7,15 @@ const debugTransformZeta = ({
   betaLengthFinal,
   startWithoutPrefix,
 }) => {
-  const v0 = VECTOR;
+  const codes = [];
+  const vectors = [];
 
   let i = 0;
 
   while (i < betaLengthFinal) {
-    CODES[i] = beta.charCodeAt(startWithoutPrefix + i);
+    codes[i] = beta.charCodeAt(startWithoutPrefix + i);
     i = inc(i);
-    v0[dec(i)] = i;
+    vectors[dec(i)] = i;
   }
 
   let current = 0;
@@ -39,9 +37,9 @@ const debugTransformZeta = ({
       above = current;
 
       current = left;
-      left = v0[j];
+      left = vectors[j];
 
-      if (charA !== CODES[j]) {
+      if (charA !== codes[j]) {
         // Insertion
         if (left < current) {
           current = left;
@@ -55,7 +53,7 @@ const debugTransformZeta = ({
         current = inc(current);
       }
 
-      v0[j] = current;
+      vectors[j] = current;
     }
   }
 
