@@ -1,27 +1,42 @@
 import {
-  apply,
   applyTo,
+  last,
   pipe,
 } from 'ramda';
 import applyAnd from './applyAnd';
+import applyEquals from './applyEquals';
+import applyPipe from './applyPipe';
+import flipPair from './flipPair';
+import flipPairApplyPipe from './flipPairApplyPipe';
+import flipZipMapApplyUTF16Code from './flipZipMapApplyUTF16Code';
 import headGreaterThanZero from './headGreaterThanZero';
 import mapApplyTo from './mapApplyTo';
+import mapNegateBitwiseNot from './mapNegateBitwiseNot';
 import pairHead from './pairHead';
-import debugAlias from './debugAlias';
-import debugLastThenApplyEquals from './debugLastThenApplyEquals';
 
 const debugPredicateAlpha = pipe(
   mapApplyTo,
   applyTo([
     headGreaterThanZero,
-    debugAlias,
+    pipe(
+      mapNegateBitwiseNot,
+      flipZipMapApplyUTF16Code,
+    ),
   ]),
-  x => apply(pipe)(
-    mapApplyTo(x)([
-      debugLastThenApplyEquals,
-      pairHead,
-    ]),
-  ),
+  mapApplyTo,
+  flipPairApplyPipe,
+  applyPipe,
+  applyTo([
+    pipe(
+      last,
+      applyTo(
+        applyEquals,
+        flipPair,
+      ),
+      applyPipe,
+    ),
+    pairHead,
+  ]),
   applyAnd,
 );
 
