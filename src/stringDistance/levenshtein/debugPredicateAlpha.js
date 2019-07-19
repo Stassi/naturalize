@@ -1,4 +1,8 @@
-import {apply, applyTo, pipe} from 'ramda';
+import {
+  apply,
+  applyTo,
+  pipe,
+} from 'ramda';
 import applyAnd from './applyAnd';
 import headGreaterThanZero from './headGreaterThanZero';
 import mapApplyTo from './mapApplyTo';
