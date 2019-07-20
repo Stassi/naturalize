@@ -1,14 +1,11 @@
 import { pipe } from 'ramda';
 import list from './list';
+import triFlatten from './triFlatten';
 import debugTransformAlpha from './debugTransformAlpha';
 
-// TODO: Pointfree
-const debugTransformPrime = (strings) => {
-  const debugTransformAlphaBeta = debugTransformAlpha(strings);
-  const debugTransformAlphaBetaGamma = debugTransformAlphaBeta(strings);
-  return debugTransformAlphaBetaGamma(strings);
-};
-
-const levenshtein = pipe(list, debugTransformPrime);
+const levenshtein = pipe(
+  list,
+  triFlatten(debugTransformAlpha),
+);
 
 export default levenshtein;
