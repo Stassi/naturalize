@@ -1,8 +1,10 @@
-import damerauLevenshteinDistance from './stringDistance/damerauLevenshtein';
-import diceCoefficient from './stringDistance/diceCoefficient';
-import hammingDistance from './stringDistance/hamming';
-import jaroWinklerDistance from './stringDistance/jaroWinkler';
-import levenshteinDistance from './stringDistance/levenshtein';
+import {
+  damerauLevenshtein as damerauLevenshteinDistance,
+  dice as diceCoefficient,
+  hamming as hammingDistance,
+  jaroWinkler as jaroWinklerDistance,
+  levenshtein as levenshteinDistance,
+} from './distanceMetrics';
 
 export {
   damerauLevenshteinDistance,
