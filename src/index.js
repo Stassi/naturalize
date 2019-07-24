@@ -8,6 +8,7 @@ import {
   jaccard as jaccardDistance,
   jaro as jaroDistance,
   jaroWinkler as jaroWinklerDistance,
+  lcs as lcsDistance,
   levenshtein as levenshteinDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
@@ -22,6 +23,7 @@ export {
   jaccardDistance,
   jaroDistance,
   jaroWinklerDistance,
+  lcsDistance,
   levenshteinDistance,
   sorensenDiceDistance,
 };

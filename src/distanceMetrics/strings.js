@@ -7,7 +7,7 @@ import { distance as identity } from 'talisman/metrics/distance/identity';
 import { distance as jaccard } from 'talisman/metrics/distance/jaccard';
 import { distance as jaro } from 'talisman/metrics/distance/jaro';
 import { distance as jaroWinkler } from 'talisman/metrics/distance/jaro-winkler';
-import lcs from 'talisman/metrics/distance/lcs';
+import { distance as lcs } from 'talisman/metrics/distance/lcs';
 import length from 'talisman/metrics/distance/length';
 import levenshtein from 'talisman/metrics/distance/levenshtein';
 import { lig2, lig3 } from 'talisman/metrics/distance/lig';

@@ -10,6 +10,7 @@
       "jaccard": 1,
       "jaro": 1,
       "jaroWinkler": 1,
+      "lcs": 1,
       "levenshtein": 1,
       "sorensenDice": 1
     },
@@ -29,6 +30,7 @@
       "jaccard": 0.6666666666666667,
       "jaro": 0.33333333333333337,
       "jaroWinkler": 0.33333333333333337,
+      "lcs": 0.5,
       "levenshtein": 1,
       "sorensenDice": 1
     },
@@ -48,6 +50,7 @@
       "jaccard": 0.6666666666666667,
       "jaro": 0.33333333333333337,
       "jaroWinkler": 0.33333333333333337,
+      "lcs": 0.5,
       "levenshtein": 1,
       "sorensenDice": 1
     },
@@ -67,6 +70,7 @@
       "jaccard": 0.5,
       "jaro": 0.22222222222222232,
       "jaroWinkler": 0.20000000000000007,
+      "lcs": 0.6666666666666667,
       "levenshtein": 1,
       "sorensenDice": 1
     },
@@ -86,6 +90,7 @@
       "jaccard": 0.5714285714285714,
       "jaro": 0.25396825396825395,
       "jaroWinkler": 0.25396825396825395,
+      "lcs": 0.5714285714285714,
       "levenshtein": 3,
       "sorensenDice": 0.6363636363636364
     },
@@ -105,6 +110,7 @@
       "jaccard": 0.5,
       "jaro": 0.3076923076923078,
       "jaroWinkler": 0.3076923076923078,
+      "lcs": 0.8461538461538461,
       "levenshtein": 6,
       "sorensenDice": 0.75
     },
@@ -124,6 +130,7 @@
       "jaccard": 0.8,
       "jaro": 0.44444444444444453,
       "jaroWinkler": 0.44444444444444453,
+      "lcs": 0.6666666666666667,
       "levenshtein": 2,
       "sorensenDice": 1
     },
@@ -143,6 +150,7 @@
       "jaccard": 0.125,
       "jaro": 0.15384615384615385,
       "jaroWinkler": 0.15384615384615385,
+      "lcs": 0.8461538461538461,
       "levenshtein": 6,
       "sorensenDice": 0.6666666666666667
     },
@@ -162,6 +170,7 @@
       "jaccard": 0.6923076923076923,
       "jaro": 0.3737373737373737,
       "jaroWinkler": 0.3737373737373737,
+      "lcs": 0.75,
       "levenshtein": 7,
       "sorensenDice": 0.8095238095238095
     },
@@ -181,6 +190,7 @@
       "jaccard": 0.2857142857142857,
       "jaro": 0.19047619047619035,
       "jaroWinkler": 0.19047619047619035,
+      "lcs": 0.2857142857142857,
       "levenshtein": 3,
       "sorensenDice": 0.33333333333333337
     },
@@ -200,6 +210,7 @@
       "jaccard": 0.4,
       "jaro": 0.25,
       "jaroWinkler": 0.25,
+      "lcs": 0.5,
       "levenshtein": 6,
       "sorensenDice": 0.5714285714285714
     },
@@ -219,6 +230,7 @@
       "jaccard": 0.5833333333333333,
       "jaro": 0.40295815295815296,
       "jaroWinkler": 0.40295815295815296,
+      "lcs": 0.6666666666666667,
       "levenshtein": 6,
       "sorensenDice": 0.5238095238095238
     },
@@ -238,6 +250,7 @@
       "jaccard": 0.5,
       "jaro": 0.3583333333333333,
       "jaroWinkler": 0.3583333333333333,
+      "lcs": 0.7,
       "levenshtein": 5,
       "sorensenDice": 0.625
     },
@@ -257,6 +270,7 @@
       "jaccard": 0.8571428571428572,
       "jaro": 1,
       "jaroWinkler": 1,
+      "lcs": 0.8,
       "levenshtein": 5,
       "sorensenDice": 1
     },
@@ -276,6 +290,7 @@
       "jaccard": 0.15384615384615385,
       "jaro": 0.09523809523809523,
       "jaroWinkler": 0.05714285714285716,
+      "lcs": 0.5,
       "levenshtein": 2,
       "sorensenDice": 0.3076923076923077
     },
@@ -295,6 +310,7 @@
       "jaccard": 0,
       "jaro": 0.12179110615050226,
       "jaroWinkler": 0.07307466369030136,
+      "lcs": 0.24531516183986368,
       "levenshtein": 7,
       "sorensenDice": 0
     },
