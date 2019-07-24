@@ -4,7 +4,7 @@ import { distance as eudex } from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
 import { distance as identity } from 'talisman/metrics/distance/identity';
-import jaccard from 'talisman/metrics/distance/jaccard';
+import { distance as jaccard } from 'talisman/metrics/distance/jaccard';
 import { distance as jaro } from 'talisman/metrics/distance/jaro';
 import jaroWinkler from 'talisman/metrics/distance/jaro-winkler';
 import lcs from 'talisman/metrics/distance/lcs';
