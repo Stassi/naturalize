@@ -9,7 +9,7 @@
       "identity": 1,
       "jaccard": 1,
       "jaro": 1,
-      "jaroWinkler": 0,
+      "jaroWinkler": 1,
       "levenshtein": 1,
       "sorensenDice": 0
     },
@@ -28,7 +28,7 @@
       "identity": 1,
       "jaccard": 0.6666666666666667,
       "jaro": 0.33333333333333337,
-      "jaroWinkler": 0.6666666666666666,
+      "jaroWinkler": 0.33333333333333337,
       "levenshtein": 1,
       "sorensenDice": 0
     },
@@ -47,7 +47,7 @@
       "identity": 1,
       "jaccard": 0.6666666666666667,
       "jaro": 0.33333333333333337,
-      "jaroWinkler": 0.6666666666666666,
+      "jaroWinkler": 0.33333333333333337,
       "levenshtein": 1,
       "sorensenDice": 0
     },
@@ -66,7 +66,7 @@
       "identity": 1,
       "jaccard": 0.5,
       "jaro": 0.22222222222222232,
-      "jaroWinkler": 0.7999999999999999,
+      "jaroWinkler": 0.20000000000000007,
       "levenshtein": 1,
       "sorensenDice": 0
     },
@@ -85,7 +85,7 @@
       "identity": 1,
       "jaccard": 0.5714285714285714,
       "jaro": 0.25396825396825395,
-      "jaroWinkler": 0.746031746031746,
+      "jaroWinkler": 0.25396825396825395,
       "levenshtein": 3,
       "sorensenDice": 0.36363636363636365
     },
@@ -104,7 +104,7 @@
       "identity": 1,
       "jaccard": 0.5,
       "jaro": 0.3076923076923078,
-      "jaroWinkler": 0.6923076923076922,
+      "jaroWinkler": 0.3076923076923078,
       "levenshtein": 6,
       "sorensenDice": 0.25
     },
@@ -123,7 +123,7 @@
       "identity": 1,
       "jaccard": 0.8,
       "jaro": 0.44444444444444453,
-      "jaroWinkler": 0.5555555555555555,
+      "jaroWinkler": 0.44444444444444453,
       "levenshtein": 2,
       "sorensenDice": 0
     },
@@ -142,7 +142,7 @@
       "identity": 1,
       "jaccard": 0.125,
       "jaro": 0.15384615384615385,
-      "jaroWinkler": 0.8461538461538461,
+      "jaroWinkler": 0.15384615384615385,
       "levenshtein": 6,
       "sorensenDice": 0.3333333333333333
     },
@@ -161,7 +161,7 @@
       "identity": 1,
       "jaccard": 0.6923076923076923,
       "jaro": 0.3737373737373737,
-      "jaroWinkler": 0.6262626262626263,
+      "jaroWinkler": 0.3737373737373737,
       "levenshtein": 7,
       "sorensenDice": 0.19047619047619047
     },
@@ -180,7 +180,7 @@
       "identity": 1,
       "jaccard": 0.2857142857142857,
       "jaro": 0.19047619047619035,
-      "jaroWinkler": 0.8095238095238096,
+      "jaroWinkler": 0.19047619047619035,
       "levenshtein": 3,
       "sorensenDice": 0.6666666666666666
     },
@@ -199,7 +199,7 @@
       "identity": 1,
       "jaccard": 0.4,
       "jaro": 0.25,
-      "jaroWinkler": 0.75,
+      "jaroWinkler": 0.25,
       "levenshtein": 6,
       "sorensenDice": 0.42857142857142855
     },
@@ -218,7 +218,7 @@
       "identity": 1,
       "jaccard": 0.5833333333333333,
       "jaro": 0.40295815295815296,
-      "jaroWinkler": 0.597041847041847,
+      "jaroWinkler": 0.40295815295815296,
       "levenshtein": 6,
       "sorensenDice": 0.47619047619047616
     },
@@ -237,7 +237,7 @@
       "identity": 1,
       "jaccard": 0.5,
       "jaro": 0.3583333333333333,
-      "jaroWinkler": 0.6416666666666667,
+      "jaroWinkler": 0.3583333333333333,
       "levenshtein": 5,
       "sorensenDice": 0.375
     },
@@ -256,7 +256,7 @@
       "identity": 1,
       "jaccard": 0.8571428571428572,
       "jaro": 1,
-      "jaroWinkler": 0,
+      "jaroWinkler": 1,
       "levenshtein": 5,
       "sorensenDice": 0
     },
@@ -275,7 +275,7 @@
       "identity": 1,
       "jaccard": 0.15384615384615385,
       "jaro": 0.09523809523809523,
-      "jaroWinkler": 0.9428571428571428,
+      "jaroWinkler": 0.05714285714285716,
       "levenshtein": 2,
       "sorensenDice": 0.6923076923076923
     },
@@ -294,7 +294,7 @@
       "identity": 1,
       "jaccard": 0,
       "jaro": 0.12179110615050226,
-      "jaroWinkler": 0.9269253363096986,
+      "jaroWinkler": 0.07307466369030136,
       "levenshtein": 7,
       "sorensenDice": 1
     },
