@@ -1,10 +1,6 @@
 import bag from 'talisman/metrics/distance/bag';
-import canberra from 'talisman/metrics/distance/canberra';
-import chebyshev from 'talisman/metrics/distance/chebyshev';
-import cosine from 'talisman/metrics/distance/cosine';
 import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
 import dice from 'talisman/metrics/distance/dice';
-import euclidean from 'talisman/metrics/distance/euclidean';
 import eudex from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
@@ -16,9 +12,7 @@ import lcs from 'talisman/metrics/distance/lcs';
 import length from 'talisman/metrics/distance/length';
 import levenshtein from 'talisman/metrics/distance/levenshtein';
 import lig from 'talisman/metrics/distance/lig';
-import manhattan from 'talisman/metrics/distance/manhattan';
 import minhash from 'talisman/metrics/distance/minhash';
-import minkowski from 'talisman/metrics/distance/minkowski';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkan from 'talisman/metrics/distance/monge-elkan';
 import mra from 'talisman/metrics/distance/mra';
@@ -33,12 +27,8 @@ import tversky from 'talisman/metrics/distance/tversky';
 
 export {
   bag,
-  canberra,
-  chebyshev,
-  cosine,
   damerauLevenshtein,
   dice,
-  euclidean,
   eudex,
   guth,
   hamming,
@@ -50,9 +40,7 @@ export {
   length,
   levenshtein,
   lig,
-  manhattan,
   minhash,
-  minkowski,
   mlipns,
   mongeElkan,
   mra,

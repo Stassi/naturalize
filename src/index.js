@@ -4,7 +4,7 @@ import {
   hamming as hammingDistance,
   jaroWinkler as jaroWinklerDistance,
   levenshtein as levenshteinDistance,
-} from './distanceMetrics';
+} from './distanceMetrics/strings';
 
 export {
   damerauLevenshteinDistance,
