@@ -152,7 +152,7 @@ const [
 ] = samples;
 
 describe('#jaccardDistance', () => {
-  it('should return the bag distance', () => {
+  it('should return the jaccard distance', () => {
     expect(jaccardDistance(alpha, beta)).to.equal(alphaBeta);
     expect(jaccardDistance(gamma, delta)).to.equal(gammaDelta);
     expect(jaccardDistance(epsilon, zeta)).to.equal(epsilonZeta);

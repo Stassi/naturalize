@@ -152,7 +152,7 @@ const [
 ] = samples;
 
 describe('#identityDistance', () => {
-  it('should return the bag distance', () => {
+  it('should return the identity distance', () => {
     expect(identityDistance(alpha, beta)).to.equal(alphaBeta);
     expect(identityDistance(gamma, delta)).to.equal(gammaDelta);
     expect(identityDistance(epsilon, zeta)).to.equal(epsilonZeta);
