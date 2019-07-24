@@ -6,7 +6,7 @@ import samples from './samples';
 const [
   {
     distances: {
-      dice: alphaBeta,
+      sorensenDice: alphaBeta,
     },
     sample: [
       alpha,
@@ -15,7 +15,7 @@ const [
   },
   {
     distances: {
-      dice: gammaDelta,
+      sorensenDice: gammaDelta,
     },
     sample: [
       gamma,
@@ -24,7 +24,7 @@ const [
   },
   {
     distances: {
-      dice: epsilonZeta,
+      sorensenDice: epsilonZeta,
     },
     sample: [
       epsilon,
@@ -33,7 +33,7 @@ const [
   },
   {
     distances: {
-      dice: etaTheta,
+      sorensenDice: etaTheta,
     },
     sample: [
       eta,
@@ -42,7 +42,7 @@ const [
   },
   {
     distances: {
-      dice: iotaKappa,
+      sorensenDice: iotaKappa,
     },
     sample: [
       iota,
@@ -51,7 +51,7 @@ const [
   },
   {
     distances: {
-      dice: lambdaMu,
+      sorensenDice: lambdaMu,
     },
     sample: [
       lambda,
@@ -60,7 +60,7 @@ const [
   },
   {
     distances: {
-      dice: nuXi,
+      sorensenDice: nuXi,
     },
     sample: [
       nu,
@@ -69,7 +69,7 @@ const [
   },
   {
     distances: {
-      dice: omicronPi,
+      sorensenDice: omicronPi,
     },
     sample: [
       omicron,
@@ -78,7 +78,7 @@ const [
   },
   {
     distances: {
-      dice: rhoSigma,
+      sorensenDice: rhoSigma,
     },
     sample: [
       rho,
@@ -87,7 +87,7 @@ const [
   },
   {
     distances: {
-      dice: tauUpsilon,
+      sorensenDice: tauUpsilon,
     },
     sample: [
       tau,
@@ -96,7 +96,7 @@ const [
   },
   {
     distances: {
-      dice: phiChi,
+      sorensenDice: phiChi,
     },
     sample: [
       phi,
@@ -105,7 +105,7 @@ const [
   },
   {
     distances: {
-      dice: psiOmega,
+      sorensenDice: psiOmega,
     },
     sample: [
       psi,
@@ -114,7 +114,7 @@ const [
   },
   {
     distances: {
-      dice: bravoCharlie,
+      sorensenDice: bravoCharlie,
     },
     sample: [
       bravo,
@@ -123,7 +123,7 @@ const [
   },
   {
     distances: {
-      dice: echoFoxtrot,
+      sorensenDice: echoFoxtrot,
     },
     sample: [
       echo,
@@ -132,7 +132,7 @@ const [
   },
   {
     distances: {
-      dice: golfHotel,
+      sorensenDice: golfHotel,
     },
     sample: [
       golf,
@@ -141,7 +141,7 @@ const [
   },
   {
     distances: {
-      dice: indiaJuliett,
+      sorensenDice: indiaJuliett,
     },
     sample: [
       india,
