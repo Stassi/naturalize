@@ -1,6 +1,5 @@
 import bag from 'talisman/metrics/distance/bag';
 import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
-import dice from 'talisman/metrics/distance/dice';
 import eudex from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
@@ -21,14 +20,13 @@ import prefix from 'talisman/metrics/distance/prefix';
 import ratcliffObershelp from 'talisman/metrics/distance/ratcliff-obershelp';
 import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
-import sorensen from 'talisman/metrics/distance/sorensen';
+import sorensenDice from 'talisman/metrics/distance/dice';
 import suffix from 'talisman/metrics/distance/suffix';
 import tversky from 'talisman/metrics/distance/tversky';
 
 export {
   bag,
   damerauLevenshtein,
-  dice,
   eudex,
   guth,
   hamming,
@@ -50,7 +48,7 @@ export {
   ratcliffObershelp,
   sift4,
   smithWaterman,
-  sorensen,
+  sorensenDice,
   suffix,
   tversky,
 };
