@@ -9,6 +9,7 @@ import {
   jaro as jaroDistance,
   jaroWinkler as jaroWinklerDistance,
   lcs as lcsDistance,
+  length as lengthDistance,
   levenshtein as levenshteinDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
@@ -24,6 +25,7 @@ export {
   jaroDistance,
   jaroWinklerDistance,
   lcsDistance,
+  lengthDistance,
   levenshteinDistance,
   sorensenDiceDistance,
 };
