@@ -11,7 +11,7 @@ import jaroWinkler from 'talisman/metrics/distance/jaro-winkler';
 import lcs from 'talisman/metrics/distance/lcs';
 import length from 'talisman/metrics/distance/length';
 import levenshtein from 'talisman/metrics/distance/levenshtein';
-import lig from 'talisman/metrics/distance/lig';
+import { lig2, lig3 } from 'talisman/metrics/distance/lig';
 import minhash from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkan from 'talisman/metrics/distance/monge-elkan';
@@ -39,7 +39,8 @@ export {
   lcs,
   length,
   levenshtein,
-  lig,
+  lig2,
+  lig3,
   minhash,
   mlipns,
   mongeElkan,
