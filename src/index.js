@@ -1,4 +1,5 @@
 import {
+  bag as bagDistance,
   damerauLevenshtein as damerauLevenshteinDistance,
   hamming as hammingDistance,
   jaroWinkler as jaroWinklerDistance,
@@ -7,6 +8,7 @@ import {
 } from './distanceMetrics/strings';
 
 export {
+  bagDistance,
   damerauLevenshteinDistance,
   hammingDistance,
   jaroWinklerDistance,
