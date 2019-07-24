@@ -4,6 +4,7 @@
       "bag": 1,
       "damerauLevenshtein": 1,
       "dice": 0,
+      "eudex": 256,
       "hamming": 1,
       "jaroWinkler": 0,
       "levenshtein": 1
@@ -18,6 +19,7 @@
       "bag": 1,
       "damerauLevenshtein": 1,
       "dice": 0,
+      "eudex": 2,
       "hamming": 1,
       "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
@@ -32,6 +34,7 @@
       "bag": 1,
       "damerauLevenshtein": 1,
       "dice": 0,
+      "eudex": 256,
       "hamming": 1,
       "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
@@ -46,6 +49,7 @@
       "bag": 1,
       "damerauLevenshtein": 1,
       "dice": 0,
+      "eudex": 8,
       "hamming": 1,
       "jaroWinkler": 0.7999999999999999,
       "levenshtein": 1
@@ -60,6 +64,7 @@
       "bag": 3,
       "damerauLevenshtein": 3,
       "dice": 0.36363636363636365,
+      "eudex": 563,
       "hamming": null,
       "jaroWinkler": 0.746031746031746,
       "levenshtein": 3
@@ -74,6 +79,7 @@
       "bag": 6,
       "damerauLevenshtein": 6,
       "dice": 0.25,
+      "eudex": 643,
       "hamming": 6,
       "jaroWinkler": 0.6923076923076922,
       "levenshtein": 6
@@ -88,6 +94,7 @@
       "bag": 2,
       "damerauLevenshtein": 2,
       "dice": 0,
+      "eudex": 4,
       "hamming": 2,
       "jaroWinkler": 0.5555555555555555,
       "levenshtein": 2
@@ -102,6 +109,7 @@
       "bag": 6,
       "damerauLevenshtein": 6,
       "dice": 0.3333333333333333,
+      "eudex": 899,
       "hamming": null,
       "jaroWinkler": 0.8461538461538461,
       "levenshtein": 6
@@ -116,6 +124,7 @@
       "bag": 6,
       "damerauLevenshtein": 7,
       "dice": 0.19047619047619047,
+      "eudex": 566,
       "hamming": null,
       "jaroWinkler": 0.6262626262626263,
       "levenshtein": 7
@@ -130,6 +139,7 @@
       "bag": 2,
       "damerauLevenshtein": 3,
       "dice": 0.6666666666666666,
+      "eudex": 650,
       "hamming": 7,
       "jaroWinkler": 0.8095238095238096,
       "levenshtein": 3
@@ -144,6 +154,7 @@
       "bag": 2,
       "damerauLevenshtein": 6,
       "dice": 0.42857142857142855,
+      "eudex": 1003,
       "hamming": 8,
       "jaroWinkler": 0.75,
       "levenshtein": 6
@@ -158,6 +169,7 @@
       "bag": 5,
       "damerauLevenshtein": 6,
       "dice": 0.47619047619047616,
+      "eudex": 864,
       "hamming": null,
       "jaroWinkler": 0.597041847041847,
       "levenshtein": 6
@@ -172,6 +184,7 @@
       "bag": 5,
       "damerauLevenshtein": 5,
       "dice": 0.375,
+      "eudex": 272,
       "hamming": null,
       "jaroWinkler": 0.6416666666666667,
       "levenshtein": 5
@@ -186,6 +199,7 @@
       "bag": 4,
       "damerauLevenshtein": 5,
       "dice": 0,
+      "eudex": 414,
       "hamming": null,
       "jaroWinkler": 0,
       "levenshtein": 5
@@ -200,6 +214,7 @@
       "bag": 2,
       "damerauLevenshtein": 2,
       "dice": 0.6923076923076923,
+      "eudex": null,
       "hamming": 2,
       "jaroWinkler": 0.9428571428571428,
       "levenshtein": 2
@@ -214,6 +229,7 @@
       "bag": 7,
       "damerauLevenshtein": 7,
       "dice": 1,
+      "eudex": 0,
       "hamming": null,
       "jaroWinkler": 0.9269253363096986,
       "levenshtein": 7

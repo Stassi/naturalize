@@ -1,6 +1,6 @@
 import bag from 'talisman/metrics/distance/bag';
 import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
-import eudex from 'talisman/metrics/distance/eudex';
+import { distance as eudex } from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
 import identity from 'talisman/metrics/distance/identity';
