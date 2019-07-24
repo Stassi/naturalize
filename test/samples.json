@@ -7,6 +7,7 @@
       "eudex": 256,
       "guth": 1,
       "hamming": 1,
+      "identity": 1,
       "jaroWinkler": 0,
       "levenshtein": 1
     },
@@ -23,6 +24,7 @@
       "eudex": 2,
       "guth": 1,
       "hamming": 1,
+      "identity": 1,
       "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
     },
@@ -39,6 +41,7 @@
       "eudex": 256,
       "guth": 0,
       "hamming": 1,
+      "identity": 1,
       "jaroWinkler": 0.6666666666666666,
       "levenshtein": 1
     },
@@ -55,6 +58,7 @@
       "eudex": 8,
       "guth": 0,
       "hamming": 1,
+      "identity": 1,
       "jaroWinkler": 0.7999999999999999,
       "levenshtein": 1
     },
@@ -71,6 +75,7 @@
       "eudex": 563,
       "guth": 1,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.746031746031746,
       "levenshtein": 3
     },
@@ -87,6 +92,7 @@
       "eudex": 643,
       "guth": 1,
       "hamming": 6,
+      "identity": 1,
       "jaroWinkler": 0.6923076923076922,
       "levenshtein": 6
     },
@@ -103,6 +109,7 @@
       "eudex": 4,
       "guth": 2,
       "hamming": 2,
+      "identity": 1,
       "jaroWinkler": 0.5555555555555555,
       "levenshtein": 2
     },
@@ -119,6 +126,7 @@
       "eudex": 899,
       "guth": 9,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.8461538461538461,
       "levenshtein": 6
     },
@@ -135,6 +143,7 @@
       "eudex": 566,
       "guth": 2,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.6262626262626263,
       "levenshtein": 7
     },
@@ -151,6 +160,7 @@
       "eudex": 650,
       "guth": 1,
       "hamming": 7,
+      "identity": 1,
       "jaroWinkler": 0.8095238095238096,
       "levenshtein": 3
     },
@@ -167,6 +177,7 @@
       "eudex": 1003,
       "guth": 4,
       "hamming": 8,
+      "identity": 1,
       "jaroWinkler": 0.75,
       "levenshtein": 6
     },
@@ -183,6 +194,7 @@
       "eudex": 864,
       "guth": 4,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.597041847041847,
       "levenshtein": 6
     },
@@ -199,6 +211,7 @@
       "eudex": 272,
       "guth": 5,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.6416666666666667,
       "levenshtein": 5
     },
@@ -215,6 +228,7 @@
       "eudex": 414,
       "guth": 5,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0,
       "levenshtein": 5
     },
@@ -231,6 +245,7 @@
       "eudex": null,
       "guth": 0,
       "hamming": 2,
+      "identity": 1,
       "jaroWinkler": 0.9428571428571428,
       "levenshtein": 2
     },
@@ -247,6 +262,7 @@
       "eudex": 0,
       "guth": 244,
       "hamming": null,
+      "identity": 1,
       "jaroWinkler": 0.9269253363096986,
       "levenshtein": 7
     },

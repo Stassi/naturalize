@@ -3,7 +3,7 @@ import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
 import { distance as eudex } from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
-import identity from 'talisman/metrics/distance/identity';
+import { distance as identity } from 'talisman/metrics/distance/identity';
 import jaccard from 'talisman/metrics/distance/jaccard';
 import jaro from 'talisman/metrics/distance/jaro';
 import jaroWinkler from 'talisman/metrics/distance/jaro-winkler';
