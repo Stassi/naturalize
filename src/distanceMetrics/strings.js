@@ -20,7 +20,7 @@ import prefix from 'talisman/metrics/distance/prefix';
 import ratcliffObershelp from 'talisman/metrics/distance/ratcliff-obershelp';
 import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
-import sorensenDice from 'talisman/metrics/distance/dice';
+import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import suffix from 'talisman/metrics/distance/suffix';
 import tversky from 'talisman/metrics/distance/tversky';
 

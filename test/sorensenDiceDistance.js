@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { sorensenDiceCoefficient } from '../src';
+import { sorensenDiceDistance } from '../src';
 import samples from './samples';
 
 const [
@@ -150,23 +150,23 @@ const [
   },
 ] = samples;
 
-describe('#sorensenDiceCoefficient', () => {
-  it('should return the Sørensen–Dice coefficient', () => {
-    expect(sorensenDiceCoefficient(alpha, beta)).to.equal(alphaBeta);
-    expect(sorensenDiceCoefficient(gamma, delta)).to.equal(gammaDelta);
-    expect(sorensenDiceCoefficient(epsilon, zeta)).to.equal(epsilonZeta);
-    expect(sorensenDiceCoefficient(eta, theta)).to.equal(etaTheta);
-    expect(sorensenDiceCoefficient(iota, kappa)).to.equal(iotaKappa);
-    expect(sorensenDiceCoefficient(lambda, mu)).to.equal(lambdaMu);
-    expect(sorensenDiceCoefficient(nu, xi)).to.equal(nuXi);
-    expect(sorensenDiceCoefficient(omicron, pi)).to.equal(omicronPi);
-    expect(sorensenDiceCoefficient(rho, sigma)).to.equal(rhoSigma);
-    expect(sorensenDiceCoefficient(tau, upsilon)).to.equal(tauUpsilon);
-    expect(sorensenDiceCoefficient(phi, chi)).to.equal(phiChi);
-    expect(sorensenDiceCoefficient(psi, omega)).to.equal(psiOmega);
-    expect(sorensenDiceCoefficient(bravo, charlie)).to.equal(bravoCharlie);
-    expect(sorensenDiceCoefficient(echo, foxtrot)).to.equal(echoFoxtrot);
-    expect(sorensenDiceCoefficient(golf, hotel)).to.equal(golfHotel);
-    expect(sorensenDiceCoefficient(india, juliett)).to.equal(indiaJuliett);
+describe('#sorensenDiceDistance', () => {
+  it('should return the Sørensen–Dice distance', () => {
+    expect(sorensenDiceDistance(alpha, beta)).to.equal(alphaBeta);
+    expect(sorensenDiceDistance(gamma, delta)).to.equal(gammaDelta);
+    expect(sorensenDiceDistance(epsilon, zeta)).to.equal(epsilonZeta);
+    expect(sorensenDiceDistance(eta, theta)).to.equal(etaTheta);
+    expect(sorensenDiceDistance(iota, kappa)).to.equal(iotaKappa);
+    expect(sorensenDiceDistance(lambda, mu)).to.equal(lambdaMu);
+    expect(sorensenDiceDistance(nu, xi)).to.equal(nuXi);
+    expect(sorensenDiceDistance(omicron, pi)).to.equal(omicronPi);
+    expect(sorensenDiceDistance(rho, sigma)).to.equal(rhoSigma);
+    expect(sorensenDiceDistance(tau, upsilon)).to.equal(tauUpsilon);
+    expect(sorensenDiceDistance(phi, chi)).to.equal(phiChi);
+    expect(sorensenDiceDistance(psi, omega)).to.equal(psiOmega);
+    expect(sorensenDiceDistance(bravo, charlie)).to.equal(bravoCharlie);
+    expect(sorensenDiceDistance(echo, foxtrot)).to.equal(echoFoxtrot);
+    expect(sorensenDiceDistance(golf, hotel)).to.equal(golfHotel);
+    expect(sorensenDiceDistance(india, juliett)).to.equal(indiaJuliett);
   });
 });
