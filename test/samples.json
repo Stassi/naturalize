@@ -17,6 +17,7 @@
       "lig3": 1,
       "minHash": 1,
       "mlipns": 1,
+      "mongeElkan": 0,
       "sorensenDice": 1
     },
     "sample": [
@@ -42,6 +43,7 @@
       "lig3": 0.33333333333333337,
       "minHash": 0.5,
       "mlipns": 1,
+      "mongeElkan": 0.5,
       "sorensenDice": 1
     },
     "sample": [
@@ -67,6 +69,7 @@
       "lig3": 0.33333333333333337,
       "minHash": 0.5,
       "mlipns": 1,
+      "mongeElkan": 0.5,
       "sorensenDice": 1
     },
     "sample": [
@@ -92,6 +95,7 @@
       "lig3": 0.19999999999999996,
       "minHash": 0.33333333333333337,
       "mlipns": 1,
+      "mongeElkan": 0.6666666666666666,
       "sorensenDice": 1
     },
     "sample": [
@@ -117,6 +121,7 @@
       "lig3": 0.2727272727272727,
       "minHash": null,
       "mlipns": 1,
+      "mongeElkan": 0.6666666666666666,
       "sorensenDice": 0.6363636363636364
     },
     "sample": [
@@ -142,6 +147,7 @@
       "lig3": 0.30000000000000004,
       "minHash": 0.46153846153846156,
       "mlipns": 0,
+      "mongeElkan": 0.5384615384615384,
       "sorensenDice": 0.75
     },
     "sample": [
@@ -167,6 +173,7 @@
       "lig3": 0.5,
       "minHash": 0.6666666666666667,
       "mlipns": 1,
+      "mongeElkan": 0.3333333333333333,
       "sorensenDice": 1
     },
     "sample": [
@@ -192,6 +199,7 @@
       "lig3": 0.30000000000000004,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 1,
       "sorensenDice": 0.6666666666666667
     },
     "sample": [
@@ -217,6 +225,7 @@
       "lig3": 0.4117647058823529,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 0.6363636363636364,
       "sorensenDice": 0.8095238095238095
     },
     "sample": [
@@ -242,6 +251,7 @@
       "lig3": 0.2727272727272727,
       "minHash": 1,
       "mlipns": 0,
+      "mongeElkan": 0.8571428571428571,
       "sorensenDice": 0.33333333333333337
     },
     "sample": [
@@ -267,6 +277,7 @@
       "lig3": 0.6,
       "minHash": 1,
       "mlipns": 0,
+      "mongeElkan": 0.75,
       "sorensenDice": 0.5714285714285714
     },
     "sample": [
@@ -292,6 +303,7 @@
       "lig3": 0.33333333333333337,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 0.7272727272727273,
       "sorensenDice": 0.5238095238095238
     },
     "sample": [
@@ -317,6 +329,7 @@
       "lig3": 0.33333333333333337,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 0.625,
       "sorensenDice": 0.625
     },
     "sample": [
@@ -342,6 +355,7 @@
       "lig3": 1,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 0.2,
       "sorensenDice": 1
     },
     "sample": [
@@ -367,6 +381,7 @@
       "lig3": 0.07692307692307687,
       "minHash": 0.1428571428571429,
       "mlipns": 1,
+      "mongeElkan": 0.8571428571428571,
       "sorensenDice": 0.3076923076923077
     },
     "sample": [
@@ -392,6 +407,7 @@
       "lig3": 0.005998286203941716,
       "minHash": null,
       "mlipns": 0,
+      "mongeElkan": 1,
       "sorensenDice": 0
     },
     "sample": [

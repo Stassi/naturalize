@@ -15,6 +15,7 @@ import {
   lig3 as lig3Distance,
   minHash as minHashDistance,
   mlipns as mlipnsDistance,
+  mongeElkan as mongeElkanDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -35,5 +36,6 @@ export {
   lig3Distance,
   minHashDistance,
   mlipnsDistance,
+  mongeElkanDistance,
   sorensenDiceDistance,
 };

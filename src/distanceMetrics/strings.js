@@ -1,9 +1,13 @@
+/* eslint-disable implicit-arrow-linebreak */
 import bag from 'talisman/metrics/distance/bag';
 import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
 import { distance as eudex } from 'talisman/metrics/distance/eudex';
 import guth from 'talisman/metrics/distance/guth';
 import hamming from 'talisman/metrics/distance/hamming';
-import { distance as identity } from 'talisman/metrics/distance/identity';
+import {
+  distance as identity,
+  similarity as identitySimilarity,
+} from 'talisman/metrics/distance/identity';
 import { distance as jaccard } from 'talisman/metrics/distance/jaccard';
 import { distance as jaro } from 'talisman/metrics/distance/jaro';
 import { distance as jaroWinkler } from 'talisman/metrics/distance/jaro-winkler';
@@ -16,7 +20,7 @@ import {
 } from 'talisman/metrics/distance/lig';
 import { distance as minHash } from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
-import mongeElkan from 'talisman/metrics/distance/monge-elkan';
+import mongeElkanWithoutSimilarity from 'talisman/metrics/distance/monge-elkan';
 import mra from 'talisman/metrics/distance/mra';
 import overlap from 'talisman/metrics/distance/overlap';
 import prefix from 'talisman/metrics/distance/prefix';
@@ -31,6 +35,9 @@ import {
 } from './toggleDistanceOrSimilarity';
 
 const [lig2, lig3] = mapToDistance([lig2Similarity, lig3Similarity]);
+
+const mongeElkan = (similarity = identitySimilarity) => (...args) =>
+  mongeElkanWithoutSimilarity(similarity, ...args);
 
 export {
   bag,
