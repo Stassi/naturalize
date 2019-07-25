@@ -21,6 +21,7 @@ import {
   prefix as prefixDistance,
   ratcliffObershelp as ratcliffObershelpDistance,
   sift4 as sift4Distance,
+  smithWaterman as smithWatermanDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -47,5 +48,6 @@ export {
   prefixDistance,
   ratcliffObershelpDistance,
   sift4Distance,
+  smithWatermanDistance,
   sorensenDiceDistance,
 };
