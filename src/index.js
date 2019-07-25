@@ -13,6 +13,7 @@ import {
   levenshtein as levenshteinDistance,
   lig2 as lig2Distance,
   lig3 as lig3Distance,
+  minHash as minHashDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -31,5 +32,6 @@ export {
   levenshteinDistance,
   lig2Distance,
   lig3Distance,
+  minHashDistance,
   sorensenDiceDistance,
 };

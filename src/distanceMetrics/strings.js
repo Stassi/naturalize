@@ -14,7 +14,7 @@ import {
   lig2 as lig2Similarity,
   lig3 as lig3Similarity,
 } from 'talisman/metrics/distance/lig';
-import minhash from 'talisman/metrics/distance/minhash';
+import { distance as minHash } from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkan from 'talisman/metrics/distance/monge-elkan';
 import mra from 'talisman/metrics/distance/mra';
@@ -47,7 +47,7 @@ export {
   levenshtein,
   lig2,
   lig3,
-  minhash,
+  minHash,
   mlipns,
   mongeElkan,
   mra,
