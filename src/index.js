@@ -20,6 +20,7 @@ import {
   overlap as overlapDistance,
   prefix as prefixDistance,
   ratcliffObershelp as ratcliffObershelpDistance,
+  sift4 as sift4Distance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -45,5 +46,6 @@ export {
   overlapDistance,
   prefixDistance,
   ratcliffObershelpDistance,
+  sift4Distance,
   sorensenDiceDistance,
 };

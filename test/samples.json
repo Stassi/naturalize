@@ -30,6 +30,7 @@
       "overlap": 1,
       "prefix": 1,
       "ratcliffObershelp": 1,
+      "sift4": 1,
       "sorensenDice": 1
     },
     "sample": [
@@ -68,6 +69,7 @@
       "overlap": 0.5,
       "prefix": 0.5,
       "ratcliffObershelp": 0.5,
+      "sift4": 1,
       "sorensenDice": 1
     },
     "sample": [
@@ -106,6 +108,7 @@
       "overlap": 0.5,
       "prefix": 1,
       "ratcliffObershelp": 0.5,
+      "sift4": 1,
       "sorensenDice": 1
     },
     "sample": [
@@ -144,6 +147,7 @@
       "overlap": 0.33333333333333337,
       "prefix": 0.6666666666666667,
       "ratcliffObershelp": 0.33333333333333337,
+      "sift4": 1,
       "sorensenDice": 1
     },
     "sample": [
@@ -182,6 +186,7 @@
       "overlap": 0.4,
       "prefix": 1,
       "ratcliffObershelp": 0.3846153846153846,
+      "sift4": 3,
       "sorensenDice": 0.6363636363636364
     },
     "sample": [
@@ -220,6 +225,7 @@
       "overlap": 0.125,
       "prefix": 1,
       "ratcliffObershelp": 0.46153846153846156,
+      "sift4": 6,
       "sorensenDice": 0.75
     },
     "sample": [
@@ -258,6 +264,7 @@
       "overlap": 0.6666666666666667,
       "prefix": 0.6666666666666667,
       "ratcliffObershelp": 0.6666666666666667,
+      "sift4": 2,
       "sorensenDice": 1
     },
     "sample": [
@@ -296,6 +303,7 @@
       "overlap": 0,
       "prefix": 1,
       "ratcliffObershelp": 0.30000000000000004,
+      "sift4": 10,
       "sorensenDice": 0.6666666666666667
     },
     "sample": [
@@ -334,6 +342,7 @@
       "overlap": 0.5,
       "prefix": 1,
       "ratcliffObershelp": 0.4782608695652174,
+      "sift4": 6,
       "sorensenDice": 0.8095238095238095
     },
     "sample": [
@@ -372,6 +381,7 @@
       "overlap": 0.16666666666666663,
       "prefix": 1,
       "ratcliffObershelp": 0.2857142857142857,
+      "sift4": 2,
       "sorensenDice": 0.33333333333333337
     },
     "sample": [
@@ -410,6 +420,7 @@
       "overlap": 0.25,
       "prefix": 1,
       "ratcliffObershelp": 0.375,
+      "sift4": 4,
       "sorensenDice": 0.5714285714285714
     },
     "sample": [
@@ -448,6 +459,7 @@
       "overlap": 0.375,
       "prefix": 1,
       "ratcliffObershelp": 0.3913043478260869,
+      "sift4": 10,
       "sorensenDice": 0.5238095238095238
     },
     "sample": [
@@ -486,6 +498,7 @@
       "overlap": 0.2857142857142857,
       "prefix": 0.75,
       "ratcliffObershelp": 0.4444444444444444,
+      "sift4": 7,
       "sorensenDice": 0.625
     },
     "sample": [
@@ -524,6 +537,7 @@
       "overlap": 0.6666666666666667,
       "prefix": 1,
       "ratcliffObershelp": 0.75,
+      "sift4": 4,
       "sorensenDice": 1
     },
     "sample": [
@@ -562,6 +576,7 @@
       "overlap": 0.08333333333333337,
       "prefix": 0.7142857142857143,
       "ratcliffObershelp": 0.1428571428571429,
+      "sift4": 2,
       "sorensenDice": 0.3076923076923077
     },
     "sample": [
@@ -600,6 +615,7 @@
       "overlap": 0,
       "prefix": 0.7620689655172413,
       "ratcliffObershelp": 0.005998286203941716,
+      "sift4": 336,
       "sorensenDice": 0
     },
     "sample": [
