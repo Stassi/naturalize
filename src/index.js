@@ -11,6 +11,8 @@ import {
   lcs as lcsDistance,
   length as lengthDistance,
   levenshtein as levenshteinDistance,
+  lig2 as lig2Distance,
+  lig3 as lig3Distance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -27,5 +29,7 @@ export {
   lcsDistance,
   lengthDistance,
   levenshteinDistance,
+  lig2Distance,
+  lig3Distance,
   sorensenDiceDistance,
 };

@@ -10,7 +10,10 @@ import { distance as jaroWinkler } from 'talisman/metrics/distance/jaro-winkler'
 import { distance as lcs } from 'talisman/metrics/distance/lcs';
 import { distance as length } from 'talisman/metrics/distance/length';
 import levenshtein from 'talisman/metrics/distance/levenshtein';
-import { lig2, lig3 } from 'talisman/metrics/distance/lig';
+import {
+  lig2 as lig2Similarity,
+  lig3 as lig3Similarity,
+} from 'talisman/metrics/distance/lig';
 import minhash from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkan from 'talisman/metrics/distance/monge-elkan';
@@ -23,6 +26,11 @@ import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import suffix from 'talisman/metrics/distance/suffix';
 import tversky from 'talisman/metrics/distance/tversky';
+import {
+  mapToggleDistanceOrSimilarity as mapToDistance,
+} from '../toggleDistanceOrSimilarity';
+
+const [lig2, lig3] = mapToDistance([lig2Similarity, lig3Similarity]);
 
 export {
   bag,
