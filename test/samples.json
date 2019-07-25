@@ -32,7 +32,8 @@
       "ratcliffObershelp": 1,
       "sift4": 1,
       "smithWaterman": 0,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 1
     },
     "sample": [
       "a",
@@ -72,7 +73,8 @@
       "ratcliffObershelp": 0.5,
       "sift4": 1,
       "smithWaterman": 1,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 1
     },
     "sample": [
       "ab",
@@ -112,7 +114,8 @@
       "ratcliffObershelp": 0.5,
       "sift4": 1,
       "smithWaterman": 1,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 0.5
     },
     "sample": [
       "ac",
@@ -152,7 +155,8 @@
       "ratcliffObershelp": 0.33333333333333337,
       "sift4": 1,
       "smithWaterman": 2,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 0.6666666666666667
     },
     "sample": [
       "abc",
@@ -192,7 +196,8 @@
       "ratcliffObershelp": 0.3846153846153846,
       "sift4": 3,
       "smithWaterman": 4,
-      "sorensenDice": 0.6363636363636364
+      "sorensenDice": 0.6363636363636364,
+      "suffix": 1
     },
     "sample": [
       "kitten",
@@ -232,7 +237,8 @@
       "ratcliffObershelp": 0.46153846153846156,
       "sift4": 6,
       "smithWaterman": 7,
-      "sorensenDice": 0.75
+      "sorensenDice": 0.75,
+      "suffix": 1
     },
     "sample": [
       "1ab2cd34ef5g6",
@@ -272,7 +278,8 @@
       "ratcliffObershelp": 0.6666666666666667,
       "sift4": 2,
       "smithWaterman": 1,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 1
     },
     "sample": [
       "cat",
@@ -312,7 +319,8 @@
       "ratcliffObershelp": 0.30000000000000004,
       "sift4": 10,
       "smithWaterman": 3,
-      "sorensenDice": 0.6666666666666667
+      "sorensenDice": 0.6666666666666667,
+      "suffix": 1
     },
     "sample": [
       "abcdefg",
@@ -352,7 +360,8 @@
       "ratcliffObershelp": 0.4782608695652174,
       "sift4": 6,
       "smithWaterman": 5,
-      "sorensenDice": 0.8095238095238095
+      "sorensenDice": 0.8095238095238095,
+      "suffix": 0.7272727272727273
     },
     "sample": [
       "javawasneat",
@@ -392,7 +401,8 @@
       "ratcliffObershelp": 0.2857142857142857,
       "sift4": 2,
       "smithWaterman": 5,
-      "sorensenDice": 0.33333333333333337
+      "sorensenDice": 0.33333333333333337,
+      "suffix": 1
     },
     "sample": [
       "example",
@@ -432,7 +442,8 @@
       "ratcliffObershelp": 0.375,
       "sift4": 4,
       "smithWaterman": 4,
-      "sorensenDice": 0.5714285714285714
+      "sorensenDice": 0.5714285714285714,
+      "suffix": 1
     },
     "sample": [
       "sturgeon",
@@ -472,7 +483,8 @@
       "ratcliffObershelp": 0.3913043478260869,
       "sift4": 10,
       "smithWaterman": 6,
-      "sorensenDice": 0.5238095238095238
+      "sorensenDice": 0.5238095238095238,
+      "suffix": 0.6363636363636364
     },
     "sample": [
       "levenshtein",
@@ -512,7 +524,8 @@
       "ratcliffObershelp": 0.4444444444444444,
       "sift4": 7,
       "smithWaterman": 3,
-      "sorensenDice": 0.625
+      "sorensenDice": 0.625,
+      "suffix": 0.625
     },
     "sample": [
       "distance",
@@ -552,7 +565,8 @@
       "ratcliffObershelp": 0.75,
       "sift4": 4,
       "smithWaterman": 1,
-      "sorensenDice": 1
+      "sorensenDice": 1,
+      "suffix": 1
     },
     "sample": [
       "abcde",
@@ -592,7 +606,8 @@
       "ratcliffObershelp": 0.1428571428571429,
       "sift4": 2,
       "smithWaterman": 12,
-      "sorensenDice": 0.3076923076923077
+      "sorensenDice": 0.3076923076923077,
+      "suffix": 0.9285714285714286
     },
     "sample": [
       "因為我是中國人所以我會說中文",
@@ -632,7 +647,8 @@
       "ratcliffObershelp": 0.005998286203941716,
       "sift4": 336,
       "smithWaterman": 573,
-      "sorensenDice": 0
+      "sorensenDice": 0,
+      "suffix": 0.2362068965517241
     },
     "sample": [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",

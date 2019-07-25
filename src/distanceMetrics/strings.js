@@ -30,7 +30,7 @@ import {
 import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
-import suffix from 'talisman/metrics/distance/suffix';
+import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tversky from 'talisman/metrics/distance/tversky';
 import {
   mapToggleDistanceOrSimilarity as mapToDistance,

@@ -23,6 +23,7 @@ import {
   sift4 as sift4Distance,
   smithWaterman as smithWatermanDistance,
   sorensenDice as sorensenDiceDistance,
+  suffix as suffixDistance,
 } from './distanceMetrics/strings';
 
 export {
@@ -50,4 +51,5 @@ export {
   sift4Distance,
   smithWatermanDistance,
   sorensenDiceDistance,
+  suffixDistance,
 };
