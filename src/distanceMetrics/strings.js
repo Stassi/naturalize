@@ -28,7 +28,7 @@ import suffix from 'talisman/metrics/distance/suffix';
 import tversky from 'talisman/metrics/distance/tversky';
 import {
   mapToggleDistanceOrSimilarity as mapToDistance,
-} from '../toggleDistanceOrSimilarity';
+} from './toggleDistanceOrSimilarity';
 
 const [lig2, lig3] = mapToDistance([lig2Similarity, lig3Similarity]);
 
