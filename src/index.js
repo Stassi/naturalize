@@ -17,6 +17,7 @@ import {
   minHash as minHashDistance,
   mlipns as mlipnsDistance,
   mongeElkan as mongeElkanDistance,
+  overlap as overlapDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -39,5 +40,6 @@ export {
   mlipnsDistance,
   mongeElkanDistance,
   mraComparison,
+  overlapDistance,
   sorensenDiceDistance,
 };

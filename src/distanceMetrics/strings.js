@@ -22,7 +22,7 @@ import { distance as minHash } from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkanWithoutSimilarity from 'talisman/metrics/distance/monge-elkan';
 import mraComparison from 'talisman/metrics/distance/mra';
-import overlap from 'talisman/metrics/distance/overlap';
+import overlapSimilarity from 'talisman/metrics/distance/overlap';
 import prefix from 'talisman/metrics/distance/prefix';
 import ratcliffObershelp from 'talisman/metrics/distance/ratcliff-obershelp';
 import sift4 from 'talisman/metrics/distance/sift4';
@@ -34,7 +34,15 @@ import {
   mapToggleDistanceOrSimilarity as mapToDistance,
 } from './toggleDistanceOrSimilarity';
 
-const [lig2, lig3] = mapToDistance([lig2Similarity, lig3Similarity]);
+const [
+  lig2,
+  lig3,
+  overlap,
+] = mapToDistance([
+  lig2Similarity,
+  lig3Similarity,
+  overlapSimilarity,
+]);
 
 const mongeElkan = (similarity = identitySimilarity) => (...args) =>
   mongeElkanWithoutSimilarity(similarity, ...args);
