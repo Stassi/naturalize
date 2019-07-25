@@ -19,6 +19,7 @@ import {
   mongeElkan as mongeElkanDistance,
   overlap as overlapDistance,
   prefix as prefixDistance,
+  ratcliffObershelp as ratcliffObershelpDistance,
   sorensenDice as sorensenDiceDistance,
 } from './distanceMetrics/strings';
 
@@ -43,5 +44,6 @@ export {
   mraComparison,
   overlapDistance,
   prefixDistance,
+  ratcliffObershelpDistance,
   sorensenDiceDistance,
 };
