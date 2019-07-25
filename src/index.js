@@ -1,4 +1,5 @@
 import {
+  mraComparison,
   bag as bagDistance,
   damerauLevenshtein as damerauLevenshteinDistance,
   eudex as eudexDistance,
@@ -37,5 +38,6 @@ export {
   minHashDistance,
   mlipnsDistance,
   mongeElkanDistance,
+  mraComparison,
   sorensenDiceDistance,
 };

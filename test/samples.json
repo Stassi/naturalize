@@ -18,6 +18,15 @@
       "minHash": 1,
       "mlipns": 1,
       "mongeElkan": 0,
+      "mra": {
+        "codex": [
+          "A",
+          "B"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -44,6 +53,15 @@
       "minHash": 0.5,
       "mlipns": 1,
       "mongeElkan": 0.5,
+      "mra": {
+        "codex": [
+          "AB",
+          "AC"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -70,6 +88,15 @@
       "minHash": 0.5,
       "mlipns": 1,
       "mongeElkan": 0.5,
+      "mra": {
+        "codex": [
+          "AC",
+          "BC"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -96,6 +123,15 @@
       "minHash": 0.33333333333333337,
       "mlipns": 1,
       "mongeElkan": 0.6666666666666666,
+      "mra": {
+        "codex": [
+          "ABC",
+          "AXC"
+        ],
+        "matching": true,
+        "minimum": 4,
+        "similarity": 5
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -122,6 +158,15 @@
       "minHash": null,
       "mlipns": 1,
       "mongeElkan": 0.6666666666666666,
+      "mra": {
+        "codex": [
+          "KTN",
+          "STNG"
+        ],
+        "matching": true,
+        "minimum": 4,
+        "similarity": 4
+      },
       "sorensenDice": 0.6363636363636364
     },
     "sample": [
@@ -148,6 +193,15 @@
       "minHash": 0.46153846153846156,
       "mlipns": 0,
       "mongeElkan": 0.5384615384615384,
+      "mra": {
+        "codex": [
+          "ABCDFG",
+          "XBXXGX"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
       "sorensenDice": 0.75
     },
     "sample": [
@@ -174,6 +228,15 @@
       "minHash": 0.6666666666666667,
       "mlipns": 1,
       "mongeElkan": 0.3333333333333333,
+      "mra": {
+        "codex": [
+          "CT",
+          "CW"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -200,6 +263,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 1,
+      "mra": {
+        "codex": [
+          "ABCDFG",
+          "XBXXGX"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
       "sorensenDice": 0.6666666666666667
     },
     "sample": [
@@ -226,6 +298,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 0.6363636363636364,
+      "mra": {
+        "codex": [
+          "JVWSNT",
+          "SCLGRT"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
       "sorensenDice": 0.8095238095238095
     },
     "sample": [
@@ -252,6 +333,15 @@
       "minHash": 1,
       "mlipns": 0,
       "mongeElkan": 0.8571428571428571,
+      "mra": {
+        "codex": [
+          "EXMPL",
+          "SMPLS"
+        ],
+        "matching": false,
+        "minimum": 3,
+        "similarity": 1
+      },
       "sorensenDice": 0.33333333333333337
     },
     "sample": [
@@ -278,6 +368,15 @@
       "minHash": 1,
       "mlipns": 0,
       "mongeElkan": 0.75,
+      "mra": {
+        "codex": [
+          "STRGN",
+          "URGTLY"
+        ],
+        "matching": false,
+        "minimum": 3,
+        "similarity": 0
+      },
       "sorensenDice": 0.5714285714285714
     },
     "sample": [
@@ -304,6 +403,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 0.7272727272727273,
+      "mra": {
+        "codex": [
+          "LVNHTN",
+          "FRNSTN"
+        ],
+        "matching": true,
+        "minimum": 2,
+        "similarity": 3
+      },
       "sorensenDice": 0.5238095238095238
     },
     "sample": [
@@ -330,6 +438,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 0.625,
+      "mra": {
+        "codex": [
+          "DSTNC",
+          "DFRNC"
+        ],
+        "matching": true,
+        "minimum": 3,
+        "similarity": 4
+      },
       "sorensenDice": 0.625
     },
     "sample": [
@@ -356,6 +473,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 0.2,
+      "mra": {
+        "codex": [
+          "ABCD",
+          "TS"
+        ],
+        "matching": false,
+        "minimum": 4,
+        "similarity": 2
+      },
       "sorensenDice": 1
     },
     "sample": [
@@ -382,6 +508,15 @@
       "minHash": 0.1428571428571429,
       "mlipns": 1,
       "mongeElkan": 0.8571428571428571,
+      "mra": {
+        "codex": [
+          "",
+          ""
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 6
+      },
       "sorensenDice": 0.3076923076923077
     },
     "sample": [
@@ -408,6 +543,15 @@
       "minHash": null,
       "mlipns": 0,
       "mongeElkan": 1,
+      "mra": {
+        "codex": [
+          "LRMSNM",
+          "LRMSNM"
+        ],
+        "matching": true,
+        "minimum": 2,
+        "similarity": 6
+      },
       "sorensenDice": 0
     },
     "sample": [
