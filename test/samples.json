@@ -33,7 +33,8 @@
       "sift4": 1,
       "smithWaterman": 0,
       "sorensenDice": 1,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 1
     },
     "sample": [
       "a",
@@ -74,7 +75,8 @@
       "sift4": 1,
       "smithWaterman": 1,
       "sorensenDice": 1,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.6666666666666667
     },
     "sample": [
       "ab",
@@ -115,7 +117,8 @@
       "sift4": 1,
       "smithWaterman": 1,
       "sorensenDice": 1,
-      "suffix": 0.5
+      "suffix": 0.5,
+      "tversky": 0.6666666666666667
     },
     "sample": [
       "ac",
@@ -156,7 +159,8 @@
       "sift4": 1,
       "smithWaterman": 2,
       "sorensenDice": 1,
-      "suffix": 0.6666666666666667
+      "suffix": 0.6666666666666667,
+      "tversky": 0.5
     },
     "sample": [
       "abc",
@@ -197,7 +201,8 @@
       "sift4": 3,
       "smithWaterman": 4,
       "sorensenDice": 0.6363636363636364,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.5714285714285714
     },
     "sample": [
       "kitten",
@@ -238,7 +243,8 @@
       "sift4": 6,
       "smithWaterman": 7,
       "sorensenDice": 0.75,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.5
     },
     "sample": [
       "1ab2cd34ef5g6",
@@ -279,7 +285,8 @@
       "sift4": 2,
       "smithWaterman": 1,
       "sorensenDice": 1,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.8
     },
     "sample": [
       "cat",
@@ -320,7 +327,8 @@
       "sift4": 10,
       "smithWaterman": 3,
       "sorensenDice": 0.6666666666666667,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.125
     },
     "sample": [
       "abcdefg",
@@ -361,7 +369,8 @@
       "sift4": 6,
       "smithWaterman": 5,
       "sorensenDice": 0.8095238095238095,
-      "suffix": 0.7272727272727273
+      "suffix": 0.7272727272727273,
+      "tversky": 0.6923076923076923
     },
     "sample": [
       "javawasneat",
@@ -402,7 +411,8 @@
       "sift4": 2,
       "smithWaterman": 5,
       "sorensenDice": 0.33333333333333337,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.2857142857142857
     },
     "sample": [
       "example",
@@ -443,7 +453,8 @@
       "sift4": 4,
       "smithWaterman": 4,
       "sorensenDice": 0.5714285714285714,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.4
     },
     "sample": [
       "sturgeon",
@@ -484,7 +495,8 @@
       "sift4": 10,
       "smithWaterman": 6,
       "sorensenDice": 0.5238095238095238,
-      "suffix": 0.6363636363636364
+      "suffix": 0.6363636363636364,
+      "tversky": 0.5833333333333333
     },
     "sample": [
       "levenshtein",
@@ -525,7 +537,8 @@
       "sift4": 7,
       "smithWaterman": 3,
       "sorensenDice": 0.625,
-      "suffix": 0.625
+      "suffix": 0.625,
+      "tversky": 0.5
     },
     "sample": [
       "distance",
@@ -566,7 +579,8 @@
       "sift4": 4,
       "smithWaterman": 1,
       "sorensenDice": 1,
-      "suffix": 1
+      "suffix": 1,
+      "tversky": 0.8571428571428572
     },
     "sample": [
       "abcde",
@@ -607,7 +621,8 @@
       "sift4": 2,
       "smithWaterman": 12,
       "sorensenDice": 0.3076923076923077,
-      "suffix": 0.9285714285714286
+      "suffix": 0.9285714285714286,
+      "tversky": 0.15384615384615385
     },
     "sample": [
       "因為我是中國人所以我會說中文",
@@ -648,7 +663,8 @@
       "sift4": 336,
       "smithWaterman": 573,
       "sorensenDice": 0,
-      "suffix": 0.2362068965517241
+      "suffix": 0.2362068965517241,
+      "tversky": 0
     },
     "sample": [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",

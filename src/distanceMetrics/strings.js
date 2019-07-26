@@ -31,8 +31,9 @@ import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
-import tversky from 'talisman/metrics/distance/tversky';
+import tverskySimilarityWithoutOptions from 'talisman/metrics/distance/tversky';
 import {
+  toggleDistanceOrSimilarity as toDistance,
   mapToggleDistanceOrSimilarity as mapToDistance,
 } from './toggleDistanceOrSimilarity';
 
@@ -48,6 +49,13 @@ const [
 
 const mongeElkan = (similarity = identitySimilarity) => (...args) =>
   mongeElkanWithoutSimilarity(similarity, ...args);
+
+const tverskySimilarity = options => (...args) =>
+  tverskySimilarityWithoutOptions(options, ...args);
+
+const tversky = options => toDistance(
+  tverskySimilarity(options),
+);
 
 export {
   bag,

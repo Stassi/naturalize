@@ -24,6 +24,7 @@ import {
   smithWaterman as smithWatermanDistance,
   sorensenDice as sorensenDiceDistance,
   suffix as suffixDistance,
+  tversky as tverskyDistance,
 } from './distanceMetrics/strings';
 
 export {
@@ -52,4 +53,5 @@ export {
   smithWatermanDistance,
   sorensenDiceDistance,
   suffixDistance,
+  tverskyDistance,
 };
