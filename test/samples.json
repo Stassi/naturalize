@@ -1,11 +1,40 @@
 [
   {
     "distances": {
+      "bag": 1,
       "damerauLevenshtein": 1,
-      "dice": 0,
+      "eudex": 256,
+      "guth": 1,
       "hamming": 1,
-      "jaroWinkler": 0,
-      "levenshtein": 1
+      "identity": 1,
+      "jaccard": 1,
+      "jaro": 1,
+      "jaroWinkler": 1,
+      "lcs": 1,
+      "length": 0,
+      "levenshtein": 1,
+      "lig2": 1,
+      "lig3": 1,
+      "minHash": 1,
+      "mlipns": 1,
+      "mongeElkan": 0,
+      "mra": {
+        "codex": [
+          "A",
+          "B"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
+      "overlap": 1,
+      "prefix": 1,
+      "ratcliffObershelp": 1,
+      "sift4": 1,
+      "smithWaterman": 0,
+      "sorensenDice": 1,
+      "suffix": 1,
+      "tversky": 1
     },
     "sample": [
       "a",
@@ -14,11 +43,40 @@
   },
   {
     "distances": {
+      "bag": 1,
       "damerauLevenshtein": 1,
-      "dice": 0,
+      "eudex": 2,
+      "guth": 1,
       "hamming": 1,
-      "jaroWinkler": 0.6666666666666666,
-      "levenshtein": 1
+      "identity": 1,
+      "jaccard": 0.6666666666666667,
+      "jaro": 0.33333333333333337,
+      "jaroWinkler": 0.33333333333333337,
+      "lcs": 0.5,
+      "length": 0,
+      "levenshtein": 1,
+      "lig2": 0.5,
+      "lig3": 0.33333333333333337,
+      "minHash": 0.5,
+      "mlipns": 1,
+      "mongeElkan": 0.5,
+      "mra": {
+        "codex": [
+          "AB",
+          "AC"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
+      "overlap": 0.5,
+      "prefix": 0.5,
+      "ratcliffObershelp": 0.5,
+      "sift4": 1,
+      "smithWaterman": 1,
+      "sorensenDice": 1,
+      "suffix": 1,
+      "tversky": 0.6666666666666667
     },
     "sample": [
       "ab",
@@ -27,11 +85,40 @@
   },
   {
     "distances": {
+      "bag": 1,
       "damerauLevenshtein": 1,
-      "dice": 0,
+      "eudex": 256,
+      "guth": 0,
       "hamming": 1,
-      "jaroWinkler": 0.6666666666666666,
-      "levenshtein": 1
+      "identity": 1,
+      "jaccard": 0.6666666666666667,
+      "jaro": 0.33333333333333337,
+      "jaroWinkler": 0.33333333333333337,
+      "lcs": 0.5,
+      "length": 0,
+      "levenshtein": 1,
+      "lig2": 0.5,
+      "lig3": 0.33333333333333337,
+      "minHash": 0.5,
+      "mlipns": 1,
+      "mongeElkan": 0.5,
+      "mra": {
+        "codex": [
+          "AC",
+          "BC"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
+      "overlap": 0.5,
+      "prefix": 1,
+      "ratcliffObershelp": 0.5,
+      "sift4": 1,
+      "smithWaterman": 1,
+      "sorensenDice": 1,
+      "suffix": 0.5,
+      "tversky": 0.6666666666666667
     },
     "sample": [
       "ac",
@@ -40,11 +127,40 @@
   },
   {
     "distances": {
+      "bag": 1,
       "damerauLevenshtein": 1,
-      "dice": 0,
+      "eudex": 8,
+      "guth": 0,
       "hamming": 1,
-      "jaroWinkler": 0.7999999999999999,
-      "levenshtein": 1
+      "identity": 1,
+      "jaccard": 0.5,
+      "jaro": 0.22222222222222232,
+      "jaroWinkler": 0.20000000000000007,
+      "lcs": 0.6666666666666667,
+      "length": 0,
+      "levenshtein": 1,
+      "lig2": 0.33333333333333337,
+      "lig3": 0.19999999999999996,
+      "minHash": 0.33333333333333337,
+      "mlipns": 1,
+      "mongeElkan": 0.6666666666666666,
+      "mra": {
+        "codex": [
+          "ABC",
+          "AXC"
+        ],
+        "matching": true,
+        "minimum": 4,
+        "similarity": 5
+      },
+      "overlap": 0.33333333333333337,
+      "prefix": 0.6666666666666667,
+      "ratcliffObershelp": 0.33333333333333337,
+      "sift4": 1,
+      "smithWaterman": 2,
+      "sorensenDice": 1,
+      "suffix": 0.6666666666666667,
+      "tversky": 0.5
     },
     "sample": [
       "abc",
@@ -53,11 +169,40 @@
   },
   {
     "distances": {
+      "bag": 3,
       "damerauLevenshtein": 3,
-      "dice": 0.36363636363636365,
+      "eudex": 563,
+      "guth": 1,
       "hamming": null,
-      "jaroWinkler": 0.746031746031746,
-      "levenshtein": 3
+      "identity": 1,
+      "jaccard": 0.5714285714285714,
+      "jaro": 0.25396825396825395,
+      "jaroWinkler": 0.25396825396825395,
+      "lcs": 0.5714285714285714,
+      "length": 0.1428571428571429,
+      "levenshtein": 3,
+      "lig2": 0.4285714285714286,
+      "lig3": 0.2727272727272727,
+      "minHash": null,
+      "mlipns": 1,
+      "mongeElkan": 0.6666666666666666,
+      "mra": {
+        "codex": [
+          "KTN",
+          "STNG"
+        ],
+        "matching": true,
+        "minimum": 4,
+        "similarity": 4
+      },
+      "overlap": 0.4,
+      "prefix": 1,
+      "ratcliffObershelp": 0.3846153846153846,
+      "sift4": 3,
+      "smithWaterman": 4,
+      "sorensenDice": 0.6363636363636364,
+      "suffix": 1,
+      "tversky": 0.5714285714285714
     },
     "sample": [
       "kitten",
@@ -66,11 +211,40 @@
   },
   {
     "distances": {
+      "bag": 6,
       "damerauLevenshtein": 6,
-      "dice": 0.25,
+      "eudex": 643,
+      "guth": 1,
       "hamming": 6,
-      "jaroWinkler": 0.6923076923076922,
-      "levenshtein": 6
+      "identity": 1,
+      "jaccard": 0.5,
+      "jaro": 0.3076923076923078,
+      "jaroWinkler": 0.3076923076923078,
+      "lcs": 0.8461538461538461,
+      "length": 0,
+      "levenshtein": 6,
+      "lig2": 0.46153846153846156,
+      "lig3": 0.30000000000000004,
+      "minHash": 0.46153846153846156,
+      "mlipns": 0,
+      "mongeElkan": 0.5384615384615384,
+      "mra": {
+        "codex": [
+          "ABCDFG",
+          "XBXXGX"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
+      "overlap": 0.125,
+      "prefix": 1,
+      "ratcliffObershelp": 0.46153846153846156,
+      "sift4": 6,
+      "smithWaterman": 7,
+      "sorensenDice": 0.75,
+      "suffix": 1,
+      "tversky": 0.5
     },
     "sample": [
       "1ab2cd34ef5g6",
@@ -79,11 +253,40 @@
   },
   {
     "distances": {
+      "bag": 2,
       "damerauLevenshtein": 2,
-      "dice": 0,
+      "eudex": 4,
+      "guth": 2,
       "hamming": 2,
-      "jaroWinkler": 0.5555555555555555,
-      "levenshtein": 2
+      "identity": 1,
+      "jaccard": 0.8,
+      "jaro": 0.44444444444444453,
+      "jaroWinkler": 0.44444444444444453,
+      "lcs": 0.6666666666666667,
+      "length": 0,
+      "levenshtein": 2,
+      "lig2": 0.6666666666666667,
+      "lig3": 0.5,
+      "minHash": 0.6666666666666667,
+      "mlipns": 1,
+      "mongeElkan": 0.3333333333333333,
+      "mra": {
+        "codex": [
+          "CT",
+          "CW"
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 5
+      },
+      "overlap": 0.6666666666666667,
+      "prefix": 0.6666666666666667,
+      "ratcliffObershelp": 0.6666666666666667,
+      "sift4": 2,
+      "smithWaterman": 1,
+      "sorensenDice": 1,
+      "suffix": 1,
+      "tversky": 0.8
     },
     "sample": [
       "cat",
@@ -92,11 +295,40 @@
   },
   {
     "distances": {
+      "bag": 6,
       "damerauLevenshtein": 6,
-      "dice": 0.3333333333333333,
+      "eudex": 899,
+      "guth": 9,
       "hamming": null,
-      "jaroWinkler": 0.8461538461538461,
-      "levenshtein": 6
+      "identity": 1,
+      "jaccard": 0.125,
+      "jaro": 0.15384615384615385,
+      "jaroWinkler": 0.15384615384615385,
+      "lcs": 0.8461538461538461,
+      "length": 0.46153846153846156,
+      "levenshtein": 6,
+      "lig2": 0.46153846153846156,
+      "lig3": 0.30000000000000004,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 1,
+      "mra": {
+        "codex": [
+          "ABCDFG",
+          "XBXXGX"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
+      "overlap": 0,
+      "prefix": 1,
+      "ratcliffObershelp": 0.30000000000000004,
+      "sift4": 10,
+      "smithWaterman": 3,
+      "sorensenDice": 0.6666666666666667,
+      "suffix": 1,
+      "tversky": 0.125
     },
     "sample": [
       "abcdefg",
@@ -105,11 +337,40 @@
   },
   {
     "distances": {
+      "bag": 6,
       "damerauLevenshtein": 7,
-      "dice": 0.19047619047619047,
+      "eudex": 566,
+      "guth": 2,
       "hamming": null,
-      "jaroWinkler": 0.6262626262626263,
-      "levenshtein": 7
+      "identity": 1,
+      "jaccard": 0.6923076923076923,
+      "jaro": 0.3737373737373737,
+      "jaroWinkler": 0.3737373737373737,
+      "lcs": 0.75,
+      "length": 0.08333333333333337,
+      "levenshtein": 7,
+      "lig2": 0.5833333333333333,
+      "lig3": 0.4117647058823529,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 0.6363636363636364,
+      "mra": {
+        "codex": [
+          "JVWSNT",
+          "SCLGRT"
+        ],
+        "matching": false,
+        "minimum": 2,
+        "similarity": 1
+      },
+      "overlap": 0.5,
+      "prefix": 1,
+      "ratcliffObershelp": 0.4782608695652174,
+      "sift4": 6,
+      "smithWaterman": 5,
+      "sorensenDice": 0.8095238095238095,
+      "suffix": 0.7272727272727273,
+      "tversky": 0.6923076923076923
     },
     "sample": [
       "javawasneat",
@@ -118,11 +379,40 @@
   },
   {
     "distances": {
+      "bag": 2,
       "damerauLevenshtein": 3,
-      "dice": 0.6666666666666666,
+      "eudex": 650,
+      "guth": 1,
       "hamming": 7,
-      "jaroWinkler": 0.8095238095238096,
-      "levenshtein": 3
+      "identity": 1,
+      "jaccard": 0.2857142857142857,
+      "jaro": 0.19047619047619035,
+      "jaroWinkler": 0.19047619047619035,
+      "lcs": 0.2857142857142857,
+      "length": 0,
+      "levenshtein": 3,
+      "lig2": 0.4285714285714286,
+      "lig3": 0.2727272727272727,
+      "minHash": 1,
+      "mlipns": 0,
+      "mongeElkan": 0.8571428571428571,
+      "mra": {
+        "codex": [
+          "EXMPL",
+          "SMPLS"
+        ],
+        "matching": false,
+        "minimum": 3,
+        "similarity": 1
+      },
+      "overlap": 0.16666666666666663,
+      "prefix": 1,
+      "ratcliffObershelp": 0.2857142857142857,
+      "sift4": 2,
+      "smithWaterman": 5,
+      "sorensenDice": 0.33333333333333337,
+      "suffix": 1,
+      "tversky": 0.2857142857142857
     },
     "sample": [
       "example",
@@ -131,11 +421,40 @@
   },
   {
     "distances": {
+      "bag": 2,
       "damerauLevenshtein": 6,
-      "dice": 0.42857142857142855,
+      "eudex": 1003,
+      "guth": 4,
       "hamming": 8,
-      "jaroWinkler": 0.75,
-      "levenshtein": 6
+      "identity": 1,
+      "jaccard": 0.4,
+      "jaro": 0.25,
+      "jaroWinkler": 0.25,
+      "lcs": 0.5,
+      "length": 0,
+      "levenshtein": 6,
+      "lig2": 0.75,
+      "lig3": 0.6,
+      "minHash": 1,
+      "mlipns": 0,
+      "mongeElkan": 0.75,
+      "mra": {
+        "codex": [
+          "STRGN",
+          "URGTLY"
+        ],
+        "matching": false,
+        "minimum": 3,
+        "similarity": 0
+      },
+      "overlap": 0.25,
+      "prefix": 1,
+      "ratcliffObershelp": 0.375,
+      "sift4": 4,
+      "smithWaterman": 4,
+      "sorensenDice": 0.5714285714285714,
+      "suffix": 1,
+      "tversky": 0.4
     },
     "sample": [
       "sturgeon",
@@ -144,11 +463,40 @@
   },
   {
     "distances": {
+      "bag": 5,
       "damerauLevenshtein": 6,
-      "dice": 0.47619047619047616,
+      "eudex": 864,
+      "guth": 4,
       "hamming": null,
-      "jaroWinkler": 0.597041847041847,
-      "levenshtein": 6
+      "identity": 1,
+      "jaccard": 0.5833333333333333,
+      "jaro": 0.40295815295815296,
+      "jaroWinkler": 0.40295815295815296,
+      "lcs": 0.6666666666666667,
+      "length": 0.08333333333333337,
+      "levenshtein": 6,
+      "lig2": 0.5,
+      "lig3": 0.33333333333333337,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 0.7272727272727273,
+      "mra": {
+        "codex": [
+          "LVNHTN",
+          "FRNSTN"
+        ],
+        "matching": true,
+        "minimum": 2,
+        "similarity": 3
+      },
+      "overlap": 0.375,
+      "prefix": 1,
+      "ratcliffObershelp": 0.3913043478260869,
+      "sift4": 10,
+      "smithWaterman": 6,
+      "sorensenDice": 0.5238095238095238,
+      "suffix": 0.6363636363636364,
+      "tversky": 0.5833333333333333
     },
     "sample": [
       "levenshtein",
@@ -157,11 +505,40 @@
   },
   {
     "distances": {
+      "bag": 5,
       "damerauLevenshtein": 5,
-      "dice": 0.375,
+      "eudex": 272,
+      "guth": 5,
       "hamming": null,
-      "jaroWinkler": 0.6416666666666667,
-      "levenshtein": 5
+      "identity": 1,
+      "jaccard": 0.5,
+      "jaro": 0.3583333333333333,
+      "jaroWinkler": 0.3583333333333333,
+      "lcs": 0.7,
+      "length": 0.19999999999999996,
+      "levenshtein": 5,
+      "lig2": 0.5,
+      "lig3": 0.33333333333333337,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 0.625,
+      "mra": {
+        "codex": [
+          "DSTNC",
+          "DFRNC"
+        ],
+        "matching": true,
+        "minimum": 3,
+        "similarity": 4
+      },
+      "overlap": 0.2857142857142857,
+      "prefix": 0.75,
+      "ratcliffObershelp": 0.4444444444444444,
+      "sift4": 7,
+      "smithWaterman": 3,
+      "sorensenDice": 0.625,
+      "suffix": 0.625,
+      "tversky": 0.5
     },
     "sample": [
       "distance",
@@ -170,11 +547,40 @@
   },
   {
     "distances": {
+      "bag": 4,
       "damerauLevenshtein": 5,
-      "dice": 0,
+      "eudex": 414,
+      "guth": 5,
       "hamming": null,
-      "jaroWinkler": 0,
-      "levenshtein": 5
+      "identity": 1,
+      "jaccard": 0.8571428571428572,
+      "jaro": 1,
+      "jaroWinkler": 1,
+      "lcs": 0.8,
+      "length": 0.4,
+      "levenshtein": 5,
+      "lig2": 1,
+      "lig3": 1,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 0.2,
+      "mra": {
+        "codex": [
+          "ABCD",
+          "TS"
+        ],
+        "matching": false,
+        "minimum": 4,
+        "similarity": 2
+      },
+      "overlap": 0.6666666666666667,
+      "prefix": 1,
+      "ratcliffObershelp": 0.75,
+      "sift4": 4,
+      "smithWaterman": 1,
+      "sorensenDice": 1,
+      "suffix": 1,
+      "tversky": 0.8571428571428572
     },
     "sample": [
       "abcde",
@@ -183,11 +589,40 @@
   },
   {
     "distances": {
+      "bag": 2,
       "damerauLevenshtein": 2,
-      "dice": 0.6923076923076923,
+      "eudex": null,
+      "guth": 0,
       "hamming": 2,
-      "jaroWinkler": 0.9428571428571428,
-      "levenshtein": 2
+      "identity": 1,
+      "jaccard": 0.15384615384615385,
+      "jaro": 0.09523809523809523,
+      "jaroWinkler": 0.05714285714285716,
+      "lcs": 0.5,
+      "length": 0,
+      "levenshtein": 2,
+      "lig2": 0.1428571428571429,
+      "lig3": 0.07692307692307687,
+      "minHash": 0.1428571428571429,
+      "mlipns": 1,
+      "mongeElkan": 0.8571428571428571,
+      "mra": {
+        "codex": [
+          "",
+          ""
+        ],
+        "matching": true,
+        "minimum": 5,
+        "similarity": 6
+      },
+      "overlap": 0.08333333333333337,
+      "prefix": 0.7142857142857143,
+      "ratcliffObershelp": 0.1428571428571429,
+      "sift4": 2,
+      "smithWaterman": 12,
+      "sorensenDice": 0.3076923076923077,
+      "suffix": 0.9285714285714286,
+      "tversky": 0.15384615384615385
     },
     "sample": [
       "因為我是中國人所以我會說中文",
@@ -196,11 +631,40 @@
   },
   {
     "distances": {
+      "bag": 7,
       "damerauLevenshtein": 7,
-      "dice": 1,
+      "eudex": 0,
+      "guth": 244,
       "hamming": null,
-      "jaroWinkler": 0.9269253363096986,
-      "levenshtein": 7
+      "identity": 1,
+      "jaccard": 0,
+      "jaro": 0.12179110615050226,
+      "jaroWinkler": 0.07307466369030136,
+      "lcs": 0.24531516183986368,
+      "length": 0.011925042589437829,
+      "levenshtein": 7,
+      "lig2": 0.011925042589437829,
+      "lig3": 0.005998286203941716,
+      "minHash": null,
+      "mlipns": 0,
+      "mongeElkan": 1,
+      "mra": {
+        "codex": [
+          "LRMSNM",
+          "LRMSNM"
+        ],
+        "matching": true,
+        "minimum": 2,
+        "similarity": 6
+      },
+      "overlap": 0,
+      "prefix": 0.7620689655172413,
+      "ratcliffObershelp": 0.005998286203941716,
+      "sift4": 336,
+      "smithWaterman": 573,
+      "sorensenDice": 0,
+      "suffix": 0.2362068965517241,
+      "tversky": 0
     },
     "sample": [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
