@@ -1,4 +1,3 @@
-/* eslint-disable no-empty-pattern */
 import { expect } from 'chai';
 import { describe } from 'mocha';
 import { smithWatermanDistance } from '../src';

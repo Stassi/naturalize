@@ -1,4 +1,3 @@
-/* eslint-disable no-empty-pattern */
 import { expect } from 'chai';
 import { describe } from 'mocha';
 import { tverskyDistance as tverskyDistanceWithOptions } from '../src';
