@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { bagDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#bagDistance', () => {
+  const name = 'bag';
+  const bagDistance = stringMetrics({ name });
+
   it('should return the bag distance', () => {
     expect(bagDistance(alpha, beta)).to.equal(alphaBeta);
     expect(bagDistance(gamma, delta)).to.equal(gammaDelta);

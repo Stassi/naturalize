@@ -1,7 +1,7 @@
 /* eslint-disable no-empty-pattern */
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { hammingDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -95,6 +95,9 @@ const [
 ] = samples;
 
 describe('#hammingDistance', () => {
+  const name = 'hamming';
+  const hammingDistance = stringMetrics({ name });
+
   it('should return the Hamming distance', () => {
     expect(hammingDistance(alpha, beta)).to.equal(alphaBeta);
     expect(hammingDistance(gamma, delta)).to.equal(gammaDelta);

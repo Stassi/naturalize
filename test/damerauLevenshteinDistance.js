@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { damerauLevenshteinDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#damerauLevenshteinDistance', () => {
+  const name = 'damerauLevenshtein';
+  const damerauLevenshteinDistance = stringMetrics({ name });
+
   it('should return the Damerau–Levenshtein distance', () => {
     expect(damerauLevenshteinDistance(alpha, beta)).to.equal(alphaBeta);
     expect(damerauLevenshteinDistance(gamma, delta)).to.equal(gammaDelta);

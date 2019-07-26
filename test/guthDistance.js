@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { guthDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#guthDistance', () => {
+  const name = 'guth';
+  const guthDistance = stringMetrics({ name });
+
   it('should return the Guth distance', () => {
     expect(guthDistance(alpha, beta)).to.equal(alphaBeta);
     expect(guthDistance(gamma, delta)).to.equal(gammaDelta);

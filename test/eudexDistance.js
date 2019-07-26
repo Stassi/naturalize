@@ -1,7 +1,7 @@
 /* eslint-disable no-empty-pattern */
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { eudexDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -144,6 +144,9 @@ const [
 ] = samples;
 
 describe('#eudexDistance', () => {
+  const name = 'eudex';
+  const eudexDistance = stringMetrics({ name });
+
   it('should return the Eudex distance', () => {
     expect(eudexDistance(alpha, beta)).to.equal(alphaBeta);
     expect(eudexDistance(gamma, delta)).to.equal(gammaDelta);
