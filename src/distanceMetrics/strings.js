@@ -33,9 +33,9 @@ import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
 import {
-  toggleDistanceOrSimilarity as toDistance,
-  mapToggleDistanceOrSimilarity as mapToDistance,
-} from './toggleDistanceOrSimilarity';
+  subtractFromOne as toDistance,
+  mapSubtractFromOne as mapToDistance,
+} from './subtractFromOne';
 
 const [
   lig2,
