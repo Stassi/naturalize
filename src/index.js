@@ -26,6 +26,7 @@ import {
   suffix as suffixDistance,
   tversky as tverskyDistance,
 } from './distanceMetrics/strings';
+import stringMetrics from './stringMetrics';
 
 export {
   bagDistance,
@@ -52,6 +53,7 @@ export {
   sift4Distance,
   smithWatermanDistance,
   sorensenDiceDistance,
+  stringMetrics,
   suffixDistance,
   tverskyDistance,
 };
