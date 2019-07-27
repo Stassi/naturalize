@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { identityDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#identityDistance', () => {
+  const name = 'identity';
+  const identityDistance = stringMetrics({ name });
+
   it('should return the identity distance', () => {
     expect(identityDistance(alpha, beta)).to.equal(alphaBeta);
     expect(identityDistance(gamma, delta)).to.equal(gammaDelta);

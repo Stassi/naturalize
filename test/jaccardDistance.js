@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { jaccardDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#jaccardDistance', () => {
+  const name = 'jaccard';
+  const jaccardDistance = stringMetrics({ name });
+
   it('should return the Jaccard distance', () => {
     expect(jaccardDistance(alpha, beta)).to.equal(alphaBeta);
     expect(jaccardDistance(gamma, delta)).to.equal(gammaDelta);

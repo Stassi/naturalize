@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { jaroDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#jaroDistance', () => {
+  const name = 'jaro';
+  const jaroDistance = stringMetrics({ name });
+
   it('should return the Jaro distance', () => {
     expect(jaroDistance(alpha, beta)).to.equal(alphaBeta);
     expect(jaroDistance(gamma, delta)).to.equal(gammaDelta);
