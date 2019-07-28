@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { mlipnsDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#mlipnsDistance', () => {
+  const name = 'mlipns';
+  const mlipnsDistance = stringMetrics({ name });
+
   it('should return the Modified Language-Independent Product Name Search (MLIPNS) distance', () => {
     expect(mlipnsDistance(alpha, beta)).to.equal(alphaBeta);
     expect(mlipnsDistance(gamma, delta)).to.equal(gammaDelta);

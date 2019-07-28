@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { lig2Distance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#lig2Distance', () => {
+  const name = 'lig2';
+  const lig2Distance = stringMetrics({ name });
+
   it('should return the LIG2 distance', () => {
     expect(lig2Distance(alpha, beta)).to.equal(alphaBeta);
     expect(lig2Distance(gamma, delta)).to.equal(gammaDelta);

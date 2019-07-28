@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { sorensenDiceDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#sorensenDiceDistance', () => {
+  const name = 'sorensenDice';
+  const sorensenDiceDistance = stringMetrics({ name });
+
   it('should return the Sørensen–Dice distance', () => {
     expect(sorensenDiceDistance(alpha, beta)).to.equal(alphaBeta);
     expect(sorensenDiceDistance(gamma, delta)).to.equal(gammaDelta);

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { smithWatermanDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#smithWatermanDistance', () => {
+  const name = 'smithWaterman';
+  const smithWatermanDistance = stringMetrics({ name });
+
   it('should return the Smith–Waterman distance', () => {
     expect(smithWatermanDistance(alpha, beta)).to.equal(alphaBeta);
     expect(smithWatermanDistance(gamma, delta)).to.equal(gammaDelta);

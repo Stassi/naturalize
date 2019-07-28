@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { ratcliffObershelpDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#ratcliffObershelpDistance', () => {
+  const name = 'ratcliffObershelp';
+  const ratcliffObershelpDistance = stringMetrics({ name });
+
   it('should return the Ratcliff-Obershelp distance', () => {
     expect(ratcliffObershelpDistance(alpha, beta)).to.equal(alphaBeta);
     expect(ratcliffObershelpDistance(gamma, delta)).to.equal(gammaDelta);

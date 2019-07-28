@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { overlapDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#overlapDistance', () => {
+  const name = 'overlap';
+  const overlapDistance = stringMetrics({ name });
+
   it('should return the overlap distance', () => {
     expect(overlapDistance(alpha, beta)).to.equal(alphaBeta);
     expect(overlapDistance(gamma, delta)).to.equal(gammaDelta);

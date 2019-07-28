@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { lengthDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#lengthDistance', () => {
+  const name = 'length';
+  const lengthDistance = stringMetrics({ name });
+
   it('should return the length distance', () => {
     expect(lengthDistance(alpha, beta)).to.equal(alphaBeta);
     expect(lengthDistance(gamma, delta)).to.equal(gammaDelta);

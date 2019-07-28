@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { sift4Distance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#sift4Distance', () => {
+  const name = 'sift4';
+  const sift4Distance = stringMetrics({ name });
+
   it('should return the SIFT4 distance', () => {
     expect(sift4Distance(alpha, beta)).to.equal(alphaBeta);
     expect(sift4Distance(gamma, delta)).to.equal(gammaDelta);

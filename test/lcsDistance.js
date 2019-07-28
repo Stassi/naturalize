@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { lcsDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#lcsDistance', () => {
+  const name = 'lcs';
+  const lcsDistance = stringMetrics({ name });
+
   it('should return the Longest Common Subsequence (LCS) distance', () => {
     expect(lcsDistance(alpha, beta)).to.equal(alphaBeta);
     expect(lcsDistance(gamma, delta)).to.equal(gammaDelta);

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { prefixDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#prefixDistance', () => {
+  const name = 'prefix';
+  const prefixDistance = stringMetrics({ name });
+
   it('should return the prefix distance', () => {
     expect(prefixDistance(alpha, beta)).to.equal(alphaBeta);
     expect(prefixDistance(gamma, delta)).to.equal(gammaDelta);

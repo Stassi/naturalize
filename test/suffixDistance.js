@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { suffixDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#suffixDistance', () => {
+  const name = 'suffix';
+  const suffixDistance = stringMetrics({ name });
+
   it('should return the suffix distance', () => {
     expect(suffixDistance(alpha, beta)).to.equal(alphaBeta);
     expect(suffixDistance(gamma, delta)).to.equal(gammaDelta);

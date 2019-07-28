@@ -1,7 +1,7 @@
 /* eslint-disable no-empty-pattern */
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { minHashDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -96,6 +96,9 @@ const [
 ] = samples;
 
 describe('#minHashDistance', () => {
+  const name = 'minHash';
+  const minHashDistance = stringMetrics({ name });
+
   it('should return the MinHash signature distance', () => {
     expect(minHashDistance(alpha, beta)).to.equal(alphaBeta);
     expect(minHashDistance(gamma, delta)).to.equal(gammaDelta);

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { levenshteinDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#levenshteinDistance', () => {
+  const name = 'levenshtein';
+  const levenshteinDistance = stringMetrics({ name });
+
   it('should return the Levenshtein distance', () => {
     expect(levenshteinDistance(alpha, beta)).to.equal(alphaBeta);
     expect(levenshteinDistance(gamma, delta)).to.equal(gammaDelta);

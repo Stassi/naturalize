@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { jaroWinklerDistance } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,6 +151,9 @@ const [
 ] = samples;
 
 describe('#jaroWinklerDistance', () => {
+  const name = 'jaroWinkler';
+  const jaroWinklerDistance = stringMetrics({ name });
+
   it('should return the Jaro–Winkler distance', () => {
     expect(jaroWinklerDistance(alpha, beta)).to.equal(alphaBeta);
     expect(jaroWinklerDistance(gamma, delta)).to.equal(gammaDelta);
