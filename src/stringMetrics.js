@@ -1,11 +1,19 @@
 import * as metrics from './distanceMetrics/strings';
-import {
-  subtractFromOne as toSimilarity,
-} from './distanceMetrics/subtractFromOne';
 
-const stringMetrics = ({ name, similarity }) => {
+const stringMetrics = ({
+  alpha,
+  beta,
+  innerSimilarity,
+  name,
+}) => {
   const distance = metrics[name];
-  return similarity ? toSimilarity(distance) : distance;
+  if (name === 'mongeElkan') {
+    return distance(innerSimilarity);
+  } else if (name === 'tversky') {
+    return distance({ alpha, beta });
+  } else {
+    return distance;
+  }
 };
 
 export default stringMetrics;

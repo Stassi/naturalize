@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { tverskyDistance as tverskyDistanceWithOptions } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,9 +151,10 @@ const [
 ] = samples;
 
 describe('#tverskyDistance', () => {
-  describe('with default options', () => {
-    const tverskyDistance = tverskyDistanceWithOptions();
+  const name = 'tversky';
+  const tverskyDistance = stringMetrics({ name });
 
+  describe('with default options', () => {
     it('should return the Tversky distance', () => {
       expect(tverskyDistance(alpha, beta)).to.equal(alphaBeta);
       expect(tverskyDistance(gamma, delta)).to.equal(gammaDelta);

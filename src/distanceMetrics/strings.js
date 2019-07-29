@@ -33,9 +33,16 @@ import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
 import {
-  subtractFromOne as toDistance,
-  mapSubtractFromOne as mapToDistance,
-} from './subtractFromOne';
+  mapPipeToSubtractOne as mapToDistance,
+  pipeToSubtractOne as toDistance,
+} from './pipeToSubtractOne';
+
+const mongeElkan = (similarity = identitySimilarity) => (...args) =>
+  mongeElkanWithoutSimilarity(similarity, ...args);
+
+const tversky = options => toDistance(
+  (...args) => tverskySimilarity(options, ...args),
+);
 
 const [
   lig2,
@@ -46,13 +53,6 @@ const [
   lig3Similarity,
   overlapSimilarity,
 ]);
-
-const mongeElkan = (similarity = identitySimilarity) => (...args) =>
-  mongeElkanWithoutSimilarity(similarity, ...args);
-
-const tversky = options => toDistance(
-  (...args) => tverskySimilarity(options, ...args),
-);
 
 export {
   bag,

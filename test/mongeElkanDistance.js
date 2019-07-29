@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { mongeElkanDistance as mongeElkanWithOptions } from '../src';
+import { stringMetrics } from '../src';
 import samples from './samples';
 
 const [
@@ -151,9 +151,10 @@ const [
 ] = samples;
 
 describe('#mongeElkanDistance', () => {
-  describe('with inner identity similarity', () => {
-    const mongeElkanDistance = mongeElkanWithOptions();
+  const name = 'mongeElkan';
+  const mongeElkanDistance = stringMetrics({ name });
 
+  describe('with inner identity similarity', () => {
     it('should return the Monge-Elkan distance', () => {
       expect(mongeElkanDistance(alpha, beta)).to.equal(alphaBeta);
       expect(mongeElkanDistance(gamma, delta)).to.equal(gammaDelta);
