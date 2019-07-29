@@ -83,9 +83,9 @@ const metrics = {
 };
 
 const applyOptionsToDistance = ({
-  options,
   distance,
   isAlgorithmWithOptions,
+  options,
 }) => (isAlgorithmWithOptions ? distance(options) : distance);
 
 const stringMetrics = ({ name, ...options }) => applyOptionsToDistance({
