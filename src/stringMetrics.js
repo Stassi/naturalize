@@ -86,16 +86,18 @@ const applyOptionsToDistance = ({
   options,
 }) => (isAlgorithmWithOptions ? distance(options) : distance);
 
-const convertToSimilarity = (asSimilarity, distance) =>
-  (asSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
+const convertToSimilarity = ({
+  asSimilarity,
+  distance,
+}) => (asSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
 
 const stringMetrics = ({
   asSimilarity,
   name,
   ...options
-}) => convertToSimilarity(
+}) => convertToSimilarity({
   asSimilarity,
-  applyOptionsToDistance({
+  distance: applyOptionsToDistance({
     options,
     distance: metrics[name],
     isAlgorithmWithOptions: [
@@ -103,6 +105,6 @@ const stringMetrics = ({
       'tversky',
     ].includes(name),
   }),
-);
+});
 
 export default stringMetrics;
