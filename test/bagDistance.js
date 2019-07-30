@@ -154,6 +154,14 @@ describe('#bagDistance', () => {
   const name = 'bag';
   const bagDistance = stringMetrics({ name });
 
+  describe('as similarity', () => {
+    const bagSimilarity = stringMetrics({ name, asSimilarity: true });
+
+    it('should return the bag similarity', () => {
+      expect(bagSimilarity(alpha, beta)).to.equal(1 - alphaBeta);
+    });
+  });
+
   it('should return the bag distance', () => {
     expect(bagDistance(alpha, beta)).to.equal(alphaBeta);
     expect(bagDistance(gamma, delta)).to.equal(gammaDelta);

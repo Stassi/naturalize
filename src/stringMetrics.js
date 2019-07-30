@@ -24,9 +24,7 @@ import mongeElkanWithoutSimilarity from 'talisman/metrics/distance/monge-elkan';
 import mraComparison from 'talisman/metrics/distance/mra';
 import overlapSimilarity from 'talisman/metrics/distance/overlap';
 import { distance as prefix } from 'talisman/metrics/distance/prefix';
-import {
-  distance as ratcliffObershelp,
-} from 'talisman/metrics/distance/ratcliff-obershelp';
+import { distance as ratcliffObershelp } from 'talisman/metrics/distance/ratcliff-obershelp';
 import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
@@ -88,13 +86,23 @@ const applyOptionsToDistance = ({
   options,
 }) => (isAlgorithmWithOptions ? distance(options) : distance);
 
-const stringMetrics = ({ name, ...options }) => applyOptionsToDistance({
-  options,
-  distance: metrics[name],
-  isAlgorithmWithOptions: [
-    'mongeElkan',
-    'tversky',
-  ].includes(name),
-});
+const convertToSimilarity = (asSimilarity, distance) =>
+  (asSimilarity ? toDistance(distance) : distance);
+
+const stringMetrics = ({
+  asSimilarity,
+  name,
+  ...options
+}) => convertToSimilarity(
+  asSimilarity,
+  applyOptionsToDistance({
+    options,
+    distance: metrics[name],
+    isAlgorithmWithOptions: [
+      'mongeElkan',
+      'tversky',
+    ].includes(name),
+  }),
+);
 
 export default stringMetrics;
