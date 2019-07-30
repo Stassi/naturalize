@@ -31,13 +31,13 @@ import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
 
-const toDistance = f => (...x) => 1 - f(...x);
-const mapToDistance = x => x.map(toDistance);
+const toggleDistanceOrSimilarity = f => (...x) => 1 - f(...x);
+const mapToggleDistanceOrSimilarity = x => x.map(toggleDistanceOrSimilarity);
 
 const mongeElkan = ({ similarity = identitySimilarity }) => (...args) =>
   mongeElkanWithoutSimilarity(similarity, ...args);
 
-const tversky = options => toDistance(
+const tversky = options => toggleDistanceOrSimilarity(
   (...args) => tverskySimilarity(options, ...args),
 );
 
@@ -45,7 +45,7 @@ const [
   lig2,
   lig3,
   overlap,
-] = mapToDistance([
+] = mapToggleDistanceOrSimilarity([
   lig2Similarity,
   lig3Similarity,
   overlapSimilarity,
@@ -87,7 +87,7 @@ const applyOptionsToDistance = ({
 }) => (isAlgorithmWithOptions ? distance(options) : distance);
 
 const convertToSimilarity = (asSimilarity, distance) =>
-  (asSimilarity ? toDistance(distance) : distance);
+  (asSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
 
 const stringMetrics = ({
   asSimilarity,
