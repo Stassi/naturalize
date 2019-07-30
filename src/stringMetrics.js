@@ -104,9 +104,7 @@ const stringMetrics = ({
       'tversky',
     ].includes(name),
   }),
-  requiresSimilarity: asSimilarity && [
-    'bag',
-  ].includes(name),
+  requiresSimilarity: asSimilarity && [].includes(name),
 });
 
 export default stringMetrics;
