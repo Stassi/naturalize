@@ -87,16 +87,15 @@ const applyRequiredOptionsToDistance = ({
 }) => (requiresOptions ? distance(options) : distance);
 
 const convertToSimilarity = ({
-  asSimilarity,
   distance,
-}) => (asSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
+  requiresSimilarity,
+}) => (requiresSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
 
 const stringMetrics = ({
   asSimilarity,
   name,
   ...options
 }) => convertToSimilarity({
-  asSimilarity,
   distance: applyRequiredOptionsToDistance({
     options,
     distance: metrics[name],
@@ -105,6 +104,9 @@ const stringMetrics = ({
       'tversky',
     ].includes(name),
   }),
+  requiresSimilarity: asSimilarity && [
+    'bag',
+  ].includes(name),
 });
 
 export default stringMetrics;
