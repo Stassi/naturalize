@@ -80,11 +80,11 @@ const metrics = {
   tversky,
 };
 
-const applyOptionsToDistance = ({
+const applyRequiredOptionsToDistance = ({
   distance,
-  isAlgorithmWithOptions,
   options,
-}) => (isAlgorithmWithOptions ? distance(options) : distance);
+  requiresOptions,
+}) => (requiresOptions ? distance(options) : distance);
 
 const convertToSimilarity = ({
   asSimilarity,
@@ -97,10 +97,10 @@ const stringMetrics = ({
   ...options
 }) => convertToSimilarity({
   asSimilarity,
-  distance: applyOptionsToDistance({
+  distance: applyRequiredOptionsToDistance({
     options,
     distance: metrics[name],
-    isAlgorithmWithOptions: [
+    requiresOptions: [
       'mongeElkan',
       'tversky',
     ].includes(name),
