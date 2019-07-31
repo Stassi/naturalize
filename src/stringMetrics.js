@@ -119,6 +119,7 @@ const stringMetrics = ({
     'overlap',
     'prefix',
     'ratcliffObershelp',
+    'sorensenDice',
   ].includes(name),
 });
 
