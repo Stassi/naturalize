@@ -117,6 +117,7 @@ const stringMetrics = ({
     'mlipns',
     'mongeElkan',
     'overlap',
+    'prefix',
   ].includes(name),
 });
 
