@@ -98,7 +98,7 @@ describe('hamming metrics', () => {
   describe('hamming distance', () => {
     const hammingDistance = stringMetrics({ name: 'hamming' });
 
-    it('should return the hamming distance', () => {
+    it('should return the Hamming distance', () => {
       expect(hammingDistance(alpha, beta)).to.equal(alphaBeta);
       expect(hammingDistance(gamma, delta)).to.equal(gammaDelta);
       expect(hammingDistance(epsilon, zeta)).to.equal(epsilonZeta);
@@ -117,7 +117,7 @@ describe('hamming metrics', () => {
       name: 'hamming',
     });
 
-    it('should return the hamming distance (invalid similarity)', () => {
+    it('should return the Hamming distance (invalid similarity)', () => {
       expect(hammingSimilarity(alpha, beta)).to.equal(alphaBeta);
       expect(hammingSimilarity(gamma, delta)).to.equal(gammaDelta);
       expect(hammingSimilarity(epsilon, zeta)).to.equal(epsilonZeta);
