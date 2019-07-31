@@ -180,7 +180,7 @@ describe('jaccard metrics', () => {
       name: 'jaccard',
     });
 
-    it('should return the Jaccard similarity', () => {
+    it('should return the Jaccard index', () => {
       expect(jaccardSimilarity(alpha, beta)).to.equal(1 - alphaBeta);
       expect(jaccardSimilarity(gamma, delta)).to.equal(1 - gammaDelta);
       expect(jaccardSimilarity(epsilon, zeta)).to.equal(1 - epsilonZeta);
