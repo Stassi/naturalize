@@ -111,6 +111,7 @@ const stringMetrics = ({
     'jaroWinkler',
     'lcs',
     'length',
+    'lig2',
   ].includes(name),
 });
 
