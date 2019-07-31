@@ -115,6 +115,7 @@ const stringMetrics = ({
     'lig3',
     'minHash',
     'mlipns',
+    'mongeElkan',
   ].includes(name),
 });
 
