@@ -113,6 +113,7 @@ const stringMetrics = ({
     'length',
     'lig2',
     'lig3',
+    'minHash',
   ].includes(name),
 });
 
