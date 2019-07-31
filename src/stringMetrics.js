@@ -110,6 +110,7 @@ const stringMetrics = ({
     'jaro',
     'jaroWinkler',
     'lcs',
+    'length',
   ].includes(name),
 });
 
