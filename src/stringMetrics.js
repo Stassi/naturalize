@@ -21,40 +21,37 @@ import {
 import { distance as minHash } from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkanWithoutSimilarity from 'talisman/metrics/distance/monge-elkan';
-import mraComparison from 'talisman/metrics/distance/mra';
+import mra from 'talisman/metrics/distance/mra';
 import overlapSimilarity from 'talisman/metrics/distance/overlap';
 import { distance as prefix } from 'talisman/metrics/distance/prefix';
-import {
-  distance as ratcliffObershelp,
-} from 'talisman/metrics/distance/ratcliff-obershelp';
+import { distance as ratcliffObershelp } from 'talisman/metrics/distance/ratcliff-obershelp';
 import sift4 from 'talisman/metrics/distance/sift4';
 import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
-import {
-  toggleDistanceOrSimilarity as toDistance,
-  mapToggleDistanceOrSimilarity as mapToDistance,
-} from './toggleDistanceOrSimilarity';
+
+const toggleDistanceOrSimilarity = f => (...x) => 1 - f(...x);
+const mapToggleDistanceOrSimilarity = x => x.map(toggleDistanceOrSimilarity);
+
+const mongeElkan = ({ similarity = identitySimilarity }) => (...args) =>
+  mongeElkanWithoutSimilarity(similarity, ...args);
+
+const tversky = options => toggleDistanceOrSimilarity(
+  (...args) => tverskySimilarity(options, ...args),
+);
 
 const [
   lig2,
   lig3,
   overlap,
-] = mapToDistance([
+] = mapToggleDistanceOrSimilarity([
   lig2Similarity,
   lig3Similarity,
   overlapSimilarity,
 ]);
 
-const mongeElkan = (similarity = identitySimilarity) => (...args) =>
-  mongeElkanWithoutSimilarity(similarity, ...args);
-
-const tversky = options => toDistance(
-  (...args) => tverskySimilarity(options, ...args),
-);
-
-export {
+const metrics = {
   bag,
   damerauLevenshtein,
   eudex,
@@ -72,7 +69,7 @@ export {
   minHash,
   mlipns,
   mongeElkan,
-  mraComparison,
+  mra,
   overlap,
   prefix,
   ratcliffObershelp,
@@ -82,3 +79,50 @@ export {
   suffix,
   tversky,
 };
+
+const applyRequiredOptionsToDistance = ({
+  distance,
+  options,
+  requiresOptions,
+}) => (requiresOptions ? distance(options) : distance);
+
+const convertToSimilarity = ({
+  distance,
+  requiresSimilarity,
+}) => (requiresSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
+
+const stringMetrics = ({
+  asSimilarity,
+  name,
+  ...options
+}) => convertToSimilarity({
+  distance: applyRequiredOptionsToDistance({
+    options,
+    distance: metrics[name],
+    requiresOptions: [
+      'mongeElkan',
+      'tversky',
+    ].includes(name),
+  }),
+  requiresSimilarity: asSimilarity && [
+    'identity',
+    'jaccard',
+    'jaro',
+    'jaroWinkler',
+    'lcs',
+    'length',
+    'lig2',
+    'lig3',
+    'minHash',
+    'mlipns',
+    'mongeElkan',
+    'overlap',
+    'prefix',
+    'ratcliffObershelp',
+    'sorensenDice',
+    'suffix',
+    'tversky',
+  ].includes(name),
+});
+
+export default stringMetrics;
