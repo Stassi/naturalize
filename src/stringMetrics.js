@@ -116,6 +116,7 @@ const stringMetrics = ({
     'minHash',
     'mlipns',
     'mongeElkan',
+    'overlap',
   ].includes(name),
 });
 
