@@ -107,6 +107,7 @@ const stringMetrics = ({
   requiresSimilarity: asSimilarity && [
     'identity',
     'jaccard',
+    'jaro',
   ].includes(name),
 });
 
