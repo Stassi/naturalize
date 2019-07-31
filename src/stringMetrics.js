@@ -118,6 +118,7 @@ const stringMetrics = ({
     'mongeElkan',
     'overlap',
     'prefix',
+    'ratcliffObershelp',
   ].includes(name),
 });
 
