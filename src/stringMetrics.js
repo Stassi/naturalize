@@ -120,6 +120,7 @@ const stringMetrics = ({
     'prefix',
     'ratcliffObershelp',
     'sorensenDice',
+    'suffix',
   ].includes(name),
 });
 
