@@ -21,7 +21,7 @@ import {
 import { distance as minHash } from 'talisman/metrics/distance/minhash';
 import mlipns from 'talisman/metrics/distance/mlipns';
 import mongeElkanWithoutSimilarity from 'talisman/metrics/distance/monge-elkan';
-import mraComparison from 'talisman/metrics/distance/mra';
+import mra from 'talisman/metrics/distance/mra';
 import overlapSimilarity from 'talisman/metrics/distance/overlap';
 import { distance as prefix } from 'talisman/metrics/distance/prefix';
 import { distance as ratcliffObershelp } from 'talisman/metrics/distance/ratcliff-obershelp';
@@ -69,7 +69,7 @@ const metrics = {
   minHash,
   mlipns,
   mongeElkan,
-  mraComparison,
+  mra,
   overlap,
   prefix,
   ratcliffObershelp,

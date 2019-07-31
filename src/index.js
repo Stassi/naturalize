@@ -1,4 +1,4 @@
-import mraComparison from 'talisman/metrics/distance/mra';
 import stringMetrics from './stringMetrics';
 
-export { mraComparison, stringMetrics };
+// eslint-disable-next-line import/prefer-default-export
+export { stringMetrics };
