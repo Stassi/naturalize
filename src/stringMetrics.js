@@ -112,6 +112,7 @@ const stringMetrics = ({
     'lcs',
     'length',
     'lig2',
+    'lig3',
   ].includes(name),
 });
 
