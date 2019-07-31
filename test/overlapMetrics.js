@@ -180,7 +180,7 @@ describe('overlap metrics', () => {
       name: 'overlap',
     });
 
-    it('should return the overlap similarity', () => {
+    it('should return the overlap coefficient', () => {
       expect(overlapSimilarity(alpha, beta)).to.equal(1 - alphaBeta);
       expect(overlapSimilarity(gamma, delta)).to.equal(1 - gammaDelta);
       expect(overlapSimilarity(epsilon, zeta)).to.equal(1 - epsilonZeta);
