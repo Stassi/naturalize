@@ -109,6 +109,7 @@ const stringMetrics = ({
     'jaccard',
     'jaro',
     'jaroWinkler',
+    'lcs',
   ].includes(name),
 });
 
