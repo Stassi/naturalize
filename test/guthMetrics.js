@@ -154,7 +154,7 @@ describe('guth metrics', () => {
   describe('guth distance', () => {
     const guthDistance = stringMetrics({ name: 'guth' });
 
-    it('should return the guth distance', () => {
+    it('should return the Guth distance', () => {
       expect(guthDistance(alpha, beta)).to.equal(alphaBeta);
       expect(guthDistance(gamma, delta)).to.equal(gammaDelta);
       expect(guthDistance(epsilon, zeta)).to.equal(epsilonZeta);
@@ -180,7 +180,7 @@ describe('guth metrics', () => {
       name: 'guth',
     });
 
-    it('should return the guth distance (invalid similarity)', () => {
+    it('should return the Guth distance (invalid similarity)', () => {
       expect(guthSimilarity(alpha, beta)).to.equal(alphaBeta);
       expect(guthSimilarity(gamma, delta)).to.equal(gammaDelta);
       expect(guthSimilarity(epsilon, zeta)).to.equal(epsilonZeta);
