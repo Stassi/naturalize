@@ -147,7 +147,7 @@ describe('eudex metrics', () => {
   describe('eudex distance', () => {
     const eudexDistance = stringMetrics({ name: 'eudex' });
 
-    it('should return the eudex distance', () => {
+    it('should return the Eudex distance', () => {
       expect(eudexDistance(alpha, beta)).to.equal(alphaBeta);
       expect(eudexDistance(gamma, delta)).to.equal(gammaDelta);
       expect(eudexDistance(epsilon, zeta)).to.equal(epsilonZeta);
@@ -172,7 +172,7 @@ describe('eudex metrics', () => {
       name: 'eudex',
     });
 
-    it('should return the eudex distance (invalid similarity)', () => {
+    it('should return the Eudex distance (invalid similarity)', () => {
       expect(eudexSimilarity(alpha, beta)).to.equal(alphaBeta);
       expect(eudexSimilarity(gamma, delta)).to.equal(gammaDelta);
       expect(eudexSimilarity(epsilon, zeta)).to.equal(epsilonZeta);
