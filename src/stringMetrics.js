@@ -121,6 +121,7 @@ const stringMetrics = ({
     'ratcliffObershelp',
     'sorensenDice',
     'suffix',
+    'tversky',
   ].includes(name),
 });
 
