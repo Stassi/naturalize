@@ -29,9 +29,10 @@ import smithWaterman from 'talisman/metrics/distance/smith-waterman';
 import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
-
-const toggleDistanceOrSimilarity = f => (...x) => 1 - f(...x);
-const mapToggleDistanceOrSimilarity = x => x.map(toggleDistanceOrSimilarity);
+import {
+  mapToggleDistanceOrSimilarity,
+  toggleDistanceOrSimilarity,
+} from './toggleDistanceOrSimilarity';
 
 const [
   lig2,
@@ -80,48 +81,28 @@ const distances = {
   suffix,
 };
 
-const applyRequiredOptionsToDistance = ({
-  distance,
-  options,
-  requiresOptions,
-}) => (requiresOptions ? distance(options) : distance);
+const invertibleDistances = [
+  'identity',
+  'jaccard',
+  'jaro',
+  'jaroWinkler',
+  'lcs',
+  'length',
+  'lig2',
+  'lig3',
+  'minHash',
+  'mlipns',
+  'mongeElkan',
+  'overlap',
+  'prefix',
+  'ratcliffObershelp',
+  'sorensenDice',
+  'suffix',
+  'tversky',
+];
 
-const convertToSimilarity = ({
-  distance,
-  requiresSimilarity,
-}) => (requiresSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
-
-const stringMetrics = ({
-  asSimilarity,
-  name,
-  ...options
-}) => convertToSimilarity({
-  distance: applyRequiredOptionsToDistance({
-    options,
-    distance: distances[name],
-    requiresOptions: Object
-      .keys(distancesRequiringOptions)
-      .includes(name),
-  }),
-  requiresSimilarity: asSimilarity && [
-    'identity',
-    'jaccard',
-    'jaro',
-    'jaroWinkler',
-    'lcs',
-    'length',
-    'lig2',
-    'lig3',
-    'minHash',
-    'mlipns',
-    'mongeElkan',
-    'overlap',
-    'prefix',
-    'ratcliffObershelp',
-    'sorensenDice',
-    'suffix',
-    'tversky',
-  ].includes(name),
-});
-
-export default stringMetrics;
+export {
+  distances,
+  distancesRequiringOptions,
+  invertibleDistances,
+};
