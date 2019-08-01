@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { stringMetrics } from '../src';
+import { stringMetrics } from '../../src';
 import samples from './samples';
 
 const [
