@@ -1,4 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
 import bag from 'talisman/metrics/distance/bag';
 import damerauLevenshtein from 'talisman/metrics/distance/damerau-levenshtein';
 import { distance as eudex } from 'talisman/metrics/distance/eudex';
@@ -34,13 +33,6 @@ import tverskySimilarity from 'talisman/metrics/distance/tversky';
 const toggleDistanceOrSimilarity = f => (...x) => 1 - f(...x);
 const mapToggleDistanceOrSimilarity = x => x.map(toggleDistanceOrSimilarity);
 
-const mongeElkan = ({ similarity = identitySimilarity }) => (...args) =>
-  mongeElkanWithoutSimilarity(similarity, ...args);
-
-const tversky = options => toggleDistanceOrSimilarity(
-  (...args) => tverskySimilarity(options, ...args),
-);
-
 const [
   lig2,
   lig3,
@@ -51,7 +43,17 @@ const [
   overlapSimilarity,
 ]);
 
-const metrics = {
+const distancesRequiringOptions = {
+  mongeElkan: ({
+    similarity = identitySimilarity,
+  }) => (...args) => mongeElkanWithoutSimilarity(similarity, ...args),
+  tversky: options => toggleDistanceOrSimilarity(
+    (...args) => tverskySimilarity(options, ...args),
+  ),
+};
+
+const distances = {
+  ...distancesRequiringOptions,
   bag,
   damerauLevenshtein,
   eudex,
@@ -68,7 +70,6 @@ const metrics = {
   lig3,
   minHash,
   mlipns,
-  mongeElkan,
   mra,
   overlap,
   prefix,
@@ -77,7 +78,6 @@ const metrics = {
   smithWaterman,
   sorensenDice,
   suffix,
-  tversky,
 };
 
 const applyRequiredOptionsToDistance = ({
@@ -98,11 +98,10 @@ const stringMetrics = ({
 }) => convertToSimilarity({
   distance: applyRequiredOptionsToDistance({
     options,
-    distance: metrics[name],
-    requiresOptions: [
-      'mongeElkan',
-      'tversky',
-    ].includes(name),
+    distance: distances[name],
+    requiresOptions: Object
+      .keys(distancesRequiringOptions)
+      .includes(name),
   }),
   requiresSimilarity: asSimilarity && [
     'identity',
