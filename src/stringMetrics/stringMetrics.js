@@ -3,6 +3,7 @@ import {
   distancesRequiringOptionsList,
   invertibleDistances,
 } from './distances';
+import and from '../and';
 import applyToMap from '../applyToMap';
 import mapApplyTo from '../mapApplyTo';
 import mapItemIncludedIn from '../mapItemIncludedIn';
@@ -26,10 +27,10 @@ const stringMetrics = ({
   name,
   ...options
 }) => {
+  const asSimilarityAnd = and(asSimilarity);
   const [distance, mapNameIncludedIn] = debugAlpha(name);
   const [isInvertible, requiresSimilarity] = debugBeta(mapNameIncludedIn);
-
-  const requiresInversion = asSimilarity && isInvertible;
+  const requiresInversion = asSimilarityAnd(isInvertible);
 
   const distanceWithOptions = requiresSimilarity
     ? distance(options)
