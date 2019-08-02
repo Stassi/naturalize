@@ -33,6 +33,8 @@ import {
   mapToggleDistanceOrSimilarity,
   toggleDistanceOrSimilarity,
 } from './toggleDistanceOrSimilarity';
+import keys from '../keys';
+import propOf from '../propOf';
 
 const [
   lig2,
@@ -53,7 +55,9 @@ const distancesRequiringOptions = {
   ),
 };
 
-const distances = {
+const distancesRequiringOptionsList = keys(distancesRequiringOptions);
+
+const distanceProp = propOf({
   ...distancesRequiringOptions,
   bag,
   damerauLevenshtein,
@@ -79,7 +83,7 @@ const distances = {
   smithWaterman,
   sorensenDice,
   suffix,
-};
+});
 
 const invertibleDistances = [
   'identity',
@@ -102,7 +106,7 @@ const invertibleDistances = [
 ];
 
 export {
-  distances,
-  distancesRequiringOptions,
+  distanceProp,
+  distancesRequiringOptionsList,
   invertibleDistances,
 };

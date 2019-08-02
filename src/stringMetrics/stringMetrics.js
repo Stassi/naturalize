@@ -1,35 +1,45 @@
 import {
-  distances,
-  distancesRequiringOptions,
+  distanceProp,
+  distancesRequiringOptionsList,
   invertibleDistances,
 } from './distances';
+import applyToMap from '../applyToMap';
+import mapApplyTo from '../mapApplyTo';
+import mapItemIncludedIn from '../mapItemIncludedIn';
+import pipe from '../pipe';
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
-const applyRequiredOptionsToDistance = ({
-  distance,
-  options,
-  requiresOptions,
-}) => (requiresOptions ? distance(options) : distance);
+// TODO: Rename
+const [
+  debugDelta,
+  debugBeta,
+] = mapApplyTo([
+  [distanceProp, mapItemIncludedIn],
+  [invertibleDistances, distancesRequiringOptionsList],
+]);
 
-const convertToSimilarity = ({
-  distance,
-  requiresSimilarity,
-}) => (requiresSimilarity ? toggleDistanceOrSimilarity(distance) : distance);
+// TODO: Rename
+const debugAlpha = pipe(applyToMap, debugDelta);
 
 const stringMetrics = ({
   asSimilarity,
   name,
   ...options
-}) => convertToSimilarity({
-  distance: applyRequiredOptionsToDistance({
-    options,
-    distance: distances[name],
-    requiresOptions: Object
-      .keys(distancesRequiringOptions)
-      .includes(name),
-  }),
-  requiresSimilarity: asSimilarity
-    && invertibleDistances.includes(name),
-});
+}) => {
+  const [distance, mapNameIncludedIn] = debugAlpha(name);
+  const [isInvertible, requiresSimilarity] = debugBeta(mapNameIncludedIn);
+
+  const requiresInversion = asSimilarity && isInvertible;
+
+  const distanceWithOptions = requiresSimilarity
+    ? distance(options)
+    : distance;
+
+  const convertToSimilarity = requiresInversion
+    ? toggleDistanceOrSimilarity(distanceWithOptions)
+    : distanceWithOptions;
+
+  return convertToSimilarity;
+};
 
 export default stringMetrics;
