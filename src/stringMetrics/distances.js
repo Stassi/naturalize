@@ -33,8 +33,7 @@ import {
   mapToggleDistanceOrSimilarity,
   toggleDistanceOrSimilarity,
 } from './toggleDistanceOrSimilarity';
-import keys from '../keys';
-import propOf from '../propOf';
+import { keys, propOf } from '../utilities';
 
 const [
   lig2,

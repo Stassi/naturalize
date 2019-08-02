@@ -3,11 +3,13 @@ import {
   distancesRequiringOptionsList,
   invertibleDistances,
 } from './distances';
-import and from '../and';
-import applyToMap from '../applyToMap';
-import mapApplyTo from '../mapApplyTo';
-import mapItemIncludedIn from '../mapItemIncludedIn';
-import pipe from '../pipe';
+import {
+  and,
+  applyToMap,
+  mapApplyTo,
+  mapItemIncludedIn,
+  pipe,
+} from '../utilities';
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
 // TODO: Rename
