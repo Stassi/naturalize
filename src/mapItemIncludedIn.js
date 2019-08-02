@@ -1,7 +1,7 @@
 import itemIncludedIn from './itemIncludedIn';
 import map from './map';
+import pipe from './pipe';
 
-// TODO: Pipe
-const mapItemIncludedIn = x => map(itemIncludedIn(x));
+const mapItemIncludedIn = pipe(itemIncludedIn, map);
 
 export default mapItemIncludedIn;
