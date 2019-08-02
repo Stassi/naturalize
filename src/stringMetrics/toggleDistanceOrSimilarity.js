@@ -1,4 +1,7 @@
-const toggleDistanceOrSimilarity = f => (...x) => 1 - f(...x);
-const mapToggleDistanceOrSimilarity = x => x.map(toggleDistanceOrSimilarity);
+import map from '../map';
+import subtractFromOne from '../subtractFromOne';
 
-export { toggleDistanceOrSimilarity, mapToggleDistanceOrSimilarity };
+const toggleDistanceOrSimilarity = f => (...x) => subtractFromOne(f(...x));
+const mapToggleDistanceOrSimilarity = map(toggleDistanceOrSimilarity);
+
+export { mapToggleDistanceOrSimilarity, toggleDistanceOrSimilarity };
