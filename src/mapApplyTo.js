@@ -1,7 +1,6 @@
 import applyTo from './applyTo';
 import map from './map';
-import pipe from './pipe';
 
-const mapApplyTo = pipe(applyTo, map);
+const mapApplyTo = map(applyTo);
 
 export default mapApplyTo;
