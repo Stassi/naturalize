@@ -1,8 +1,8 @@
 import {
   and,
   applyToMap,
+  itemIncludedInMap,
   mapApplyTo,
-  mapItemIncludedIn,
   pipe,
 } from '../utilities';
 import {
@@ -13,21 +13,21 @@ import {
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
 const [
-  applyToDistancePropAndMapItemIncludedIn,
+  applyToDistancePropAndItemIncludedInMap,
   applyToInvertibleDistancesAndDistancesRequiringOptionsList,
 ] = mapApplyTo([
-  [distanceProp, mapItemIncludedIn],
+  [distanceProp, itemIncludedInMap],
   [invertibleDistances, distancesRequiringOptionsList],
 ]);
 
 const [
-  distanceAndMapNameIncludedIn,
+  distanceAndNameIncludedIn,
   isInvertibleAndRequiresSimilarity,
 ] = [
   pipe(
     applyToMap,
-    applyToDistancePropAndMapItemIncludedIn,
-    ([distance, mapNameIncludedIn]) => ({ distance, mapNameIncludedIn }),
+    applyToDistancePropAndItemIncludedInMap,
+    ([distance, nameIncludedIn]) => ({ distance, nameIncludedIn }),
   ),
   pipe(
     applyToInvertibleDistancesAndDistancesRequiringOptionsList,
@@ -42,11 +42,11 @@ const stringMetrics = pipe(
   }),
   ({ name, ...props }) => ({
     ...props,
-    ...distanceAndMapNameIncludedIn(name),
+    ...distanceAndNameIncludedIn(name),
   }),
-  ({ mapNameIncludedIn, ...props }) => ({
+  ({ nameIncludedIn, ...props }) => ({
     ...props,
-    ...isInvertibleAndRequiresSimilarity(mapNameIncludedIn),
+    ...isInvertibleAndRequiresSimilarity(nameIncludedIn),
   }),
   ({
     asSimilarityAnd,
