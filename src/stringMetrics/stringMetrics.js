@@ -1,15 +1,15 @@
 import {
-  distanceProp,
-  distancesRequiringOptionsList,
-  invertibleDistances,
-} from './distances';
-import {
   and,
   applyToMap,
   mapApplyTo,
   mapItemIncludedIn,
   pipe,
 } from '../utilities';
+import {
+  distanceProp,
+  distancesRequiringOptionsList,
+  invertibleDistances,
+} from './distances';
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
 const [
