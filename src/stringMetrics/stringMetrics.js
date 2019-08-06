@@ -22,7 +22,7 @@ const [
 
 const [
   distanceAndNameIncludedIn,
-  isInvertibleAndRequiresSimilarity,
+  isInvertibleAndRequiresOptions,
 ] = [
   pipe(
     applyToMap,
@@ -31,7 +31,7 @@ const [
   ),
   pipe(
     applyToInvertibleDistancesAndDistancesRequiringOptionsList,
-    ([isInvertible, requiresSimilarity]) => ({ isInvertible, requiresSimilarity }),
+    ([isInvertible, requiresOptions]) => ({ isInvertible, requiresOptions }),
   ),
 ];
 
@@ -46,7 +46,7 @@ const stringMetrics = pipe(
   }),
   ({ nameIncludedIn, ...props }) => ({
     ...props,
-    ...isInvertibleAndRequiresSimilarity(nameIncludedIn),
+    ...isInvertibleAndRequiresOptions(nameIncludedIn),
   }),
   ({
     asSimilarityAnd,
@@ -58,11 +58,11 @@ const stringMetrics = pipe(
   }),
   ({
     distance,
-    requiresSimilarity,
+    requiresOptions,
     ...props
   }) => ({
     ...props,
-    distance: requiresSimilarity ? distance(props) : distance,
+    distance: requiresOptions ? distance(props) : distance,
   }),
   ({
     distance,
