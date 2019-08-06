@@ -1,6 +1,6 @@
 {
   "name": "naturalize",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Natural language processing.",
   "keywords": [
     "computational linguistics",
@@ -37,7 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "mocha": "^6.2.0",
-    "rollup": "^1.19.2",
+    "rollup": "^1.19.3",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
