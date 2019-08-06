@@ -12,27 +12,28 @@ import {
 } from '../utilities';
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
-// TODO: Rename
 const [
-  debugDelta,
-  applyMapNameIncludedInParam,
+  applyToDistancePropAndMapItemIncludedIn,
+  applyToInvertibleDistancesAndDistancesRequiringOptionsList,
 ] = mapApplyTo([
   [distanceProp, mapItemIncludedIn],
   [invertibleDistances, distancesRequiringOptionsList],
 ]);
 
-// TODO: Rename
-const applyNameParam = pipe(
-  applyToMap,
-  debugDelta,
-  ([distance, mapNameIncludedIn]) => ({ distance, mapNameIncludedIn }),
-);
-
-// TODO: Rename
-const applyMapNameIncludedIn = pipe(
-  applyMapNameIncludedInParam,
-  ([isInvertible, requiresSimilarity]) => ({ isInvertible, requiresSimilarity }),
-);
+const [
+  distanceAndMapNameIncludedIn,
+  isInvertibleAndRequiresSimilarity,
+] = [
+  pipe(
+    applyToMap,
+    applyToDistancePropAndMapItemIncludedIn,
+    ([distance, mapNameIncludedIn]) => ({ distance, mapNameIncludedIn }),
+  ),
+  pipe(
+    applyToInvertibleDistancesAndDistancesRequiringOptionsList,
+    ([isInvertible, requiresSimilarity]) => ({ isInvertible, requiresSimilarity }),
+  ),
+];
 
 const stringMetrics = pipe(
   ({ asSimilarity, ...props }) => ({
@@ -41,11 +42,11 @@ const stringMetrics = pipe(
   }),
   ({ name, ...props }) => ({
     ...props,
-    ...applyNameParam(name),
+    ...distanceAndMapNameIncludedIn(name),
   }),
   ({ mapNameIncludedIn, ...props }) => ({
     ...props,
-    ...applyMapNameIncludedIn(mapNameIncludedIn),
+    ...isInvertibleAndRequiresSimilarity(mapNameIncludedIn),
   }),
   ({
     asSimilarityAnd,
