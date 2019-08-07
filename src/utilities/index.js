@@ -6,6 +6,7 @@ import map from './map';
 import mapApplyTo from './mapApplyTo';
 import pipe from './pipe';
 import propOf from './propOf';
+import reduce from './reduce';
 import subtractFrom from './subtractFrom';
 
 export {
@@ -17,5 +18,6 @@ export {
   mapApplyTo,
   pipe,
   propOf,
+  reduce,
   subtractFrom,
 };
