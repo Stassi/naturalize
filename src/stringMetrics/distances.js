@@ -30,10 +30,17 @@ import { distance as sorensenDice } from 'talisman/metrics/distance/dice';
 import { distance as suffix } from 'talisman/metrics/distance/suffix';
 import tverskySimilarity from 'talisman/metrics/distance/tversky';
 import {
+  entries,
+  keys,
+  pipe,
+  propOf,
+  reduce,
+} from '../utilities';
+import {
   mapToggleDistanceOrSimilarity,
   toggleDistanceOrSimilarity,
 } from './toggleDistanceOrSimilarity';
-import { keys, propOf } from '../utilities';
+import metrics from './metrics';
 
 const [
   lig2,
@@ -84,25 +91,13 @@ const distanceProp = propOf({
   suffix,
 });
 
-const invertibleDistances = [
-  'identity',
-  'jaccard',
-  'jaro',
-  'jaroWinkler',
-  'lcs',
-  'length',
-  'lig2',
-  'lig3',
-  'minHash',
-  'mlipns',
-  'mongeElkan',
-  'overlap',
-  'prefix',
-  'ratcliffObershelp',
-  'sorensenDice',
-  'suffix',
-  'tversky',
-];
+const invertibleDistances = pipe(
+  entries,
+  reduce(
+    (acc, [name, { discrete }]) => (discrete ? acc : [...acc, name]),
+    [],
+  ),
+)(metrics);
 
 export {
   distanceProp,
