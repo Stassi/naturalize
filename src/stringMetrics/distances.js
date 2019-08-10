@@ -91,7 +91,7 @@ const distanceProp = propOf({
   suffix,
 });
 
-const invertibleDistances = pipe(
+const percentileDistances = pipe(
   entries,
   reduce(
     (acc, [name, { discrete }]) => (discrete ? acc : [...acc, name]),
@@ -102,5 +102,5 @@ const invertibleDistances = pipe(
 export {
   distanceProp,
   distancesRequiringOptionsList,
-  invertibleDistances,
+  percentileDistances,
 };

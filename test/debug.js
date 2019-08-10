@@ -1,6 +1,8 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import { invertibleDistances } from '../src/stringMetrics/distances';
+import {
+  percentileDistances as invertibleDistances,
+} from '../src/stringMetrics/distances';
 import debug from '../src/debug';
 
 // TODO: Rename

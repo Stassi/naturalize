@@ -8,7 +8,7 @@ import {
 import {
   distanceProp,
   distancesRequiringOptionsList,
-  invertibleDistances,
+  percentileDistances as invertibleDistances,
 } from './distances';
 import { toggleDistanceOrSimilarity } from './toggleDistanceOrSimilarity';
 
