@@ -1,0 +1,80 @@
+{
+  "bag": {
+    "discrete": true
+  },
+  "damerauLevenshtein": {
+    "discrete": true
+  },
+  "eudex": {
+    "discrete": true
+  },
+  "guth": {
+    "discrete": true
+  },
+  "hamming": {
+    "discrete": true
+  },
+  "identity": {
+    "discrete": false
+  },
+  "jaccard": {
+    "discrete": false
+  },
+  "jaro": {
+    "discrete": false
+  },
+  "jaroWinkler": {
+    "discrete": false
+  },
+  "lcs": {
+    "discrete": false
+  },
+  "length": {
+    "discrete": false
+  },
+  "levenshtein": {
+    "discrete": true
+  },
+  "lig2": {
+    "discrete": false
+  },
+  "lig3": {
+    "discrete": false
+  },
+  "minHash": {
+    "discrete": false
+  },
+  "mlipns": {
+    "discrete": false
+  },
+  "mongeElkan": {
+    "discrete": false
+  },
+  "mra": {
+    "discrete": true
+  },
+  "overlap": {
+    "discrete": false
+  },
+  "prefix": {
+    "discrete": false
+  },
+  "ratcliffObershelp": {
+    "discrete": false
+  },
+  "sift4": {
+    "discrete": true
+  },
+  "smithWaterman": {
+    "discrete": true
+  },
+  "sorensenDice": {
+    "discrete": false
+  },
+  "suffix": {
+    "discrete": false
+  },
+  "tversky": {
+    "discrete": false
+  }
+}
