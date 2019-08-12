@@ -5,29 +5,32 @@ import {
 } from '../src/stringMetrics/distances';
 import debug from '../src/debug';
 
+// TODO: Remove
+const [alpha, beta] = ['example', 'samples'];
+
 // TODO: Rename
 describe('untitled invertible distances reducer', () => {
   const debugInvertibleDistances = debug({ names: invertibleDistances });
 
   it('needs a description', () => {
-    expect(debugInvertibleDistances('banana', 'ananab')).to.deep.equal({
+    expect(debugInvertibleDistances(alpha, beta)).to.deep.equal({
       identity: 1,
-      jaccard: 0,
-      jaro: 0.11111111111111105,
-      jaroWinkler: 0.11111111111111105,
-      lcs: 0.16666666666666663,
+      jaccard: 0.2857142857142857,
+      jaro: 0.19047619047619035,
+      jaroWinkler: 0.19047619047619035,
+      lcs: 0.2857142857142857,
       length: 0,
-      lig2: 0.33333333333333337,
-      lig3: 0.19999999999999996,
+      lig2: 0.4285714285714286,
+      lig3: 0.2727272727272727,
       minHash: 1,
       mlipns: 0,
-      mongeElkan: 1,
-      overlap: 0,
+      mongeElkan: 0.8571428571428571,
+      overlap: 0.16666666666666663,
       prefix: 1,
-      ratcliffObershelp: 0.16666666666666663,
+      ratcliffObershelp: 0.2857142857142857,
       sorensenDice: 0.33333333333333337,
       suffix: 1,
-      tversky: 0,
+      tversky: 0.2857142857142857,
     });
   });
 });
@@ -40,24 +43,24 @@ describe('untitled invertible similarities reducer', () => {
   });
 
   it('needs a description', () => {
-    expect(debugInvertibleSimilarities('banana', 'ananab')).to.deep.equal({
+    expect(debugInvertibleSimilarities(alpha, beta)).to.deep.equal({
       identity: 0,
-      jaccard: 1,
-      jaro: 0.888888888888889,
-      jaroWinkler: 0.888888888888889,
-      lcs: 0.8333333333333334,
+      jaccard: 0.7142857142857143,
+      jaro: 0.8095238095238096,
+      jaroWinkler: 0.8095238095238096,
+      lcs: 0.7142857142857143,
       length: 1,
-      lig2: 0.6666666666666666,
-      lig3: 0.8,
+      lig2: 0.5714285714285714,
+      lig3: 0.7272727272727273,
       minHash: 0,
       mlipns: 1,
-      mongeElkan: 0,
-      overlap: 1,
+      mongeElkan: 0.1428571428571429,
+      overlap: 0.8333333333333334,
       prefix: 0,
-      ratcliffObershelp: 0.8333333333333334,
+      ratcliffObershelp: 0.7142857142857143,
       sorensenDice: 0.6666666666666666,
       suffix: 0,
-      tversky: 1,
+      tversky: 0.7142857142857143,
     });
   });
 });
