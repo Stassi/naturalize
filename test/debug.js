@@ -1,19 +1,17 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
-import {
-  percentileDistances as invertibleDistances,
-} from '../src/stringMetrics/distances';
+import { percentileDistances } from '../src/stringMetrics/distances';
 import debug from '../src/debug';
 
 // TODO: Remove
 const [alpha, beta] = ['example', 'samples'];
 
 // TODO: Rename
-describe('untitled invertible distances reducer', () => {
-  const debugInvertibleDistances = debug({ names: invertibleDistances });
+describe('untitled percentile distances reducer', () => {
+  const debugPercentileDistances = debug({ names: percentileDistances });
 
   it('needs a description', () => {
-    expect(debugInvertibleDistances(alpha, beta)).to.deep.equal({
+    expect(debugPercentileDistances(alpha, beta)).to.deep.equal({
       identity: 1,
       jaccard: 0.2857142857142857,
       jaro: 0.19047619047619035,
@@ -36,14 +34,14 @@ describe('untitled invertible distances reducer', () => {
 });
 
 // TODO: Rename
-describe('untitled invertible similarities reducer', () => {
-  const debugInvertibleSimilarities = debug({
+describe('untitled percentile similarities reducer', () => {
+  const debugPercentileSimilarities = debug({
     asSimilarity: true,
-    names: invertibleDistances,
+    names: percentileDistances,
   });
 
   it('needs a description', () => {
-    expect(debugInvertibleSimilarities(alpha, beta)).to.deep.equal({
+    expect(debugPercentileSimilarities(alpha, beta)).to.deep.equal({
       identity: 0,
       jaccard: 0.7142857142857143,
       jaro: 0.8095238095238096,
