@@ -1,80 +1,132 @@
 {
   "bag": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "damerauLevenshtein": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "eudex": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "guth": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "hamming": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "identity": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "jaccard": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "jaro": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "jaroWinkler": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "lcs": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "length": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "levenshtein": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "lig2": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "lig3": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "minHash": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "mlipns": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "mongeElkan": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "mra": {
-    "discrete": true
+    "discrete": true,
+    "distance": false,
+    "similarity": true
   },
   "overlap": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "prefix": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "ratcliffObershelp": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "sift4": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "smithWaterman": {
-    "discrete": true
+    "discrete": true,
+    "distance": true,
+    "similarity": false
   },
   "sorensenDice": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "suffix": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   },
   "tversky": {
-    "discrete": false
+    "discrete": false,
+    "distance": true,
+    "similarity": true
   }
 }
