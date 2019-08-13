@@ -1,40 +1,53 @@
 import {
   entries,
-  keys,
   pipe,
-  propOf,
   reduce,
 } from './utilities';
 import stringMetrics from './stringMetrics';
 import metrics from './stringMetrics/metrics';
 
-const discreteDistances = pipe(
-  entries,
-  reduce(
-    (acc, [name, { discrete }]) => (discrete ? [...acc, name] : acc),
-    [],
-  ),
-);
-
-const percentileDistances = pipe(
-  entries,
-  reduce(
-    (acc, [name, { discrete }]) => (!discrete ? [...acc, name] : acc),
-    [],
-  ),
-);
-
-const debug = ({ filter, ...options }) => {
-  const names = propOf({
-    all: keys(metrics),
-    discrete: discreteDistances(metrics),
-    percentile: percentileDistances(metrics),
-  })(filter);
+const debug = ({
+  asSimilarity,
+  filter,
+  ...options
+}) => {
+  const names = pipe(
+    entries,
+    reduce(
+      (
+        acc,
+        [
+          name,
+          {
+            discrete,
+            distance,
+            similarity,
+          },
+        ],
+      ) => {
+        const distancePredicate = !asSimilarity && distance;
+        const similarityPredicate = !!asSimilarity && similarity;
+        const distanceOrSimilarityPredicate = distancePredicate || similarityPredicate;
+        const discretesRequired = filter === 'all' || filter === 'discrete';
+        const discretePredicate = discretesRequired && discrete;
+        const percentilesRequired = filter === 'all' || filter === 'percentile';
+        const percentilePredicate = percentilesRequired && !discrete;
+        const discreteOrPercentilePredicate = discretePredicate || percentilePredicate;
+        const predicate = distanceOrSimilarityPredicate && discreteOrPercentilePredicate;
+        return predicate ? [...acc, name] : acc;
+      },
+      [],
+    ),
+  )(metrics);
 
   const res = (...args) => reduce(
     (acc, name) => ({
       ...acc,
-      [name]: stringMetrics({ ...options, name })(...args),
+      [name]: stringMetrics({
+        ...options,
+        asSimilarity,
+        name,
+      })(...args),
     }),
     {},
   )(names);
