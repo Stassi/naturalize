@@ -1,5 +1,6 @@
 import {
   entries,
+  isArray,
   pipe,
   reduce,
 } from './utilities';
@@ -11,7 +12,7 @@ const debug = ({
   filter,
   ...options
 }) => {
-  const names = pipe(
+  const names = isArray(filter) ? filter : pipe(
     entries,
     reduce(
       (

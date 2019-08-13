@@ -3,7 +3,7 @@ import { describe } from 'mocha';
 import debug from '../src/debug';
 
 // TODO: Remove
-const [debugObj, debugStr] = [{ debug: true }, 'debug'];
+const debugStr = 'debug';
 const [alpha, beta] = ['example', 'samples'];
 
 // TODO: Rename
@@ -98,7 +98,10 @@ describe('untitled distances', () => {
       const jaroDistances = debug({ filter: ['jaro', 'jaroWinkler'] });
 
       it('should return specific distances', () => {
-        expect(jaroDistances(alpha, beta)).to.deep.equal(debugObj);
+        expect(jaroDistances(alpha, beta)).to.deep.equal({
+          jaro: 0.19047619047619035,
+          jaroWinkler: 0.19047619047619035,
+        });
       });
     });
   });
@@ -213,7 +216,10 @@ describe('untitled similarities', () => {
       });
 
       it('should return specific similarities', () => {
-        expect(jaroSimilarities(alpha, beta)).to.deep.equal(debugObj);
+        expect(jaroSimilarities(alpha, beta)).to.deep.equal({
+          jaro: 0.8095238095238096,
+          jaroWinkler: 0.8095238095238096,
+        });
       });
     });
   });
