@@ -1,6 +1,7 @@
 import and from './and';
 import applyToMap from './applyToMap';
 import entries from './entries';
+import isArray from './isArray';
 import itemIncludedInMap from './itemIncludedInMap';
 import keys from './keys';
 import map from './map';
@@ -14,6 +15,7 @@ export {
   and,
   applyToMap,
   entries,
+  isArray,
   itemIncludedInMap,
   keys,
   map,
