@@ -1,9 +1,35 @@
-import { reduce } from './utilities';
-import { percentileDistances } from './stringMetrics/distances';
+import {
+  entries,
+  pipe,
+  reduce,
+} from './utilities';
 import stringMetrics from './stringMetrics';
+import metrics from './stringMetrics/metrics';
+
+const discreteDistances = pipe(
+  entries,
+  reduce(
+    (acc, [name, { discrete }]) => (discrete ? [...acc, name] : acc),
+    [],
+  ),
+)(metrics);
+
+const percentileDistances = pipe(
+  entries,
+  reduce(
+    (acc, [name, { discrete }]) => (!discrete ? [...acc, name] : acc),
+    [],
+  ),
+)(metrics);
 
 const debug = ({ filter, ...options }) => {
-  const names = filter === 'percentile' ? percentileDistances : [];
+  let names;
+
+  if (filter === 'discrete') {
+    names = discreteDistances;
+  } else if (filter === 'percentile') {
+    names = percentileDistances;
+  }
 
   const res = (...args) => reduce(
     (acc, name) => ({

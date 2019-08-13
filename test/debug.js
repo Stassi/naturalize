@@ -20,7 +20,16 @@ describe('untitled distances', () => {
     const discreteDistances = debug({ filter: 'discrete' });
 
     it('should return discrete distances', () => {
-      expect(discreteDistances(alpha, beta)).to.deep.equal(debugObj);
+      expect(discreteDistances(alpha, beta)).to.deep.equal({
+        bag: 2,
+        damerauLevenshtein: 3,
+        eudex: 650,
+        guth: 1,
+        hamming: 7,
+        levenshtein: 3,
+        sift4: 2,
+        smithWaterman: 5,
+      });
     });
   });
 
@@ -89,7 +98,17 @@ describe('untitled similarities', () => {
     });
 
     it('should return discrete similarities', () => {
-      expect(discreteSimilarities(alpha, beta)).to.deep.equal(debugObj);
+      expect(discreteSimilarities(alpha, beta)).to.deep.equal({
+        mra: {
+          codex: [
+            'EXMPL',
+            'SMPLS',
+          ],
+          minimum: 3,
+          similarity: 1,
+          matching: false,
+        },
+      });
     });
   });
 
