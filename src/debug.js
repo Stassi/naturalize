@@ -1,11 +1,11 @@
 import {
   and,
-  applyMap,
   applyToMap,
   boolean,
   entries,
   isArray,
   itemIncludedIn,
+  map,
   negate,
   or,
   pipe,
@@ -53,7 +53,7 @@ const debug = ({
       similarityRequiredAnd,
     ] = pipe(
       applyToMap(asSimilarity),
-      applyMap(and),
+      map(and),
     )([
       negate,
       boolean,

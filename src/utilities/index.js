@@ -1,5 +1,4 @@
 import and from './and';
-import applyMap from './applyMap';
 import applyToMap from './applyToMap';
 import boolean from './boolean';
 import entries from './entries';
@@ -18,7 +17,6 @@ import subtractFrom from './subtractFrom';
 
 export {
   and,
-  applyMap,
   applyToMap,
   boolean,
   entries,
