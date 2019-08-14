@@ -1,3 +1,3 @@
-const applyTo = value => f => f(value);
+const applyTo = (value) => (f) => f(value);
 
 export default applyTo;
