@@ -19,6 +19,10 @@ const keywords = [
 ];
 
 const debug = pipe(
+  ({ asSimilarity, ...props }) => ({
+    ...props,
+    mapApplyAsSimilarityTo: applyToMap(asSimilarity),
+  }),
   ({ filter, ...props }) => ({
     ...props,
     filterIsArray: isArray(filter),
@@ -54,9 +58,9 @@ const debug = pipe(
     ...props
   }) => ({
     ...props,
-    filterIncludedIn,
     handleArrayOrKeyword,
     handleString,
+    debugGamma: debugKeywordReducer(filterIncludedIn),
     filterIsArrayOrKeyword: or(
       filterIsArray,
     )(
@@ -64,39 +68,45 @@ const debug = pipe(
     ),
   }),
   ({
-    asSimilarity,
-    filterIncludedIn,
-    filterIsArrayOrKeyword,
     handleArrayOrKeyword,
-    handleString,
-    ...options
-  }) => {
-    const debugGamma = debugKeywordReducer(asSimilarity)(filterIncludedIn);
-    const debugEpsilon = pipe(handleArrayOrKeyword, applyTo);
-    const debugBeta = debugEpsilon(debugGamma);
-
-    const stringMetric = (name) => stringMetrics({
-      ...options,
-      asSimilarity,
-      name,
-    });
-
-    const handleArraysAndKeywords = (...args) => debugBeta(
-      reduce(
-        (acc, name) => ({
-          ...acc,
-          [name]: stringMetric(name)(...args),
-        }),
-        {},
+    mapApplyAsSimilarityTo,
+    debugGamma,
+    ...props
+  }) => ({
+    ...props,
+    withAsSimilarity: mapApplyAsSimilarityTo([
+      (asSimilarity) => (name) => stringMetrics({
+        ...props,
+        asSimilarity,
+        name,
+      }),
+      pipe(
+        debugGamma,
+        handleArrayOrKeyword,
+        applyTo,
       ),
-    );
-
-    const res = filterIsArrayOrKeyword
-      ? handleArraysAndKeywords
-      : handleString(stringMetric);
-
-    return res;
-  },
+    ]),
+  }),
+  ({
+    filterIsArrayOrKeyword,
+    handleString,
+    withAsSimilarity: [
+      stringMetric,
+      debugBeta,
+    ],
+  }) => (
+    filterIsArrayOrKeyword
+      ? (...args) => debugBeta(
+        reduce(
+          (acc, name) => ({
+            ...acc,
+            [name]: stringMetric(name)(...args),
+          }),
+          {},
+        ),
+      )
+      : handleString(stringMetric)
+  ),
 );
 
 export default debug;

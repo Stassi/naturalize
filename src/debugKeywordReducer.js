@@ -8,7 +8,7 @@ import {
   pipe,
 } from './utilities';
 
-const debugKeywordReducer = (asSimilarity) => (filterIncludedIn) => (
+const debugKeywordReducer = (filterIncludedIn) => (asSimilarity) => (
   acc,
   [
     name,
