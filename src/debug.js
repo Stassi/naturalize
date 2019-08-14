@@ -1,53 +1,91 @@
 import {
+  and,
+  applyToMap,
+  boolean,
   entries,
   isArray,
   itemIncludedIn,
+  negate,
+  or,
   pipe,
   reduce,
 } from './utilities';
 import stringMetrics from './stringMetrics';
 import metrics from './stringMetrics/metrics';
 
+const keywords = [
+  'all',
+  'discrete',
+  'percentile',
+];
+
 const debug = ({
   asSimilarity,
   filter,
   ...options
 }) => {
-  const filterIsArray = isArray(filter);
+  const applyFilterToMap = applyToMap(filter);
+  const [
+    filterIsArray,
+    filterIncludedIn,
+  ] = applyFilterToMap([
+    isArray,
+    itemIncludedIn,
+  ]);
+  const filterIsKeyword = filterIncludedIn(keywords);
+  const filterIsArrayOr = or(filterIsArray);
+  const filterIsArrayOrKeyword = filterIsArrayOr(filterIsKeyword);
 
-  const handleString = (...args) => stringMetrics({
-    ...options,
-    asSimilarity,
-    name: filter,
-  })(...args);
+  const keywordReducer = (
+    acc,
+    [
+      name,
+      {
+        discrete,
+        distance,
+        similarity,
+      },
+    ],
+  ) => {
+    const applyAsSimilarityToMap = applyToMap(asSimilarity);
+    const [
+      asDistance,
+      similarityRequired,
+    ] = applyAsSimilarityToMap([
+      negate,
+      boolean,
+    ]);
+    const [
+      asDistanceAnd,
+      similarityRequiredAnd,
+    ] = [
+      and(asDistance),
+      and(similarityRequired),
+    ];
+
+    const isAllowedType = or(
+      asDistanceAnd(distance),
+    )(
+      similarityRequiredAnd(similarity),
+    );
+
+    const percentile = negate(discrete);
+    const filterIncludedInKeywordsAllAnd = (x) => filterIncludedIn(['all', x]);
+    const isAllowedCodomain = or(
+      and(filterIncludedInKeywordsAllAnd('discrete'))(discrete),
+    )(
+      and(filterIncludedInKeywordsAllAnd('percentile'))(percentile),
+    );
+
+    const isAllowedTypeAnd = and(isAllowedType);
+
+    const typeAndCodomainAllowed = isAllowedTypeAnd(isAllowedCodomain);
+    return typeAndCodomainAllowed ? [...acc, name] : acc;
+  };
 
   const reduceKeyword = pipe(
     entries,
-    reduce(
-      (
-        acc,
-        [
-          name,
-          {
-            discrete,
-            distance,
-            similarity,
-          },
-        ],
-      ) => {
-        const distancePredicate = !asSimilarity && distance;
-        const similarityPredicate = !!asSimilarity && similarity;
-        const distanceOrSimilarityPredicate = distancePredicate || similarityPredicate;
-        const discretesRequired = filter === 'all' || filter === 'discrete';
-        const discretePredicate = discretesRequired && discrete;
-        const percentilesRequired = filter === 'all' || filter === 'percentile';
-        const percentilePredicate = percentilesRequired && !discrete;
-        const discreteOrPercentilePredicate = discretePredicate || percentilePredicate;
-        const predicate = distanceOrSimilarityPredicate && discreteOrPercentilePredicate;
-        return predicate ? [...acc, name] : acc;
-      },
-      [],
-    ),
+    reduce(keywordReducer, []),
   )(metrics);
 
   const handleArraysAndKeywords = (...args) => reduce(
@@ -62,15 +100,13 @@ const debug = ({
     {},
   )(filterIsArray ? filter : reduceKeyword);
 
-  const isArrayOrKeyword = filterIsArray
-    || itemIncludedIn(filter)([
-      'all',
-      'discrete',
-      'percentile',
-    ]);
+  const handleString = (...args) => stringMetrics({
+    ...options,
+    asSimilarity,
+    name: filter,
+  })(...args);
 
-  // TODO: Simplify control flow
-  const res = isArrayOrKeyword
+  const res = filterIsArrayOrKeyword
     ? handleArraysAndKeywords
     : handleString;
 
