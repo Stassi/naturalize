@@ -1,3 +1,3 @@
-const map = f => list => list.map(f);
+const map = (f) => (list) => list.map(f);
 
 export default map;
