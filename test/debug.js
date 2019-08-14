@@ -2,8 +2,6 @@ import { expect } from 'chai';
 import { describe } from 'mocha';
 import debug from '../src/debug';
 
-// TODO: Remove
-const debugStr = 'debug';
 const [alpha, beta] = ['example', 'samples'];
 
 // TODO: Rename
@@ -90,7 +88,7 @@ describe('untitled distances', () => {
       const jaroDistance = debug({ filter: 'jaro' });
 
       it('should return the specific distance', () => {
-        expect(jaroDistance(alpha, beta)).to.equal(debugStr);
+        expect(jaroDistance(alpha, beta)).to.equal(0.19047619047619035);
       });
     });
 
@@ -205,7 +203,7 @@ describe('untitled similarities', () => {
       });
 
       it('should return a specific similarity', () => {
-        expect(jaroSimilarity(alpha, beta)).to.equal(debugStr);
+        expect(jaroSimilarity(alpha, beta)).to.equal(0.8095238095238096);
       });
     });
 
