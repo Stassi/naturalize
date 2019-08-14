@@ -1,5 +1,6 @@
 import {
   and,
+  applyMap,
   applyToMap,
   boolean,
   entries,
@@ -47,21 +48,16 @@ const debug = ({
       },
     ],
   ) => {
-    const applyAsSimilarityToMap = applyToMap(asSimilarity);
-    const [
-      asDistance,
-      similarityRequired,
-    ] = applyAsSimilarityToMap([
-      negate,
-      boolean,
-    ]);
     const [
       asDistanceAnd,
       similarityRequiredAnd,
-    ] = [
-      and(asDistance),
-      and(similarityRequired),
-    ];
+    ] = pipe(
+      applyToMap(asSimilarity),
+      applyMap(and),
+    )([
+      negate,
+      boolean,
+    ]);
 
     const isAllowedType = or(
       asDistanceAnd(distance),
@@ -78,7 +74,6 @@ const debug = ({
     );
 
     const isAllowedTypeAnd = and(isAllowedType);
-
     const typeAndCodomainAllowed = isAllowedTypeAnd(isAllowedCodomain);
     return typeAndCodomainAllowed ? [...acc, name] : acc;
   };
