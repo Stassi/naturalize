@@ -1,18 +1,16 @@
 import {
-  and,
   applyToMap,
-  boolean,
   entries,
   isArray,
   itemIncludedIn,
-  map,
-  negate,
   or,
   pipe,
   reduce,
 } from './utilities';
-import stringMetrics from './stringMetrics';
+import applyTo from './utilities/applyTo';
 import metrics from './stringMetrics/metrics';
+import stringMetrics from './stringMetrics';
+import debugKeywordReducer from './debugKeywordReducer';
 
 const keywords = [
   'all',
@@ -27,70 +25,55 @@ const debug = pipe(
     mapApplyFilterTo: applyToMap(filter),
   }),
   ({
-    asSimilarity,
     filterIsArray,
     mapApplyFilterTo,
+    ...props
+  }) => ({
+    ...props,
+    filterIsArray,
+    withFilter: mapApplyFilterTo([
+      itemIncludedIn,
+      (filter) => (keywordReducer) => (
+        filterIsArray
+          ? filter
+          : pipe(
+            entries,
+            reduce(keywordReducer, []),
+          )(metrics)
+      ),
+      (filter) => (stringMetric) => (...args) => stringMetric(filter)(...args),
+    ]),
+  }),
+  ({
+    filterIsArray,
+    withFilter: [
+      filterIncludedIn,
+      handleArrayOrKeyword,
+      handleString,
+    ],
+    ...props
+  }) => ({
+    ...props,
+    filterIncludedIn,
+    handleArrayOrKeyword,
+    handleString,
+    filterIsArrayOrKeyword: or(
+      filterIsArray,
+    )(
+      filterIncludedIn(keywords),
+    ),
+  }),
+  ({
+    asSimilarity,
+    filterIncludedIn,
+    filterIsArrayOrKeyword,
+    handleArrayOrKeyword,
+    handleString,
     ...options
   }) => {
-    const [
-      filterIncludedIn,
-      handleString,
-      handleArrayOrKeyword,
-    ] = mapApplyFilterTo([
-      itemIncludedIn,
-      (filter) => (stringMetric) => (...args) => stringMetric(filter)(...args),
-      (filter) => (reduceKeyword) => (filterIsArray ? filter : reduceKeyword),
-    ]);
-
-    const filterIsKeyword = filterIncludedIn(keywords);
-    const filterIsArrayOr = or(filterIsArray);
-    const filterIsArrayOrKeyword = filterIsArrayOr(filterIsKeyword);
-
-    const keywordReducer = (
-      acc,
-      [
-        name,
-        {
-          discrete,
-          distance,
-          similarity,
-        },
-      ],
-    ) => {
-      const [
-        asDistanceAnd,
-        similarityRequiredAnd,
-      ] = pipe(
-        applyToMap(asSimilarity),
-        map(and),
-      )([
-        negate,
-        boolean,
-      ]);
-
-      const isAllowedType = or(
-        asDistanceAnd(distance),
-      )(
-        similarityRequiredAnd(similarity),
-      );
-
-      const percentile = negate(discrete);
-      const filterIncludedInKeywordsAllAnd = (x) => filterIncludedIn(['all', x]);
-      const isAllowedCodomain = or(
-        and(filterIncludedInKeywordsAllAnd('discrete'))(discrete),
-      )(
-        and(filterIncludedInKeywordsAllAnd('percentile'))(percentile),
-      );
-
-      const isAllowedTypeAnd = and(isAllowedType);
-      const typeAndCodomainAllowed = isAllowedTypeAnd(isAllowedCodomain);
-      return typeAndCodomainAllowed ? [...acc, name] : acc;
-    };
-
-    const reduceKeyword = pipe(
-      entries,
-      reduce(keywordReducer, []),
-    )(metrics);
+    const debugGamma = debugKeywordReducer(asSimilarity)(filterIncludedIn);
+    const debugEpsilon = pipe(handleArrayOrKeyword, applyTo);
+    const debugBeta = debugEpsilon(debugGamma);
 
     const stringMetric = (name) => stringMetrics({
       ...options,
@@ -98,14 +81,14 @@ const debug = pipe(
       name,
     });
 
-    const handleArraysAndKeywords = (...args) => reduce(
-      (acc, name) => ({
-        ...acc,
-        [name]: stringMetric(name)(...args),
-      }),
-      {},
-    )(
-      handleArrayOrKeyword(reduceKeyword),
+    const handleArraysAndKeywords = (...args) => debugBeta(
+      reduce(
+        (acc, name) => ({
+          ...acc,
+          [name]: stringMetric(name)(...args),
+        }),
+        {},
+      ),
     );
 
     const res = filterIsArrayOrKeyword
