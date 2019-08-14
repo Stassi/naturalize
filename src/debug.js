@@ -21,26 +21,25 @@ const keywords = [
 ];
 
 const debug = pipe(
-  ({ filter, ...props }) => ({ ...props, mapApplyFilterTo: applyToMap(filter) }),
+  ({ filter, ...props }) => ({
+    ...props,
+    filterIsArray: isArray(filter),
+    mapApplyFilterTo: applyToMap(filter),
+  }),
   ({
     asSimilarity,
+    filterIsArray,
     mapApplyFilterTo,
     ...options
   }) => {
     const [
-      filterIsArray,
       filterIncludedIn,
       handleString,
       handleArrayOrKeyword,
     ] = mapApplyFilterTo([
-      isArray,
       itemIncludedIn,
       (filter) => (stringMetric) => (...args) => stringMetric(filter)(...args),
-      (filter) => ({ filterIsArray, reduceKeyword }) => (
-        filterIsArray
-          ? filter
-          : reduceKeyword
-      ),
+      (filter) => (reduceKeyword) => (filterIsArray ? filter : reduceKeyword),
     ]);
 
     const filterIsKeyword = filterIncludedIn(keywords);
@@ -106,10 +105,7 @@ const debug = pipe(
       }),
       {},
     )(
-      handleArrayOrKeyword({
-        filterIsArray,
-        reduceKeyword,
-      }),
+      handleArrayOrKeyword(reduceKeyword),
     );
 
     const res = filterIsArrayOrKeyword
