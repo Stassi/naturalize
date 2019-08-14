@@ -1,6 +1,7 @@
 import {
   entries,
   isArray,
+  itemIncludedIn,
   pipe,
   reduce,
 } from './utilities';
@@ -12,7 +13,15 @@ const debug = ({
   filter,
   ...options
 }) => {
-  const names = isArray(filter) ? filter : pipe(
+  const filterIsArray = isArray(filter);
+
+  const handleString = (...args) => stringMetrics({
+    ...options,
+    asSimilarity,
+    name: filter,
+  })(...args);
+
+  const reduceKeyword = pipe(
     entries,
     reduce(
       (
@@ -41,7 +50,7 @@ const debug = ({
     ),
   )(metrics);
 
-  const res = (...args) => reduce(
+  const handleArraysAndKeywords = (...args) => reduce(
     (acc, name) => ({
       ...acc,
       [name]: stringMetrics({
@@ -51,7 +60,19 @@ const debug = ({
       })(...args),
     }),
     {},
-  )(names);
+  )(filterIsArray ? filter : reduceKeyword);
+
+  const isArrayOrKeyword = filterIsArray
+    || itemIncludedIn(filter)([
+      'all',
+      'discrete',
+      'percentile',
+    ]);
+
+  // TODO: Simplify control flow
+  const res = isArrayOrKeyword
+    ? handleArraysAndKeywords
+    : handleString;
 
   return res;
 };
