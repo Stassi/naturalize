@@ -83,23 +83,21 @@ const debug = ({
     reduce(keywordReducer, []),
   )(metrics);
 
+  const stringMetric = (name) => stringMetrics({
+    ...options,
+    asSimilarity,
+    name,
+  });
+
   const handleArraysAndKeywords = (...args) => reduce(
     (acc, name) => ({
       ...acc,
-      [name]: stringMetrics({
-        ...options,
-        asSimilarity,
-        name,
-      })(...args),
+      [name]: stringMetric(name)(...args),
     }),
     {},
   )(filterIsArray ? filter : reduceKeyword);
 
-  const handleString = (...args) => stringMetrics({
-    ...options,
-    asSimilarity,
-    name: filter,
-  })(...args);
+  const handleString = (...args) => stringMetric(filter)(...args);
 
   const res = filterIsArrayOrKeyword
     ? handleArraysAndKeywords
