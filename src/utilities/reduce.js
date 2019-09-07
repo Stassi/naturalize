@@ -1,4 +1,4 @@
-const reduce = (reducer, initializer) => list => list.reduce(
+const reduce = (reducer, initializer) => (list) => list.reduce(
   reducer,
   initializer,
 );

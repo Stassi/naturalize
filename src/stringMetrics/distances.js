@@ -49,7 +49,7 @@ const distancesRequiringOptions = {
   mongeElkan: ({
     similarity = identitySimilarity,
   }) => (...args) => mongeElkanWithoutSimilarity(similarity, ...args),
-  tversky: options => toggleDistanceOrSimilarity(
+  tversky: (options) => toggleDistanceOrSimilarity(
     (...args) => tverskySimilarity(options, ...args),
   ),
 };

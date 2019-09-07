@@ -1,3 +1,3 @@
-const and = f => g => f && g;
+const and = (f) => (g) => f && g;
 
 export default and;
