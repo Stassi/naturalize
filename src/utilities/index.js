@@ -10,6 +10,7 @@ import map from './map';
 import mapApplyTo from './mapApplyTo';
 import negate from './negate';
 import or from './or';
+import pair from './pair';
 import pipe from './pipe';
 import propOf from './propOf';
 import reduce from './reduce';
@@ -28,6 +29,7 @@ export {
   mapApplyTo,
   negate,
   or,
+  pair,
   pipe,
   propOf,
   reduce,
