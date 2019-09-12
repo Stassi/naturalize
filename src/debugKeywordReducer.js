@@ -1,12 +1,47 @@
 import {
   and,
+  applyTo,
   applyToMap,
   boolean,
   map,
   negate,
   or,
+  pair,
   pipe,
 } from './utilities';
+
+const pairWithNegate = pair(negate);
+const pairWithNegateThenApplyTo = pipe(pairWithNegate, applyTo);
+
+const mapPairWithNegateThenApplyToWithoutFilter = (filterDiscrete) => pipe(
+  applyToMap,
+  pairWithNegateThenApplyTo(filterDiscrete),
+);
+
+const booleanAndNegate = pair(boolean)(negate);
+const applyBooleanAndNegateTo = applyTo(booleanAndNegate);
+const applyBooleanAndNegateToMap = pipe(
+  (asSimilarity) => pipe(
+    applyToMap(asSimilarity),
+    map(and),
+  ),
+  applyBooleanAndNegateTo,
+);
+
+const mapFilterAnd = pipe(
+  (filterIncludedIn) => pipe(
+    pair('all'),
+    filterIncludedIn,
+    and,
+  ),
+  map,
+);
+
+const discreteAndPercentile = pair('discrete')('percentile');
+const mapFilterAndThenApplyDiscreteAndPercentileTo = pipe(
+  mapFilterAnd,
+  applyTo(discreteAndPercentile),
+);
 
 const debugKeywordReducer = (filterIncludedIn) => (asSimilarity) => (
   acc,
@@ -20,33 +55,27 @@ const debugKeywordReducer = (filterIncludedIn) => (asSimilarity) => (
   ],
 ) => {
   const [
-    asDistanceAnd,
     similarityRequiredAnd,
-  ] = pipe(
-    applyToMap(asSimilarity),
-    map(and),
-  )([
-    negate,
-    boolean,
-  ]);
+    asDistanceAnd,
+  ] = applyBooleanAndNegateToMap(asSimilarity);
 
-  const isAllowedType = or(
-    asDistanceAnd(distance),
-  )(
-    similarityRequiredAnd(similarity),
-  );
+  const [
+    filterDiscrete,
+    filterPercentile,
+  ] = mapFilterAndThenApplyDiscreteAndPercentileTo(filterIncludedIn);
 
-  const percentile = negate(discrete);
-  const filterIncludedInKeywordsAllAnd = (x) => filterIncludedIn(['all', x]);
-  const isAllowedCodomain = or(
-    and(filterIncludedInKeywordsAllAnd('discrete'))(discrete),
-  )(
-    and(filterIncludedInKeywordsAllAnd('percentile'))(percentile),
-  );
+  const mapPairWithNegateThenApplyTo = mapPairWithNegateThenApplyToWithoutFilter(filterDiscrete);
 
-  const isAllowedTypeAnd = and(isAllowedType);
-  const typeAndCodomainAllowed = isAllowedTypeAnd(isAllowedCodomain);
-  return typeAndCodomainAllowed ? [...acc, name] : acc;
+  const [percentile, isDiscreteCodomain] = mapPairWithNegateThenApplyTo(discrete);
+  const isValidDistance = asDistanceAnd(distance);
+  const isValidSimilarity = similarityRequiredAnd(similarity);
+
+  const isPercentileCodomain = filterPercentile(percentile);
+  const isValidCodomain = or(isDiscreteCodomain)(isPercentileCodomain);
+  const isValidType = or(isValidDistance)(isValidSimilarity);
+  const isValidTypeAndCodomain = and(isValidType)(isValidCodomain);
+
+  return isValidTypeAndCodomain ? [...acc, name] : acc;
 };
 
 export default debugKeywordReducer;
